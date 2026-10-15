@@ -6,9 +6,12 @@ const projectCards = [...document.querySelectorAll(".project-card")];
 const projectSearch = document.querySelector("#project-search");
 const noResults = document.querySelector("#no-results");
 const printButton = document.querySelector(".print-button");
+const themeColor = document.querySelector('meta[name="theme-color"]');
+const themeStorageKey = "portfolio-theme-v2";
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
+  if (themeColor) themeColor.content = theme === "dark" ? "#081725" : "#edf5fa";
   if (themeToggle) {
     const isDark = theme === "dark";
     themeToggle.setAttribute("aria-label", `Cambiar a tema ${isDark ? "claro" : "oscuro"}`);
@@ -18,17 +21,17 @@ function setTheme(theme) {
 
 let savedTheme = null;
 try {
-  savedTheme = localStorage.getItem("portfolio-theme");
+  savedTheme = localStorage.getItem(themeStorageKey);
 } catch (error) {
   console.warn("No se pudo recuperar la preferencia de tema.", error);
 }
-setTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : "light");
+setTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : "dark");
 
 themeToggle?.addEventListener("click", () => {
   const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   setTheme(theme);
   try {
-    localStorage.setItem("portfolio-theme", theme);
+    localStorage.setItem(themeStorageKey, theme);
   } catch (error) {
     console.warn("No se pudo guardar la preferencia de tema.", error);
   }
