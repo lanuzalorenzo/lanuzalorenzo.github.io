@@ -12,6 +12,7 @@ Al trabajar en el repositorio:
 - No añadas secretos, datos personales sensibles ni enlaces a repositorios privados.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
 - Verifica las interacciones y los enlaces afectados al modificar filtros, navegación, tema o contenido de proyectos.
+- Mantén `.github/CODEOWNERS` apuntando a `@lanuzalorenzo`; los PR de colaboradores deben requerir su revisión y el bypass de administración debe quedar limitado al propietario.
 - Escribe la interfaz y la documentación en español claro; conserva los nombres oficiales de tecnologías y certificaciones.
 
 ## Convenciones de Commits

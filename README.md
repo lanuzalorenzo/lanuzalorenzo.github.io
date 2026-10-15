@@ -18,6 +18,17 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 
 Cada `push` a `main` volverá a publicar la web. El botón **Imprimir / guardar CV** abre el diálogo del navegador para imprimir la página o guardarla como PDF.
 
+## Protección de la rama `main`
+
+`.github/CODEOWNERS` asigna la revisión del código a `@lanuzalorenzo`. Para exigir que los cambios de otras personas lleguen mediante un pull request aprobado por Lorenzo:
+
+1. En GitHub, abre **Settings → Rules → Rulesets** y crea un ruleset de rama activo para `main`.
+2. Añade **Repository admin** a la lista de bypass actors con permiso **Always**. En este repositorio personal, esto permite al propietario hacer push directo.
+3. Activa **Require a pull request before merging**, exige al menos una aprobación y activa **Require review from Code Owners**.
+4. No añadas otros usuarios, equipos o roles a la lista de bypass.
+
+Los autores no pueden aprobar sus propios pull requests en GitHub; el propietario puede aprobar los PR creados por otras personas. La regla de bypass para administración permite al propietario seguir publicando directamente en `main`.
+
 ## Probar en local
 
 Abre `index.html` en un navegador o sirve la carpeta con un servidor estático, por ejemplo:
