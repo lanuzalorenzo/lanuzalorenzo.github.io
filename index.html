@@ -25,6 +25,7 @@
         <a href="#perfil">Perfil</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#contacto">Contacto</a>
         <button class="theme-toggle" type="button" aria-label="Cambiar a tema claro" aria-pressed="true" title="Cambiar tema">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
@@ -199,9 +200,10 @@
           </div>
           <div class="project-controls">
             <div class="filter-list" role="group" aria-label="Filtrar proyectos por categoría">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>02</span></button>
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>03</span></button>
               <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cloud Security</button>
               <button class="filter-button" type="button" data-filter="engineering" aria-pressed="false">Ingeniería</button>
+              <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">IA &amp; Herramientas</button>
             </div>
             <label class="search-label">
               <span class="sr-only">Buscar proyectos</span>
@@ -210,40 +212,177 @@
             </label>
           </div>
           <div class="project-grid" id="project-grid">
-            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios">
+
+            <!-- PROYECTO 01: Portfolio Ciberseguridad -->
+            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios zero trust pim rbac kql elk">
               <div class="project-visual project-visual-cloud">
                 <span class="project-label">01 / CLOUD SECURITY</span>
                 <div class="cloud-diagram" aria-hidden="true"><span>IDENTITY</span><b>+</b><span>DEFENSE</span><b>+</b><span>DETECTION</span></div>
-                <span class="visual-caption">HANDS-ON SECURITY LABS</span>
+                <span class="visual-caption">10 MÓDULOS · DEFENSE-IN-DEPTH</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>Cloud Security</span><span>Azure · DevSecOps</span></div>
+                <div class="project-meta"><span>Cloud Security · DevSecOps</span><span>Azure · .NET</span></div>
                 <h3>Portfolio de Ciberseguridad Cloud</h3>
-                <p>Laboratorios verificables sobre Entra ID, Defender for Cloud, Sentinel, PIM/JIT, auditorías cloud y controles DevSecOps.</p>
+                <p>Diez módulos de laboratorio verificables: Entra ID, Defender for Cloud, Microsoft Sentinel, PIM/JIT, auditorías cloud, DevSecOps y ELK Stack. Modelo de Defense-in-Depth alrededor de una API real en .NET.</p>
+                <div class="project-tags" aria-label="Tecnologías">
+                  <span>OAuth 2.0 · PKCE</span><span>KQL</span><span>SAST · SCA</span><span>OIDC</span>
+                </div>
                 <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Explorar el portfolio <span aria-hidden="true">↗</span></a>
               </div>
             </article>
-            <article class="project-card" data-category="engineering" data-search="github software architecture dotnet azure event driven microservices api">
+
+            <!-- PROYECTO 02: Lab API Local Azure -->
+            <article class="project-card" data-category="engineering" data-search="api local azure dotnet net ecommerce microservicios jwt oauth pkce arquitectura backend rest">
               <div class="project-visual project-visual-engineering">
                 <span class="project-label">02 / SOFTWARE ENGINEERING</span>
-                <div class="architecture-diagram" aria-hidden="true"><span>API</span><i></i><span>EVENTS</span><i></i><span>CLOUD</span></div>
-                <span class="visual-caption">DESIGN · BUILD · EVOLVE</span>
+                <div class="architecture-diagram" aria-hidden="true"><span>API</span><i></i><span>JWT</span><i></i><span>AZURE</span></div>
+                <span class="visual-caption">ECOMMERCE API · .NET · SECURE BY DESIGN</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>Arquitectura</span><span>.NET · Azure</span></div>
-                <h3>Ingeniería de software</h3>
-                <p>Explora mi perfil para ver experiencia en microservicios, sistemas orientados a eventos, APIs y modernización cloud.</p>
-                <a class="project-link" href="https://github.com/lanuzalorenzo" target="_blank" rel="noreferrer">Ver perfil de GitHub <span aria-hidden="true">↗</span></a>
+                <div class="project-meta"><span>Arquitectura · AppSec</span><span>.NET · Azure</span></div>
+                <h3>EcommerceApi — Lab API Local Azure</h3>
+                <p>Web API empresarial en .NET con arquitectura desacoplada, autenticación federada OAuth 2.0/PKCE y validación estricta de JWT. Carga de trabajo central del portfolio de ciberseguridad.</p>
+                <div class="project-tags" aria-label="Tecnologías">
+                  <span>.NET</span><span>JWT · JWKS</span><span>Azure App Service</span>
+                </div>
+                <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
               </div>
             </article>
+
+            <!-- PROYECTO 03: AI Agent Local Lab -->
+            <article class="project-card" data-category="ai" data-search="ia inteligencia artificial agente local ollama continue llm copilot vscode asistente codigo">
+              <div class="project-visual project-visual-ai">
+                <span class="project-label">03 / AI &amp; DEVELOPER TOOLING</span>
+                <div class="ai-diagram" aria-hidden="true"><span>LLM</span><i></i><span>AGENT</span><i></i><span>CODE</span></div>
+                <span class="visual-caption">LOCAL · PRIVATE · OFFLINE</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span>IA Local · Dev Tools</span><span>Ollama · Continue</span></div>
+                <h3>AI Agent Local Lab</h3>
+                <p>Laboratorio de agente IA local con Ollama y Continue integrado en VS Code. LLM corriendo on-premise para asistencia en código y documentación sin dependencias externas.</p>
+                <div class="project-tags" aria-label="Tecnologías">
+                  <span>Ollama</span><span>Continue</span><span>VS Code</span><span>GPU</span>
+                </div>
+                <a class="project-link" href="https://github.com/lanuzalorenzo/ai-agent-local-lab" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
             <p class="no-results" id="no-results" hidden>No hay proyectos que coincidan con la búsqueda.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PORTFOLIO DE CIBERSEGURIDAD — detalle módulos ========= -->
+      <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">05 — Portfolio de Ciberseguridad</p>
+            <h2 id="portfolio-title">Diez módulos.<br><span>Un modelo cohesivo.</span></h2>
+            <p class="portfolio-intro">El portfolio articula la seguridad como un modelo de <strong>Defense-in-Depth</strong> alrededor de la API <code>EcommerceApi</code>. Cada módulo documenta laboratorios reales en Azure. Haz clic en cualquier módulo para acceder a la documentación detallada.</p>
+          </div>
+
+          <!-- Layers legend -->
+          <div class="layers-legend" aria-label="Leyenda de capas de seguridad">
+            <span class="legend-item" data-layer="1"><i></i>Capa 1 · AppSec</span>
+            <span class="legend-item" data-layer="2"><i></i>Capa 2 · DevSecOps</span>
+            <span class="legend-item" data-layer="3"><i></i>Capa 3 · Identidad</span>
+            <span class="legend-item" data-layer="4"><i></i>Capa 4 · Postura</span>
+            <span class="legend-item" data-layer="5"><i></i>Capa 5 · Detección</span>
+          </div>
+
+          <div class="modules-grid" role="list">
+
+            <article class="module-card" role="listitem" data-layer="1">
+              <div class="module-head"><span class="module-num">01</span><span class="module-layer-badge">Capa 1 · AppSec</span></div>
+              <h3>Seguridad en Azure</h3>
+              <p>OAuth 2.0 con PKCE, validación estricta de JWT y descubrimiento de claves JWKS para la API .NET.</p>
+              <ul class="module-tags"><li>OAuth 2.0</li><li>PKCE</li><li>JWT · JWKS</li><li>Entra ID</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/01-seguridad-azure" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="3">
+              <div class="module-head"><span class="module-num">02</span><span class="module-layer-badge">Capa 3 · Identidad</span></div>
+              <h3>Identity Security</h3>
+              <p>MFA, Passwordless, SSPR, PIM, RBAC, Managed Identities y Azure Key Vault.</p>
+              <ul class="module-tags"><li>MFA</li><li>Passwordless</li><li>RBAC</li><li>Key Vault</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/02-identity-security" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="4">
+              <div class="module-head"><span class="module-num">03</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
+              <h3>Cloud Audits</h3>
+              <p>Evaluación de postura y gobernanza en Azure: Secure Score, Compliance Manager y Azure Policy.</p>
+              <ul class="module-tags"><li>Secure Score</li><li>Compliance</li><li>Azure Policy</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/03-cloud-audits" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="4">
+              <div class="module-head"><span class="module-num">04</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
+              <h3>Defender for Cloud</h3>
+              <p>Protección de cargas de trabajo Azure: CSPM, alertas de seguridad y remediación guiada con MCSB.</p>
+              <ul class="module-tags"><li>MCSB</li><li>CSPM</li><li>Alertas</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/04-defender-for-cloud" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="4">
+              <div class="module-head"><span class="module-num">05</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
+              <h3>Defender Suite</h3>
+              <p>Defender for APIs, Containers y Storage. Protección extendida y detección especializada de amenazas.</p>
+              <ul class="module-tags"><li>Defender APIs</li><li>Containers</li><li>Storage</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/05-defender-suite" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="3">
+              <div class="module-head"><span class="module-num">06</span><span class="module-layer-badge">Capa 3 · Identidad</span></div>
+              <h3>Identity Protection</h3>
+              <p>Gobierno avanzado: Conditional Access, PIM/JIT y detección de riesgos en tiempo real.</p>
+              <ul class="module-tags"><li>Conditional Access</li><li>PIM / JIT</li><li>Risk Policies</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/06-identity-protection" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="2">
+              <div class="module-head"><span class="module-num">07</span><span class="module-layer-badge">Capa 2 · DevSecOps</span></div>
+              <h3>DevSecOps</h3>
+              <p>Branch protection, secret scanning, SAST/SCA, IaC scanning, OIDC y pipelines seguras con GitHub Actions.</p>
+              <ul class="module-tags"><li>GitHub Actions</li><li>SAST · SCA</li><li>OIDC</li><li>Docker</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/07-devsecops" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="4">
+              <div class="module-head"><span class="module-num">08</span><span class="module-layer-badge">Capa 4 · Red</span></div>
+              <h3>Seguridad de Red Azure</h3>
+              <p>VNet, NSG, Azure Firewall, Private Link y DDoS Protection para segmentar y proteger la carga de trabajo.</p>
+              <ul class="module-tags"><li>VNet · NSG</li><li>Private Link</li><li>Azure Firewall</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/08-seguridad-red-azure" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="5">
+              <div class="module-head"><span class="module-num">09</span><span class="module-layer-badge">Capa 5 · Detección</span></div>
+              <h3>Microsoft Sentinel</h3>
+              <p>SIEM cloud-native: reglas analíticas KQL, playbooks de respuesta automatizada e investigación de incidentes.</p>
+              <ul class="module-tags"><li>KQL</li><li>Playbooks</li><li>SIEM · SOAR</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/09-microsoft-sentinel" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+            <article class="module-card" role="listitem" data-layer="5">
+              <div class="module-head"><span class="module-num">10</span><span class="module-layer-badge">Capa 5 · Detección</span></div>
+              <h3>ELK Stack Security</h3>
+              <p>Centralización de telemetría con Elasticsearch, Logstash y Kibana. Dashboards analíticos de eventos de seguridad.</p>
+              <ul class="module-tags"><li>Elasticsearch</li><li>Logstash</li><li>Kibana</li></ul>
+              <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/10-elk-stack-security" target="_blank" rel="noreferrer">Ver módulo ↗</a>
+            </article>
+
+          </div>
+
+          <div class="portfolio-cta">
+            <a class="button button-dark" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Ver repositorio completo <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
       <section class="contact-section section-wrap" id="contacto" aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="eyebrow">05 — Contacto</p>
+          <p class="eyebrow">06 — Contacto</p>
           <h2 id="contact-title">¿Hablamos de<br><span>tu próximo reto?</span></h2>
           <p>Si buscas conectar arquitectura de software, Azure y seguridad, estaré encantado de conversar.</p>
           <a class="button button-light" href="mailto:lanuzalorenzo@gmail.com">Escríbeme un email <span aria-hidden="true">↗</span></a>
