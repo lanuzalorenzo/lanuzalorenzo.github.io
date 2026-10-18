@@ -481,3 +481,49 @@ button { color: inherit; }
   justify-content: center;
   margin-top: 12px;
 }
+
+/* ── Profile avatar ──────────────────────────────────────────────── */
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: var(--paper-deep);
+}
+@media (min-width: 768px) {
+  .profile-avatar {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* ── Social icons (GitHub, LinkedIn, Email) ──────────────────────── */
+.social-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+}
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+}
+.contact-label .social-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
