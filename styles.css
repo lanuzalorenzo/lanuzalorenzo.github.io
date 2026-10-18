@@ -39,12 +39,8 @@ button { color: inherit; }
 .section-wrap { width: min(1180px, calc(100% - 80px)); margin-inline: auto; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; height: 78px; padding: 0 max(40px, calc((100vw - 1180px) / 2)); background: color-mix(in srgb, var(--paper) 92%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent); backdrop-filter: blur(14px); }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 850; letter-spacing: -.07em; line-height: 1; text-decoration: none; color: inherit; }
-.wordmark-icon { width: 28px; height: 28px; border-radius: 7px; display: block; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
-.wordmark span { color: var(--ink); }
-.wordmark span b { color: var(--accent); font-weight: inherit; }
-.site-footer .wordmark { font-size: 18px; gap: 8px; }
-.site-footer .wordmark-icon { width: 22px; height: 22px; border-radius: 6px; }
+.wordmark { font-size: 23px; font-weight: 850; letter-spacing: -.09em; line-height: 1; text-decoration: none; color: inherit; }
+.wordmark span { color: var(--accent); }
 .site-nav { display: flex; align-items: center; gap: 34px; }
 .site-nav > a { color: var(--muted); font-size: 12px; font-weight: 650; transition: color .2s; }
 .site-nav > a:hover, .hero-links a:hover, .site-footer a:hover { color: var(--accent-deep); }
