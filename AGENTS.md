@@ -16,6 +16,12 @@ Al trabajar en el repositorio:
 - Mantén `.github/CODEOWNERS` apuntando a `@lanuzalorenzo`; los PR de colaboradores deben requerir su revisión y el bypass de administración debe quedar limitado al propietario.
 - Escribe la interfaz y la documentación en español claro; conserva los nombres oficiales de tecnologías y certificaciones.
 
+## Sincronización y crecimiento
+
+- Cuando cambien módulos, prácticas, estados o enlaces en `portfolio-ciberseguridad-lorenzo`, revisa las secciones `#proyectos` y `#portfolio` y mantén los estados alineados.
+- Mantén el sitio como una página estática y ligera mientras el contenido sea manejable. Si crece, usa subpáginas dentro del mismo dominio (`/portfolio/...`, `/labs/...`) con los mismos estilos y assets.
+- Reserva una GitHub Page satélite independiente solo para una aplicación web funcional interactiva; la documentación y los laboratorios se quedan en el dominio principal o en los README de GitHub.
+
 ## Convenciones de Commits
 
 Todos los commits de este repositorio, realizados por el usuario o por asistentes de IA, deben seguir estrictamente **Conventional Commits**:
