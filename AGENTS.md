@@ -9,6 +9,7 @@ Al trabajar en el repositorio:
 - Mantén coherentes la versión web y el README del perfil cuando cambien la experiencia, formación, certificaciones o enlaces.
 - Si hubo varios periodos en una misma empresa o cliente, represéntalos como puestos separados con sus fechas y funciones propias; no los combines en una sola experiencia.
 - No inventes experiencia, resultados, certificaciones ni validaciones. Distingue la experiencia profesional de los proyectos personales y laboratorios.
+- Mantén los estados, módulos y enlaces alineados con `portfolio-ciberseguridad-lorenzo`. «Runbook preparado» se muestra como «Diseño · runbook listo» y nunca como validado.
 - No añadas secretos, datos personales sensibles ni enlaces a repositorios privados.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
 - Verifica las interacciones y los enlaces afectados al modificar filtros, navegación, tema o contenido de proyectos.
