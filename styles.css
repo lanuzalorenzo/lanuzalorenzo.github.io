@@ -429,11 +429,28 @@ button { color: inherit; }
   border-radius: 999px;
   font-weight: 600;
 }
+.module-card[data-layer="0"] .module-layer-badge { background: rgba(148, 163, 184, 0.16); color: #cbd5e1; }
 .module-card[data-layer="1"] .module-layer-badge { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; }
 .module-card[data-layer="2"] .module-layer-badge { background: rgba(52, 211, 153, 0.15); color: #6ee7b7; }
 .module-card[data-layer="3"] .module-layer-badge { background: rgba(251, 191, 36, 0.15); color: #fde68a; }
 .module-card[data-layer="4"] .module-layer-badge { background: rgba(244, 114, 182, 0.15); color: #f472b6; }
 .module-card[data-layer="5"] .module-layer-badge { background: rgba(167, 139, 250, 0.15); color: #c4b5fd; }
+
+.module-status {
+  align-self: flex-start;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin: 0 0 10px;
+  border: 1px solid transparent;
+}
+.status-validated { color: #6ee7b7; background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.3); }
+.status-partial { color: #fde68a; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3); }
+.status-design { color: #93c5fd; background: rgba(96, 165, 250, 0.12); border-color: rgba(96, 165, 250, 0.3); }
+.status-pending { color: #cbd5e1; background: rgba(148, 163, 184, 0.12); border-color: rgba(148, 163, 184, 0.3); }
 
 .module-card h3 {
   font-size: 1.08rem;
