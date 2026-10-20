@@ -16,7 +16,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 3. En GitHub, abre **Settings → Pages** y selecciona **GitHub Actions** como origen de publicación.
 4. El workflow de `.github/workflows/pages.yml` desplegará el sitio. La dirección será `https://lanuzalorenzo.github.io/`.
 
-Cada `push` a `main` volverá a publicar la web. El botón **Imprimir / guardar CV** abre el diálogo del navegador para imprimir la página o guardarla como PDF.
+Cada `push` a `main` volverá a publicar la web. El botón **Descargar CV** entrega el PDF real alojado en `assets/cv/lanuza-lorenzo-cv.pdf` (CV de 2 páginas optimizado para ATS), no una copia impresa de la página. Para actualizarlo, reemplaza ese fichero manteniendo el mismo nombre: la URL no cambia y los enlaces ya compartidos siguen funcionando.
 
 ## Protección de la rama `main`
 

@@ -137,6 +137,8 @@ button { color: inherit; }
 .skill-card h3 { margin: 29px 0 12px; font-size: 22px; font-weight: 650; letter-spacing: -.05em; line-height: 1.1; }
 .skill-card p { max-width: 245px; margin: 0; color: var(--muted); font-size: 11px; }
 .skill-mark { position: absolute; top: 23px; right: 25px; color: var(--accent-deep); font-size: 17px; }
+.skills-note { margin-top: 26px; max-width: 70ch; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.skills-note + .education { margin-top: 48px; }
 .education { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; margin-top: 87px; }
 .education .eyebrow { margin-bottom: 8px; }
 .education h3 { margin: 0; font-size: 20px; letter-spacing: -.04em; }

@@ -5,7 +5,6 @@ const filterButtons = [...document.querySelectorAll(".filter-button")];
 const projectCards = [...document.querySelectorAll(".project-card")];
 const projectSearch = document.querySelector("#project-search");
 const noResults = document.querySelector("#no-results");
-const printButton = document.querySelector(".print-button");
 const themeColor = document.querySelector('meta[name="theme-color"]');
 const themeStorageKey = "portfolio-theme-v2";
 
@@ -78,7 +77,6 @@ filterButtons.forEach((button) => {
 });
 
 projectSearch?.addEventListener("input", updateProjects);
-printButton?.addEventListener("click", () => window.print());
 
 const year = document.querySelector("#current-year");
 if (year) year.textContent = String(new Date().getFullYear());
