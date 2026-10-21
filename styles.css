@@ -497,7 +497,9 @@ button { color: inherit; }
 }
 .portfolio-cta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 12px;
   margin-top: 12px;
 }
 
