@@ -19,6 +19,7 @@ Al trabajar en el repositorio:
 ## Sincronización y crecimiento
 
 - Cuando cambien módulos, prácticas, estados o enlaces en `portfolio-ciberseguridad-lorenzo`, revisa las secciones `#proyectos` y `#portfolio` y mantén los estados alineados.
+- La sección `#portfolio` enlaza la guía de lectura del portfolio (`docs/guia-de-lectura.md`); si cambia su URL o el nombre del archivo, actualiza el botón «Guía de lectura».
 - Mantén el sitio como una página estática y ligera mientras el contenido sea manejable. Si crece, usa subpáginas dentro del mismo dominio (`/portfolio/...`, `/labs/...`) con los mismos estilos y assets.
 - Reserva una GitHub Page satélite independiente solo para una aplicación web funcional interactiva; la documentación y los laboratorios se quedan en el dominio principal o en los README de GitHub.
 
