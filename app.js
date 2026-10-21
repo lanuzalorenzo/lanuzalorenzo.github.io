@@ -78,5 +78,21 @@ filterButtons.forEach((button) => {
 
 projectSearch?.addEventListener("input", updateProjects);
 
+const timelineItems = [...document.querySelectorAll(".timeline-item")];
+let timelinePrintState = [];
+
+window.addEventListener("beforeprint", () => {
+  timelinePrintState = timelineItems.map((item) => item.open);
+  timelineItems.forEach((item) => {
+    item.open = true;
+  });
+});
+
+window.addEventListener("afterprint", () => {
+  timelineItems.forEach((item, index) => {
+    item.open = timelinePrintState[index] ?? item.open;
+  });
+});
+
 const year = document.querySelector("#current-year");
 if (year) year.textContent = String(new Date().getFullYear());
