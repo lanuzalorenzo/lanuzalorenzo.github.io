@@ -1,6 +1,6 @@
 # Web personal — Lorenzo Lanuza
 
-Sitio estático de presentación profesional, experiencia, especialidades y proyectos. El portfolio de ciberseguridad está enlazado como proyecto destacado, no como tema principal.
+Sitio estático de presentación profesional, experiencia, especialidades y proyectos. El laboratorio de seguridad —portfolio y su API— está enlazado como proyecto destacado, no como tema principal.
 
 ## Publicar en GitHub Pages
 

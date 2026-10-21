@@ -267,14 +267,13 @@
       <section class="projects-section" id="proyectos" aria-labelledby="projects-title">
         <div class="section-wrap">
           <div class="section-heading section-heading-row">
-            <div><p class="eyebrow">04 — Selección de proyectos</p><h2 id="projects-title">Trabajo que<br><span>puedes explorar.</span></h2></div>
-            <p class="heading-note">Una muestra práctica de cómo aplico seguridad y arquitectura en escenarios reales.</p>
+            <div><p class="eyebrow">04 — Laboratorios y proyectos</p><h2 id="projects-title">Trabajo que<br><span>puedes explorar.</span></h2></div>
+            <p class="heading-note">Dos laboratorios: un modelo de seguridad sobre una API real y un entorno de IA local independiente.</p>
           </div>
           <div class="project-controls">
             <div class="filter-list" role="group" aria-label="Filtrar proyectos por categoría">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>03</span></button>
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>02</span></button>
               <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cloud Security</button>
-              <button class="filter-button" type="button" data-filter="engineering" aria-pressed="false">Ingeniería</button>
               <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">IA &amp; Herramientas</button>
             </div>
             <label class="search-label">
@@ -286,57 +285,44 @@
           <p class="sr-only" id="project-status" role="status" aria-live="polite"></p>
           <div class="project-grid" id="project-grid">
 
-            <!-- PROYECTO 01: Portfolio Ciberseguridad -->
-            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios zero trust pim rbac kql elk">
+            <!-- PROYECTO 01: Laboratorio de seguridad cloud (portfolio + carga de trabajo) -->
+            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios zero trust pim rbac kql elk api ecommerce lab-api-local-azure dotnet net jwt oauth pkce arquitectura backend rest bicep">
               <div class="project-visual project-visual-cloud">
-                <span class="project-label">01 / CLOUD SECURITY</span>
+                <span class="project-label">01 / LABORATORIO DE SEGURIDAD CLOUD</span>
                 <div class="cloud-diagram" aria-hidden="true"><span>IDENTITY</span><b>+</b><span>DEFENSE</span><b>+</b><span>DETECTION</span></div>
                 <span class="visual-caption">12 MÓDULOS · DEFENSE-IN-DEPTH</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>Cloud Security · DevSecOps</span><span>Azure · .NET</span></div>
-                <h3>Portfolio de Ciberseguridad Cloud</h3>
-                <p>12 módulos con estado de validación explícito: Entra ID, Defender, Sentinel, PIM/JIT, auditorías cloud, DevSecOps, hacking ético de APIs y forense cloud. Modelo de Defense-in-Depth alrededor de una API real en .NET.</p>
+                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span><span>2 repositorios</span></div>
+                <h3>Laboratorio de seguridad cloud</h3>
+                <p>Un modelo de Defense-in-Depth aplicado a una sola carga de trabajo: <strong>EcommerceApi</strong>, una API .NET 10 con OAuth 2.0/PKCE y validación estricta de JWT. El portfolio documenta los 12 módulos con su estado y evidencia; la API es el activo sobre el que se aplican los controles.</p>
                 <div class="project-tags" aria-label="Tecnologías">
-                  <span>OAuth 2.0 · PKCE</span><span>KQL</span><span>CodeQL · Trivy</span><span>Bicep</span>
+                  <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
                 </div>
-                <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Explorar el portfolio <span aria-hidden="true">↗</span></a>
+                <div class="project-links">
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Portfolio · 12 módulos <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">EcommerceApi · carga de trabajo <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
             </article>
 
-            <!-- PROYECTO 02: Lab API Local Azure -->
-            <article class="project-card" data-category="engineering" data-search="api local azure dotnet net ecommerce microservicios jwt oauth pkce arquitectura backend rest">
-              <div class="project-visual project-visual-engineering">
-                <span class="project-label">02 / SOFTWARE ENGINEERING</span>
-                <div class="architecture-diagram" aria-hidden="true"><span>API</span><i></i><span>JWT</span><i></i><span>AZURE</span></div>
-                <span class="visual-caption">ECOMMERCE API · .NET · SECURE BY DESIGN</span>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span>Arquitectura · AppSec</span><span>.NET · Azure</span></div>
-                <h3>EcommerceApi — Lab API Local Azure</h3>
-                <p>Web API empresarial en .NET con arquitectura desacoplada, autenticación federada OAuth 2.0/PKCE y validación estricta de JWT. Carga de trabajo central del portfolio de ciberseguridad.</p>
-                <div class="project-tags" aria-label="Tecnologías">
-                  <span>.NET</span><span>JWT · JWKS</span><span>Azure App Service</span>
-                </div>
-                <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <!-- PROYECTO 03: AI Agent Local Lab -->
+            <!-- PROYECTO 02: AI Agent Local Lab (independiente) -->
             <article class="project-card" data-category="ai" data-search="ia inteligencia artificial agente local ollama ubuntu server headless netplan ssh continue llm copilot vscode asistente codigo">
               <div class="project-visual project-visual-ai">
-                <span class="project-label">03 / AI &amp; DEVELOPER TOOLING</span>
+                <span class="project-label">02 / AI &amp; DEVELOPER TOOLING</span>
                 <div class="ai-diagram" aria-hidden="true"><span>LLM</span><i></i><span>AGENT</span><i></i><span>CODE</span></div>
                 <span class="visual-caption">LOCAL · BARE-METAL · OFFLINE</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>IA Local · Bare-Metal Server</span><span>Ubuntu Server · Ollama</span></div>
+                <div class="project-meta"><span>Laboratorio independiente · IA local</span><span>Ubuntu Server · Ollama</span></div>
                 <h3>AI Agent Local Lab</h3>
-                <p>Servidor bare-metal dedicado (Ubuntu Server headless) para inferencia de LLMs con Ollama (Llama 3, Mistral) y administración remota SSH. Optimización de memoria, red declarativa con Netplan y asistencia de código local.</p>
+                <p>Servidor bare-metal dedicado (Ubuntu Server headless) para inferencia de LLMs con Ollama (Llama 3, Mistral) y administración remota SSH. Optimización de memoria, red declarativa con Netplan y asistencia de código local. No forma parte del modelo de seguridad.</p>
                 <div class="project-tags" aria-label="Tecnologías">
                   <span>Ubuntu Server</span><span>Netplan</span><span>SSH</span><span>Ollama</span><span>Llama 3</span>
                 </div>
-                <a class="project-link" href="https://github.com/lanuzalorenzo/ai-agent-local-lab" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+                <div class="project-links">
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/ai-agent-local-lab" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+                </div>
               </div>
             </article>
 
@@ -351,7 +337,7 @@
           <div class="section-heading">
             <p class="eyebrow">05 — Portfolio de Ciberseguridad</p>
             <h2 id="portfolio-title">Doce módulos.<br><span>Un modelo cohesivo.</span></h2>
-            <p class="portfolio-intro">El portfolio articula la seguridad como un modelo de <strong>Defense-in-Depth</strong> alrededor de la API <code>EcommerceApi</code>. Cada módulo declara su estado real: <strong>validado</strong>, <strong>parcial</strong>, <strong>diseño</strong> o <strong>pendiente</strong>. No se presenta un diseño como una validación.</p>
+            <p class="portfolio-intro">El portfolio articula la seguridad como un modelo de <strong>Defense-in-Depth</strong> alrededor de una sola carga de trabajo: la API <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer"><code>EcommerceApi</code> <span aria-hidden="true">↗</span></a>. Cada módulo declara su estado real: <strong>validado</strong>, <strong>parcial</strong>, <strong>diseño</strong> o <strong>pendiente</strong>. No se presenta un diseño como una validación.</p>
           </div>
 
           <div class="portfolio-controls">
