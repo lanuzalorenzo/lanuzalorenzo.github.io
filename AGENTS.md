@@ -6,7 +6,7 @@ Al trabajar en el repositorio:
 
 - Conserva el enfoque de presentación profesional general; el sitio no debe convertirse en una página dedicada únicamente a ciberseguridad.
 - Comprueba el contenido existente antes de cambiar la estructura o añadir dependencias. El sitio debe seguir siendo estático y compatible con GitHub Pages, salvo que se solicite expresamente otro enfoque.
-- Mantén coherentes la versión web y el README del perfil cuando cambien la experiencia, formación, certificaciones o enlaces.
+- Este sitio es la fuente única de trayectoria, stack, formación y certificaciones. El README del perfil (`lanuzalorenzo`) es solo una tarjeta de presentación: al cambiar contenido largo, actualiza la web y deja en el README únicamente el posicionamiento, los proyectos y los enlaces.
 - Si hubo varios periodos en una misma empresa o cliente, represéntalos como puestos separados con sus fechas y funciones propias; no los combines en una sola experiencia.
 - No inventes experiencia, resultados, certificaciones ni validaciones. Distingue la experiencia profesional de los proyectos personales y laboratorios.
 - Mantén los estados, módulos y enlaces alineados con `portfolio-ciberseguridad-lorenzo`. «Runbook preparado» se muestra como «Diseño · runbook listo» y nunca como validado.
