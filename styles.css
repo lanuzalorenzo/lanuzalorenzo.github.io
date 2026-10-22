@@ -189,16 +189,46 @@ button { color: inherit; }
   .project-card .project-body p { min-height: 0; max-width: 56ch; }
   .project-card .project-body h3 { font-size: 24px; }
 }
-.project-visual { position: relative; display: grid; place-items: center; min-height: 235px; overflow: hidden; background-color: #10253a; }
-.project-visual::before, .project-visual::after { position: absolute; width: 280px; height: 280px; border: 1px solid #51b8ff38; border-radius: 50%; content: ""; }
-.project-visual::after { width: 190px; height: 190px; }
+.project-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 235px;
+  overflow: hidden;
+  background-color: #10253a;
+  color: #dcecf7;
+  --graphic-line: #51b8ff;
+  --graphic-line-soft: #51b8ff45;
+  --graphic-ink: #e6f3fc;
+  --graphic-muted: #9dbccf;
+}
 .project-visual-cloud { background-image: radial-gradient(#ffffff0b 1px, transparent 1px); background-size: 14px 14px; }
-.project-label, .visual-caption { position: absolute; z-index: 1; left: 21px; color: #b8c9d6; font-size: 8px; font-weight: 750; letter-spacing: .14em; }
+.project-graphic { position: absolute; inset: 0; width: 100%; height: 100%; }
+.project-label, .visual-caption { position: absolute; z-index: 2; left: 21px; color: var(--graphic-muted); font-size: 8.5px; font-weight: 750; letter-spacing: .14em; }
 .project-label { top: 19px; }
-.visual-caption { bottom: 17px; left: auto; color: var(--accent); }
-.cloud-diagram { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; }
-.cloud-diagram span { display: grid; place-items: center; width: 76px; height: 76px; padding: 6px; border: 1px solid #51b8ff85; border-radius: 50%; color: #e3f2fc; font-size: 8px; font-weight: 750; letter-spacing: .08em; text-align: center; }
-.cloud-diagram b { color: var(--accent); font-size: 14px; font-weight: 400; }
+.visual-caption { bottom: 13px; left: auto; color: var(--graphic-line); }
+
+/* ── SVG gráfico de cada visual ───────────────────────────────────── */
+.graphic-axis path { fill: none; stroke: var(--graphic-line-soft); stroke-width: 1; stroke-dasharray: 2 6; }
+.graphic-layer ellipse { fill: #ffffff0a; stroke: var(--graphic-line-soft); stroke-width: 1; }
+.graphic-layer-base ellipse { fill: #ffffff12; stroke: var(--graphic-line); stroke-opacity: .6; }
+.graphic-pins circle { fill: var(--graphic-line); opacity: .8; }
+.graphic-layer text,
+.graphic-node text,
+.graphic-workload text,
+.graphic-boundary text { font-family: var(--sans); }
+.graphic-layer text { fill: var(--graphic-ink); font-size: 9px; font-weight: 750; letter-spacing: .22em; text-anchor: middle; dominant-baseline: middle; }
+.graphic-workload rect { fill: #071522cc; stroke: var(--graphic-line-soft); stroke-dasharray: 3 3; }
+.graphic-workload text { fill: var(--graphic-muted); font-size: 9px; font-weight: 650; letter-spacing: .04em; text-anchor: middle; dominant-baseline: middle; }
+.graphic-boundary rect { fill: #ffffff05; stroke: var(--graphic-line-soft); stroke-width: 1; stroke-dasharray: 5 5; }
+.graphic-boundary text { fill: var(--graphic-muted); font-size: 8px; font-weight: 750; letter-spacing: .2em; }
+.graphic-node rect { fill: #ffffff0a; stroke: var(--graphic-line-soft); stroke-width: 1; }
+.graphic-node-core rect { fill: #7dd3fc1f; stroke: var(--graphic-line); stroke-opacity: .6; }
+.graphic-node .node-title { fill: var(--graphic-ink); font-size: 10px; font-weight: 750; letter-spacing: .12em; text-anchor: middle; dominant-baseline: middle; }
+.graphic-node .node-sub { fill: var(--graphic-muted); font-size: 8px; font-weight: 550; letter-spacing: .05em; text-anchor: middle; dominant-baseline: middle; }
+.graphic-link line { stroke: var(--graphic-line); stroke-width: 1.2; stroke-dasharray: 4 5; animation: graphic-flow 1.8s linear infinite; }
+.graphic-link path { fill: none; stroke: var(--graphic-line); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes graphic-flow { to { stroke-dashoffset: -18; } }
 .project-body { padding: 22px 23px 25px; }
 .project-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 15px; color: var(--accent); font-size: 11px; font-weight: 650; }
 .project-meta span { white-space: nowrap; }
@@ -297,7 +327,7 @@ button { color: inherit; }
   .filter-button { padding: 7px 9px; font-size: 10px; }
   .search-label { width: 100%; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-visual { min-height: 210px; }
+  .project-visual { min-height: 0; aspect-ratio: 460 / 300; max-height: 340px; }
   .module-group-head { grid-template-columns: auto 1fr auto; gap: 10px; padding: 16px 0; }
   .group-count { display: none; }
   .group-title { font-size: 0.98rem; }
@@ -311,6 +341,7 @@ button { color: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .graphic-link line { animation: none !important; }
 }
 @media print {
   :root[data-theme] { color-scheme: light; --paper: #fff; --paper-deep: #fff; --ink: #17211e; --muted: #4d5952; --line: #cbd0c8; --accent: #087bb8; --accent-deep: #006693; --dark: #fff; --dark-soft: #f4f5f1; }
@@ -353,36 +384,17 @@ button { color: inherit; }
   letter-spacing: 0.04em;
   padding: 3px 8px;
   border-radius: 999px;
-  background: var(--paper-deep);
-  color: var(--muted);
-  border: 1px solid var(--line);
+  background: #ffffff0f;
+  color: #b9cfdd;
+  border: 1px solid #ffffff24;
 }
 
 /* ── Project visuals ──────────────────────────────────────────────── */
 .project-visual-ai {
-  background: radial-gradient(circle at 75% 20%, rgba(138, 75, 255, 0.28), transparent 50%),
-              linear-gradient(145deg, #160f26, #090614);
-  color: #d0bfff;
-}
-.ai-diagram {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-}
-.ai-diagram span {
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-.ai-diagram i {
-  display: inline-block;
-  width: 14px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  background-color: #0b1e2d;
+  background-image: linear-gradient(158deg, #123a54, #07131f 74%);
+  --graphic-line: #7dd3fc;
+  --graphic-line-soft: #7dd3fc45;
 }
 
 /* ── Portfolio Section ────────────────────────────────────────────── */
