@@ -40,15 +40,20 @@ themeToggle?.addEventListener("click", () => {
   }
 });
 
+const menuToggleLabel = menuToggle?.querySelector(".sr-only");
+
+function setMenuOpen(isOpen) {
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  siteNav?.classList.toggle("is-open", isOpen);
+  if (menuToggleLabel) menuToggleLabel.textContent = isOpen ? "Cerrar menú" : "Abrir menú";
+}
+
 menuToggle?.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  siteNav?.classList.toggle("is-open", !isOpen);
+  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
 });
 
 function closeMenu() {
-  menuToggle?.setAttribute("aria-expanded", "false");
-  siteNav?.classList.remove("is-open");
+  setMenuOpen(false);
 }
 
 siteNav?.querySelectorAll("a").forEach((link) => {

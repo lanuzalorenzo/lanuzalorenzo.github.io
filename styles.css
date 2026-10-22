@@ -42,7 +42,7 @@ button { color: inherit; }
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; height: 78px; padding: 0 max(40px, calc((100vw - 1180px) / 2)); background: color-mix(in srgb, var(--paper) 92%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent); backdrop-filter: blur(14px); }
 .wordmark { font-size: 23px; font-weight: 850; letter-spacing: -.09em; line-height: 1; text-decoration: none; color: inherit; }
 .wordmark span { color: var(--accent); }
-.site-nav { display: flex; align-items: center; gap: 34px; }
+.site-nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 34px); }
 .site-nav > a { position: relative; color: var(--muted); font-size: 12px; font-weight: 650; transition: color .2s; }
 .site-nav > a.is-active { color: var(--ink); }
 .site-nav > a.is-active::after { position: absolute; right: 0; bottom: -7px; left: 0; height: 1px; background: var(--accent); content: ""; }
