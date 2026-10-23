@@ -7,7 +7,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 - **Perfil y trayectoria:** experiencia profesional, formación y certificaciones.
 - **Especialidades:** arquitectura, DevSecOps y Cloud Security.
 - **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y AI Agent Local Lab.
-- **Portfolio de ciberseguridad:** doce módulos y un anexo con su estado de validación.
+- **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con siete evidencias indexadas (tres de ejecución, cuatro documentales o verificables).
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
 
 ## Publicar en GitHub Pages
