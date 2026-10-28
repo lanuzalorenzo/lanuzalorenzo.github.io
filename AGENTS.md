@@ -12,6 +12,12 @@ Este repositorio contiene la web personal de Lorenzo Lanuza, publicada con GitHu
 - No añadas secretos, datos personales sensibles ni enlaces a repositorios privados.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
 
+## Convenciones visuales
+- La identidad visual de todo el workspace está en [`docs/identidad-visual.md`](docs/identidad-visual.md): paleta, formato de icono, dónde vive cada pieza y qué no se puede hacer. Cualquier gráfico nuevo la sigue.
+- La paleta son las variables de `:root` en `styles.css`; no se introducen colores fuera de ellas.
+- Iconos: 64×64, `rx=16`, fondo navy con degradado y glifo blanco relleno. Sin etiqueta, sin número y sin color por repositorio ni por módulo.
+- Nada de dependencias externas para iconos: SVG en línea o archivos del propio repositorio.
+
 ## Convenciones técnicas
 - Sitio estático compatible con GitHub Pages (sin dependencias externas para diagramas: SVG en línea).
 - `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; los PR requieren su revisión; bypass de administración limitado al propietario.
