@@ -1,36 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="ll-t ll-d">
+  <title id="ll-t">Marca LL</title>
+  <desc id="ll-d">Monograma de dos eles, la primera blanca y la segunda cian, con un punto cian sobre la segunda.</desc>
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg-ll" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#07131e"/>
       <stop offset="100%" stop-color="#0e2a47"/>
     </linearGradient>
-
-    <!-- Vibrant Cyan-Blue Gradient for Monogram -->
-    <linearGradient id="cyanGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7dd3fc"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
-    </linearGradient>
-
-    <!-- Outer Glow / Accent Border Gradient -->
-    <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.3"/>
+    <linearGradient id="brd-ll" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.5"/>
     </linearGradient>
   </defs>
-
-  <!-- Container Base with rounded corners -->
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="url(#borderGrad)" stroke-width="2"/>
-
-  <!-- First 'L' (Clean Crisp White/Silver) -->
-  <path d="M14 15h8v24h12v7H14z" fill="#f8fafc"/>
-
-  <!-- Second 'L' (Glowing Electric Cyan Overlay with Depth) -->
-  <path d="M26 21h8v18h12v7H26z" fill="url(#cyanGrad)"/>
-
-  <!-- Security Pulse Dot (Vibrant Neon Cyan Accent) -->
-  <circle cx="50" cy="42.5" r="4.5" fill="#38bdf8"/>
-  <circle cx="50" cy="42.5" r="2" fill="#ffffff"/>
+  <rect width="64" height="64" rx="16" fill="url(#bg-ll)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="url(#brd-ll)" stroke-width="2"/>
+  <path d="M10 14H18V42H26V50H10Z" fill="#f8fafc"/>
+  <path d="M30 24H38V42H54V50H30Z" fill="#38bdf8"/>
+  <circle cx="42" cy="17" r="5" fill="#38bdf8"/>
 </svg>

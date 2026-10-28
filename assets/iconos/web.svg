@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <title>Web personal</title>
-  <desc>Marca LL del sitio.</desc>
+  <desc>Marca LL del sitio: dos eles escalonadas, la primera blanca y la segunda cian, con punto cian.</desc>
   <defs>
     <linearGradient id="bg-web" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#07131e"/>
@@ -13,8 +13,9 @@
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#bg-web)"/>
   <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="url(#brd-web)" stroke-width="2"/>
-  <g transform="translate(-9.25 -9.94) scale(1.375)" fill="#f8fafc">
-    <path d="M14 15h8v24h12v7H14z" fill="#f8fafc"/>
-    <path d="M26 21h8v18h12v7H26z" fill="#38bdf8"/>
+  <g transform="translate(2.909 2.927) scale(0.90909)">
+    <path d="M10 14H18V42H26V50H10Z" fill="#f8fafc"/>
+    <path d="M30 24H38V42H54V50H30Z" fill="#38bdf8"/>
+    <circle cx="42" cy="17" r="5" fill="#38bdf8"/>
   </g>
 </svg>
