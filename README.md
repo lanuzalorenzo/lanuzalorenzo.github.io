@@ -1,3 +1,5 @@
+<img src="assets/iconos/web.svg" width="64" alt="Icono de la web personal">
+
 # Web personal — Lorenzo Lanuza
 
 Sitio estático de presentación profesional, experiencia, especialidades y proyectos. Los dos laboratorios —seguridad cloud sobre la API y AI Agent Local Lab— se presentan como proyectos destacados, no como tema principal. Los diagramas de cada proyecto son SVG en línea, sin dependencias externas.
