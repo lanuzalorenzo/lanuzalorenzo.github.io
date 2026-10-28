@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#081725">
+    <meta name="theme-color" content="#07131e">
     <meta
       name="description"
       content="Lorenzo Lanuza Arellano: Software Architect & Cloud Security. Arquitectura .NET, Azure y DevSecOps."
@@ -74,16 +74,13 @@
         <a href="#proyectos">Proyectos</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contacto">Contacto</a>
-        <button class="theme-toggle" type="button" aria-label="Cambiar a tema claro" aria-pressed="true" title="Cambiar tema">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-        </button>
       </nav>
     </header>
 
     <main id="contenido">
       <section class="hero section-wrap" id="inicio" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> Huesca, España <span class="eyebrow-separator">/</span> Disponible en remoto</p>
+          <p class="eyebrow"><span class="status-dot"></span> Huesca, España <span class="eyebrow-separator" aria-hidden="true">/</span> Disponible en remoto</p>
           <div class="hero-heading">
             <h1 id="hero-title">Lorenzo<br><span>Lanuza</span></h1>
             <figure class="hero-portrait">
@@ -130,7 +127,12 @@
 
       <section class="ticker" aria-label="Especialidades">
         <div class="ticker-track">
-          <span>ARQUITECTURA DE SOFTWARE</span><i>✳</i><span>AZURE &amp; .NET</span><i>✳</i><span>DEVSECOPS</span><i>✳</i><span>CLOUD SECURITY</span><i>✳</i><span>ARQUITECTURA DE SOFTWARE</span><i>✳</i><span>AZURE &amp; .NET</span><i>✳</i><span>DEVSECOPS</span><i>✳</i><span>CLOUD SECURITY</span><i>✳</i>
+          <div class="ticker-set">
+            <span>ARQUITECTURA DE SOFTWARE</span><i aria-hidden="true">✳</i><span>AZURE &amp; .NET</span><i aria-hidden="true">✳</i><span>DEVSECOPS</span><i aria-hidden="true">✳</i><span>CLOUD SECURITY</span><i aria-hidden="true">✳</i>
+          </div>
+          <div class="ticker-set" aria-hidden="true">
+            <span>ARQUITECTURA DE SOFTWARE</span><i>✳</i><span>AZURE &amp; .NET</span><i>✳</i><span>DEVSECOPS</span><i>✳</i><span>CLOUD SECURITY</span><i>✳</i>
+          </div>
         </div>
       </section>
 

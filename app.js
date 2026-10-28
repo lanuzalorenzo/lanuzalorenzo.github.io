@@ -1,4 +1,3 @@
-const themeToggle = document.querySelector(".theme-toggle");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll('.site-nav > a[href^="#"]')];
@@ -9,37 +8,6 @@ const noResults = document.querySelector("#no-results");
 const projectStatus = document.querySelector("#project-status");
 const portfolioExpand = document.querySelector(".portfolio-expand");
 const moduleGroups = [...document.querySelectorAll(".module-group")];
-const themeColor = document.querySelector('meta[name="theme-color"]');
-const themeStorageKey = "portfolio-theme-v2";
-
-function setTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  if (themeColor) themeColor.content = theme === "dark" ? "#081725" : "#edf5fa";
-  if (themeToggle) {
-    const isDark = theme === "dark";
-    themeToggle.setAttribute("aria-label", `Cambiar a tema ${isDark ? "claro" : "oscuro"}`);
-    themeToggle.setAttribute("aria-pressed", String(isDark));
-  }
-}
-
-let savedTheme = null;
-try {
-  savedTheme = localStorage.getItem(themeStorageKey);
-} catch (error) {
-  console.warn("No se pudo recuperar la preferencia de tema.", error);
-}
-setTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : "dark");
-
-themeToggle?.addEventListener("click", () => {
-  const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-  setTheme(theme);
-  try {
-    localStorage.setItem(themeStorageKey, theme);
-  } catch (error) {
-    console.warn("No se pudo guardar la preferencia de tema.", error);
-  }
-});
-
 const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 
 function setMenuOpen(isOpen) {
