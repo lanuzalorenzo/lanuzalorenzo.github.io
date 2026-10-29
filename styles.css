@@ -56,8 +56,8 @@ button { color: inherit; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 27px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 22px; min-height: 48px; padding: 0 19px; border: 1px solid transparent; cursor: pointer; font-size: 11px; font-weight: 700; transition: transform .2s, background .2s; }
 .button:hover { transform: translateY(-2px); }
-.button-dark { background: var(--surface-deep); color: var(--ink); }
-.button-dark:hover { background: color-mix(in srgb, var(--surface-deep) 82%, var(--accent)); }
+.button-dark { background: var(--surface-deep, var(--paper-deep)); color: var(--ink); }
+.button-dark:hover { background: color-mix(in srgb, var(--surface-deep, var(--paper-deep)) 82%, var(--accent)); }
 .button-quiet { background: transparent; border-color: var(--line-strong); }
 .button-quiet:hover { background: var(--paper-deep); }
 .button span { font-size: 15px; }
@@ -261,6 +261,10 @@ button { color: inherit; }
   .education { gap: 28px; }
   .contact-section { gap: 45px; }
   .site-footer { padding-inline: 24px; }
+  .workload-section .spec-row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 5px; }
+  .workload-section .spec-name { grid-column: 1 / -1; }
+  .workload-section .spec-row .module-status { grid-column: 1; justify-self: start; }
+  .workload-section .spec-row .module-link, .workload-section .spec-none { grid-column: 2; justify-self: end; }
 }
 @media (max-width: 620px) {
   html { scroll-padding-top: 72px; }
@@ -296,6 +300,7 @@ button { color: inherit; }
   .metric strong { font-size: 32px; }
   .metric > span { font-size: 8px; }
   .experience-section, .projects-section { padding: 64px 0 70px; }
+  .workload-section { padding: 64px 0 70px; }
   .section-heading-row { display: block; }
   .section-heading-row .heading-note { max-width: 350px; margin-top: 17px; }
   .timeline-summary { grid-template-columns: 1fr auto; column-gap: 12px; padding: 18px 0; }
@@ -324,7 +329,7 @@ button { color: inherit; }
   .group-count { display: none; }
   .group-title { font-size: 0.98rem; }
   .module-group-body { padding-bottom: 20px; }
-  .portfolio-controls { align-items: flex-start; flex-direction: column; }
+  .portfolio-section .portfolio-controls, .workload-section .portfolio-controls { align-items: flex-start; flex-direction: column; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; padding-top: 64px; padding-bottom: 64px; }
   .site-footer { grid-template-columns: auto 1fr; gap: 16px; padding: 18px 20px; }
   .site-footer p { justify-self: end; text-align: right; }
@@ -344,7 +349,7 @@ button { color: inherit; }
   .hero h1 { font-size: 54pt; }
   .hero-portrait { width: 80px; }
   .hero-intro { max-width: 100%; }
-  .content-section, .experience-section, .projects-section, .contact-section { padding: 24px 0; background: #fff; color: #17211e; break-inside: avoid; }
+  .content-section, .experience-section, .projects-section, .portfolio-section, .workload-section, .contact-section { padding: 24px 0; background: #fff; color: #17211e; break-inside: avoid; }
   .section-heading h2, .contact-section h2 { font-size: 28pt; }
   .section-heading { margin-bottom: 20px; }
   .profile-grid, .contact-section { gap: 20px; }
@@ -528,6 +533,30 @@ button { color: inherit; }
   gap: 12px;
   margin-top: 12px;
 }
+
+/* ── Workload section (EcommerceApi) ──────────────────────────────── */
+.workload-section {
+  padding: 88px 0;
+  border-top: 1px solid var(--line);
+}
+.spec-table { border-top: 1px solid color-mix(in srgb, var(--line) 55%, transparent); }
+.spec-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 13rem);
+  align-items: center;
+  gap: 18px;
+  padding: 11px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+}
+.spec-name {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--ink) 80%, transparent);
+}
+.spec-name code { font-size: 0.92em; color: var(--accent-hover); }
+.spec-row .module-status { margin: 0; align-self: center; white-space: nowrap; }
+.spec-row .module-link { justify-self: end; text-align: right; font-size: 0.8rem; }
+.spec-none { justify-self: end; color: color-mix(in srgb, var(--ink) 35%, transparent); }
 
 /* ── Social icons (GitHub, LinkedIn, Email) ──────────────────────── */
 .social-icon {

@@ -73,6 +73,7 @@
         <a href="#especialidades">Especialidades</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#api">API</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -88,7 +89,7 @@
             </figure>
           </div>
           <p class="hero-role">Software Architect <span>&amp; Cloud Security</span></p>
-          <p class="hero-intro">Diseño software distribuido, seguro y preparado para evolucionar. Conecto arquitectura, DevSecOps y Cloud Security para llevar buenas ideas a producción.</p>
+          <p class="hero-intro">Diseño software distribuido, seguro y preparado para evolucionar. Conecto arquitectura, DevSecOps y ciberseguridad para llevar buenas ideas a producción, con especialización en Cloud Security.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#proyectos">Explorar proyectos <span aria-hidden="true">↘</span></a>
             <a class="button button-quiet" href="assets/cv/lanuza-lorenzo-cv.pdf" download="Lanuza-Lorenzo-CV.pdf" type="application/pdf">Descargar CV <span aria-hidden="true">↗</span></a>
@@ -115,7 +116,7 @@
           <div class="art-core"><span>ARQ</span><strong>+</strong><span>SEC</span></div>
           <span class="orbit-label label-top">01 / ARCHITECTURE</span>
           <span class="orbit-label label-right">02 / DEVSECOPS</span>
-          <span class="orbit-label label-bottom">03 / CLOUD SECURITY</span>
+          <span class="orbit-label label-bottom">03 / CYBERSECURITY</span>
           <span class="art-cross cross-one">+</span>
           <span class="art-cross cross-two">+</span>
           <span class="art-line"></span>
@@ -291,7 +292,7 @@
           <div class="project-grid" id="project-grid">
 
             <!-- PROYECTO 01: Laboratorio de seguridad cloud (portfolio + carga de trabajo) -->
-            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios zero trust pim rbac kql elk api ecommerce lab-api-local-azure dotnet net jwt oauth pkce arquitectura backend rest bicep">
+            <article class="project-card" data-category="security" data-search="portfolio ciberseguridad cloud security azure entra id defender sentinel devsecops laboratorios zero trust pim rbac kql elk api ecommerce lab-api-local-azure dotnet net jwt oauth pkce arquitectura backend rest bicep capas cqrs outbox sqlite xunit pruebas adr docker ci">
               <div class="project-visual project-visual-cloud">
                 <span class="project-label">01 / LABORATORIO DE SEGURIDAD CLOUD</span>
                 <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
@@ -326,13 +327,13 @@
               <div class="project-body">
                 <div class="project-meta"><span>Proyecto integrado · Cloud Security</span><span>2 repositorios</span></div>
                 <h3>Laboratorio de seguridad cloud</h3>
-                <p>Un modelo de Defense-in-Depth aplicado a una sola carga de trabajo: <strong>EcommerceApi</strong>, una API .NET 10 con OAuth 2.0/PKCE y validación estricta de JWT. El portfolio documenta los 12 módulos con su estado y evidencia; la API es el activo sobre el que se aplican los controles.</p>
+                <p>Un modelo de Defense-in-Depth aplicado a una sola carga de trabajo: <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas y 78 pruebas en CI. El portfolio documenta los 12 módulos con su estado y evidencia; la ingeniería de la API, en la sección siguiente.</p>
                 <div class="project-tags" aria-label="Tecnologías">
                   <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
                 </div>
                 <div class="project-links">
                   <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Portfolio · 12 módulos <span aria-hidden="true">↗</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">EcommerceApi · carga de trabajo <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">EcommerceApi · 78 pruebas <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>
@@ -401,7 +402,7 @@
 
           <div class="portfolio-controls">
             <p>12 módulos, agrupados por capa del modelo.</p>
-            <button class="portfolio-expand" type="button" aria-expanded="false" aria-controls="capa-1 capa-2 capa-3 capa-4 capa-5">Desplegar todos</button>
+            <button class="portfolio-expand" type="button" data-expand-all="#portfolio" aria-expanded="false" aria-controls="capa-1 capa-2 capa-3 capa-4 capa-5">Desplegar todos</button>
           </div>
 
           <div class="module-groups">
@@ -593,9 +594,239 @@
         </div>
       </section>
 
+      <!-- ========= LA CARGA DE TRABAJO — ingeniería de EcommerceApi ========= -->
+      <section class="workload-section" id="api" aria-labelledby="workload-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">06 — La carga de trabajo</p>
+            <h2 id="workload-title">EcommerceApi.<br><span>Por dentro.</span></h2>
+            <p class="portfolio-intro">No es una maqueta: es el banco de pruebas del portfolio y, a la vez, un backend completo. .NET 10 con arquitectura por capas, autenticación con Entra ID, persistencia transaccional con outbox y 78 pruebas que se ejecutan en CI. Cuatro <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/docs/adr" target="_blank" rel="noreferrer">ADR <span aria-hidden="true">↗</span></a> documentan las decisiones. Lo que sigue es el estado real de cada control, con enlace a su evidencia: lo que no está hecho también aparece.</p>
+          </div>
+
+          <div class="portfolio-controls">
+            <p>5 grupos · 28 controles y límites, con su estado.</p>
+            <button class="portfolio-expand" type="button" data-expand-all="#api" aria-expanded="false" aria-controls="api-seguridad api-pruebas api-datos api-entrega api-alcance">Desplegar todos</button>
+          </div>
+
+          <div class="module-groups">
+
+            <details class="module-group" id="api-seguridad" open>
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Seguridad de aplicación</span>
+                <span class="group-count">8 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Validación de JWT: firma, emisor, audiencia, expiración y desfase de reloj</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Autorización por endpoint con política por defecto</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Controllers/OrdersController.cs" target="_blank" rel="noreferrer">OrdersController.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">BOLA/IDOR: los pedidos se filtran por <code>UserId</code></span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Controllers/OrdersController.cs" target="_blank" rel="noreferrer">OrdersController.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Mass assignment cerrado con DTO de entrada</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/EcommerceApi/Models" target="_blank" rel="noreferrer">Models ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CORS restrictivo: sin allowlist se deniega el origen</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Rate limiting de 120 peticiones por minuto y por IP</span>
+                    <span class="module-status status-partial">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Cuerpo de petición limitado a 16 KB en escrituras</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Problem Details y cabeceras de seguridad</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="api-pruebas">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Pruebas y arquitectura</span>
+                <span class="group-count">78 pruebas</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Regla de dependencias entre capas, verificada por prueba</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0002-capas-y-regla-de-dependencias.md" target="_blank" rel="noreferrer">ADR-0002 ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">45 pruebas de dominio y aplicación</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.UnitTests" target="_blank" rel="noreferrer">UnitTests ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">10 pruebas de infraestructura sobre SQLite real</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.Infrastructure.Tests" target="_blank" rel="noreferrer">Infrastructure.Tests ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">16 pruebas de integración HTTP: 401, validación, BOLA y contrato</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.Tests" target="_blank" rel="noreferrer">Integration.Tests ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="api-datos">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Datos y mensajería</span>
+                <span class="group-count">5 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Modelo de lectura separado para pedidos (CQRS ligero)</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0003-cqrs-ligero-en-pedidos.md" target="_blank" rel="noreferrer">ADR-0003 ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Persistencia transaccional en SQLite, importes en céntimos</span>
+                    <span class="module-status status-partial">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0004-persistencia-sqlite-y-outbox.md" target="_blank" rel="noreferrer">ADR-0004 ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Outbox transaccional con reintentos y dead-letter</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Infrastructure/Outbox/OutboxDispatcher.cs" target="_blank" rel="noreferrer">OutboxDispatcher.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Consumidor idempotente con registro de mensajes procesados</span>
+                    <span class="module-status status-partial">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Application/OrderProcessing/ProcessOrderHandler.cs" target="_blank" rel="noreferrer">ProcessOrderHandler.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Paginación por cursor con plan de índice comprobado</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/persistence.md" target="_blank" rel="noreferrer">persistence.md ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="api-entrega">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Entrega y CI</span>
+                <span class="group-count">5 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Docker multi-stage con usuario no-root</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/Dockerfile" target="_blank" rel="noreferrer">Dockerfile ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Gitleaks sobre el historial completo</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CodeQL con el conjunto <code>security-extended</code></span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Trivy SCA bloqueante para CRITICAL y HIGH</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Bicep con análisis Trivy config</span>
+                    <span class="module-status status-partial">Validado en plantilla</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/infra/main.bicep" target="_blank" rel="noreferrer">main.bicep ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="api-alcance">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Alcance y límites</span>
+                <span class="group-count">6 límites</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Publicación en Service Bus</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Infrastructure/Outbox/ServiceBusEventPublisher.cs" target="_blank" rel="noreferrer">ServiceBusEventPublisher.cs ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Function desplegada en Azure</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/functions/OrderProcessor" target="_blank" rel="noreferrer">OrderProcessor ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Despliegue real en Azure</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <span class="spec-none" aria-hidden="true">—</span>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">OIDC de GitHub Actions a Azure</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/infra/README.md" target="_blank" rel="noreferrer">infra/README.md ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Scopes y roles granulares de Entra ID</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/azure-ad-config.md" target="_blank" rel="noreferrer">azure-ad-config.md ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Alta disponibilidad y copias de seguridad</span>
+                    <span class="module-status status-pending">Fuera de alcance</span>
+                    <span class="spec-none" aria-hidden="true">—</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+          <div class="portfolio-cta">
+            <a class="button button-dark" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="https://github.com/lanuzalorenzo/lab-api-local-azure#estado-de-seguridad" target="_blank" rel="noreferrer">Tabla de estado completa <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
       <section class="contact-section section-wrap" id="contacto" aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="eyebrow">06 — Contacto</p>
+          <p class="eyebrow">07 — Contacto</p>
           <h2 id="contact-title">¿Hablamos de<br><span>tu próximo reto?</span></h2>
           <p>Si buscas conectar arquitectura de software, Azure y seguridad, estaré encantado de conversar.</p>
           <a class="button button-light" href="mailto:lanuzalorenzo@gmail.com">Escríbeme un email <span aria-hidden="true">↗</span></a>

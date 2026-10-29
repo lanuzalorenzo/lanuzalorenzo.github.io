@@ -10,6 +10,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 - **Especialidades:** arquitectura, DevSecOps y Cloud Security.
 - **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y AI Agent Local Lab.
 - **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con siete evidencias indexadas (tres de ejecución, cuatro documentales o verificables).
+- **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
 
 ## Publicar en GitHub Pages

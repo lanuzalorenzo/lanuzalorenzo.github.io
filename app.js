@@ -6,8 +6,7 @@ const projectCards = [...document.querySelectorAll(".project-card")];
 const projectSearch = document.querySelector("#project-search");
 const noResults = document.querySelector("#no-results");
 const projectStatus = document.querySelector("#project-status");
-const portfolioExpand = document.querySelector(".portfolio-expand");
-const moduleGroups = [...document.querySelectorAll(".module-group")];
+const expandButtons = [...document.querySelectorAll("[data-expand-all]")];
 const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 
 function setMenuOpen(isOpen) {
@@ -110,23 +109,29 @@ filterButtons.forEach((button) => {
 
 projectSearch?.addEventListener("input", updateProjects);
 
-function syncPortfolioExpand() {
-  if (!portfolioExpand) return;
-  const allOpen = moduleGroups.length > 0 && moduleGroups.every((group) => group.open);
-  portfolioExpand.setAttribute("aria-expanded", String(allOpen));
-  portfolioExpand.textContent = allOpen ? "Contraer todos" : "Desplegar todos";
-}
+const expandControllers = expandButtons.map((button) => {
+  const scope = document.querySelector(button.dataset.expandAll);
+  const groups = scope ? [...scope.querySelectorAll(".module-group")] : [];
 
-portfolioExpand?.addEventListener("click", () => {
-  const expand = portfolioExpand.getAttribute("aria-expanded") !== "true";
-  moduleGroups.forEach((group) => {
-    group.open = expand;
+  const sync = () => {
+    const allOpen = groups.length > 0 && groups.every((group) => group.open);
+    button.setAttribute("aria-expanded", String(allOpen));
+    button.textContent = allOpen ? "Contraer todos" : "Desplegar todos";
+  };
+
+  button.addEventListener("click", () => {
+    const expand = button.getAttribute("aria-expanded") !== "true";
+    groups.forEach((group) => {
+      group.open = expand;
+    });
+    sync();
   });
-  syncPortfolioExpand();
-});
 
-moduleGroups.forEach((group) => group.addEventListener("toggle", syncPortfolioExpand));
-syncPortfolioExpand();
+  groups.forEach((group) => group.addEventListener("toggle", sync));
+  sync();
+
+  return sync;
+});
 
 const expandableItems = [...document.querySelectorAll(".timeline-item, .module-group")];
 let printState = [];
@@ -142,7 +147,7 @@ window.addEventListener("afterprint", () => {
   expandableItems.forEach((item, index) => {
     item.open = printState[index] ?? item.open;
   });
-  syncPortfolioExpand();
+  expandControllers.forEach((sync) => sync());
 });
 
 const year = document.querySelector("#current-year");
