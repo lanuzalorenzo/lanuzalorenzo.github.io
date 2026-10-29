@@ -137,16 +137,20 @@ button { color: inherit; }
 .impact-list li { position: relative; max-width: 340px; padding-left: 12px; color: var(--muted); font-size: 12px; }
 .impact-list li::before { position: absolute; left: 0; color: var(--accent-hover); content: "↗"; }
 
-.skills-section { padding-bottom: 84px; }
+.skills-block { margin-top: 76px; padding-top: 52px; border-top: 1px solid var(--line); }
+.block-head { margin-bottom: 30px; }
+.block-head .eyebrow { margin-bottom: 12px; }
+.block-head h3 { margin: 0; font-size: clamp(24px, 2.8vw, 34px); font-weight: 660; letter-spacing: -.06em; line-height: 1.05; }
+.block-head h3 span { font-family: var(--serif); font-weight: 400; font-style: italic; }
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
 .skill-card { position: relative; min-height: 208px; padding: 25px 26px; border-right: 1px solid var(--line); }
 .skill-card:last-child { border-right: 0; }
 .skill-index { color: var(--accent-hover); font-size: 9px; font-weight: 750; letter-spacing: .12em; }
-.skill-card h3 { margin: 24px 0 12px; font-size: 22px; font-weight: 650; letter-spacing: -.05em; line-height: 1.1; }
+.skill-card h4 { margin: 24px 0 12px; font-size: 22px; font-weight: 650; letter-spacing: -.05em; line-height: 1.1; }
 .skill-card p { max-width: 245px; margin: 0; color: var(--muted); font-size: 12px; }
 .skill-mark { position: absolute; top: 23px; right: 25px; color: var(--accent-hover); font-size: 17px; }
 .skills-note { margin-top: 26px; max-width: 70ch; color: var(--muted); font-size: 14px; line-height: 1.7; }
-.skills-note + .education { margin-top: 48px; }
+.skills-block + .education { margin-top: 56px; }
 .education { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; margin-top: 64px; }
 .education .eyebrow { margin-bottom: 8px; }
 .education h3 { margin: 0; font-size: 20px; letter-spacing: -.04em; }
@@ -162,10 +166,6 @@ button { color: inherit; }
 .filter-button { padding: 8px 12px; background: transparent; border: 1px solid var(--line-strong); color: var(--muted); cursor: pointer; font-size: 11px; transition: background .2s, color .2s; }
 .filter-button:hover, .filter-button.is-active { background: var(--accent); border-color: var(--accent); color: var(--paper); }
 .filter-button span { margin-left: 7px; opacity: .65; }
-.search-label { display: flex; align-items: center; gap: 8px; width: min(230px, 100%); border-bottom: 1px solid var(--line-strong); }
-.search-label svg { width: 15px; fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-linecap: round; }
-.search-label input { width: 100%; padding: 8px 0; background: transparent; border: 0; outline: 0; color: var(--ink); font-size: 12px; }
-.search-label input::placeholder { color: color-mix(in srgb, var(--ink) 62%, transparent); }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .project-card { min-width: 0; background: var(--surface); transition: transform .22s; }
 .project-card:hover { transform: translateY(-4px); }
@@ -315,14 +315,13 @@ button { color: inherit; }
   .skills-grid { grid-template-columns: 1fr; }
   .skill-card { min-height: 195px; border-right: 0; border-bottom: 1px solid var(--line); }
   .skill-card:last-child { border-bottom: 0; }
-  .skill-card h3 { margin-top: 22px; }
+  .skill-card h4 { margin-top: 22px; }
   .education { grid-template-columns: 1fr; gap: 21px; margin-top: 60px; }
   .education-list p { display: block; }
   .education-list span { display: block; margin-top: 3px; text-align: left; }
   .project-controls { align-items: stretch; flex-direction: column; }
   .filter-list { gap: 6px; }
   .filter-button { padding: 7px 9px; font-size: 10px; }
-  .search-label { width: 100%; }
   .project-grid { grid-template-columns: 1fr; }
   .project-visual { min-height: 0; aspect-ratio: 460 / 300; max-height: 340px; }
   .module-group-head { grid-template-columns: auto 1fr auto; gap: 10px; padding: 16px 0; }

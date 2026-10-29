@@ -6,8 +6,8 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 
 ## Contenido
 
-- **Perfil y trayectoria:** experiencia profesional, formación y certificaciones.
-- **Especialidades:** arquitectura, DevSecOps y Cloud Security.
+- **Perfil:** presentación, especialidades, formación y certificaciones.
+- **Experiencia:** trayectoria profesional.
 - **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y AI Agent Local Lab.
 - **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con siete evidencias indexadas (tres de ejecución, cuatro documentales o verificables).
 - **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.

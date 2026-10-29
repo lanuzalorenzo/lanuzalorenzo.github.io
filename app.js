@@ -3,7 +3,6 @@ const siteNav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll('.site-nav > a[href^="#"]')];
 const filterButtons = [...document.querySelectorAll(".filter-button")];
 const projectCards = [...document.querySelectorAll(".project-card")];
-const projectSearch = document.querySelector("#project-search");
 const noResults = document.querySelector("#no-results");
 const projectStatus = document.querySelector("#project-status");
 const expandButtons = [...document.querySelectorAll("[data-expand-all]")];
@@ -79,13 +78,10 @@ updateActiveSection();
 
 function updateProjects() {
   const activeFilter = document.querySelector(".filter-button.is-active")?.dataset.filter ?? "all";
-  const query = projectSearch?.value.trim().toLocaleLowerCase("es") ?? "";
   let visibleCount = 0;
 
   projectCards.forEach((card) => {
-    const matchesFilter = activeFilter === "all" || card.dataset.category === activeFilter;
-    const matchesSearch = (card.dataset.search ?? "").toLocaleLowerCase("es").includes(query);
-    const isVisible = matchesFilter && matchesSearch;
+    const isVisible = activeFilter === "all" || card.dataset.category === activeFilter;
     card.hidden = !isVisible;
     visibleCount += Number(isVisible);
   });
@@ -106,8 +102,6 @@ filterButtons.forEach((button) => {
     updateProjects();
   });
 });
-
-projectSearch?.addEventListener("input", updateProjects);
 
 const expandControllers = expandButtons.map((button) => {
   const scope = document.querySelector(button.dataset.expandAll);
