@@ -6,17 +6,13 @@
       <stop offset="0%" stop-color="#07131e"/>
       <stop offset="100%" stop-color="#0e2a47"/>
     </linearGradient>
-    <linearGradient id="og-brd" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.5"/>
-    </linearGradient>
   </defs>
 
   <rect width="1200" height="630" fill="#07131e"/>
 
   <g transform="translate(72 72)">
     <rect width="148" height="148" rx="37" fill="url(#og-bg)"/>
-    <rect x="5" y="5" width="138" height="138" rx="32" fill="none" stroke="url(#og-brd)" stroke-width="5"/>
+    <rect x="5" y="5" width="138" height="138" rx="32" fill="none" stroke="#38bdf8" stroke-width="5"/>
     <g transform="scale(2.3125)">
       <path d="M10 14H18V42H26V50H10Z" fill="#f8fafc"/>
       <path d="M30 24H38V42H54V50H30Z" fill="#38bdf8"/>

@@ -6,13 +6,9 @@
       <stop offset="0%" stop-color="#07131e"/>
       <stop offset="100%" stop-color="#0e2a47"/>
     </linearGradient>
-    <linearGradient id="brd-ll" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.5"/>
-    </linearGradient>
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#bg-ll)"/>
-  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="url(#brd-ll)" stroke-width="2"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#38bdf8" stroke-width="2"/>
   <path d="M10 14H18V42H26V50H10Z" fill="#f8fafc"/>
   <path d="M30 24H38V42H54V50H30Z" fill="#38bdf8"/>
   <circle cx="42" cy="17" r="5" fill="#38bdf8"/>
