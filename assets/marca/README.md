@@ -13,7 +13,7 @@ Monograma del sitio: dos eles escalonadas, la primera blanca y la segunda cian, 
 
 | Fichero | Uso | PNG |
 |---|---|---|
-| `marca-tile.svg` | Baldosa 64×64 con fondo degradado y borde cian sólido de 2 px (`#38bdf8`, sin degradado ni opacidad). Es la versión del favicon | 16, 32, 64, 180 y 512 |
+| `marca-tile.svg` | Baldosa 64×64 con fondo degradado y borde cian sólido de 2 px (`#38bdf8`, sin degradado ni opacidad). Es la versión del favicon y del icono de cabecera y pie | 16, 32, 64, 180 y 512 |
 | `marca.svg` | Marca sola sobre fondo transparente, para superficies navy ya existentes | 16, 32, 64, 180 y 512 |
 | `marca-mono.svg` | Una tinta `#f8fafc`, punto incluido | 16, 32, 64, 180 y 512 |
 
