@@ -2,13 +2,13 @@
 
 # Web personal — Lorenzo Lanuza
 
-Sitio estático de presentación profesional, experiencia, especialidades y proyectos. Los dos laboratorios —seguridad cloud sobre la API y AI Agent Local Lab— se presentan como proyectos destacados, no como tema principal. Los diagramas de cada proyecto son SVG en línea, sin dependencias externas.
+Sitio estático de presentación profesional, experiencia, especialidades y proyectos. Los dos laboratorios —seguridad cloud sobre la API y aprendizaje en IA— se presentan como proyectos destacados, no como tema principal. Los diagramas de cada proyecto son SVG en línea, sin dependencias externas.
 
 ## Contenido
 
 - **Perfil:** presentación, especialidades, formación y certificaciones.
 - **Experiencia:** trayectoria profesional.
-- **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y AI Agent Local Lab.
+- **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y el laboratorio de aprendizaje en IA.
 - **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con siete evidencias indexadas (tres de ejecución, cuatro documentales o verificables).
 - **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
