@@ -261,10 +261,10 @@ button { color: inherit; }
   .education { gap: 28px; }
   .contact-section { gap: 45px; }
   .site-footer { padding-inline: 24px; }
-  .workload-section .spec-row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 5px; }
-  .workload-section .spec-name { grid-column: 1 / -1; }
-  .workload-section .spec-row .module-status { grid-column: 1; justify-self: start; }
-  .workload-section .spec-row .module-link, .workload-section .spec-none { grid-column: 2; justify-self: end; }
+  .workload-section .spec-row, .ai-section .spec-row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 5px; }
+  .workload-section .spec-name, .ai-section .spec-name { grid-column: 1 / -1; }
+  .workload-section .spec-row .module-status, .ai-section .spec-row .module-status { grid-column: 1; justify-self: start; }
+  .workload-section .spec-row .module-link, .workload-section .spec-none, .ai-section .spec-row .module-link, .ai-section .spec-none { grid-column: 2; justify-self: end; }
 }
 @media (max-width: 620px) {
   html { scroll-padding-top: 72px; }
@@ -300,7 +300,7 @@ button { color: inherit; }
   .metric strong { font-size: 32px; }
   .metric > span { font-size: 8px; }
   .experience-section, .projects-section { padding: 64px 0 70px; }
-  .workload-section { padding: 64px 0 70px; }
+  .workload-section, .ai-section { padding: 64px 0 70px; }
   .section-heading-row { display: block; }
   .section-heading-row .heading-note { max-width: 350px; margin-top: 17px; }
   .timeline-summary { grid-template-columns: 1fr auto; column-gap: 12px; padding: 18px 0; }
@@ -328,7 +328,7 @@ button { color: inherit; }
   .group-count { display: none; }
   .group-title { font-size: 0.98rem; }
   .module-group-body { padding-bottom: 20px; }
-  .portfolio-section .portfolio-controls, .workload-section .portfolio-controls { align-items: flex-start; flex-direction: column; }
+  .portfolio-section .portfolio-controls, .workload-section .portfolio-controls, .ai-section .portfolio-controls { align-items: flex-start; flex-direction: column; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; padding-top: 64px; padding-bottom: 64px; }
   .site-footer { grid-template-columns: auto 1fr; gap: 16px; padding: 18px 20px; }
   .site-footer p { justify-self: end; text-align: right; }
@@ -348,7 +348,7 @@ button { color: inherit; }
   .hero h1 { font-size: 54pt; }
   .hero-portrait { width: 80px; }
   .hero-intro { max-width: 100%; }
-  .content-section, .experience-section, .projects-section, .portfolio-section, .workload-section, .contact-section { padding: 24px 0; background: #fff; color: #17211e; break-inside: avoid; }
+  .content-section, .experience-section, .projects-section, .portfolio-section, .workload-section, .ai-section, .contact-section { padding: 24px 0; background: #fff; color: #17211e; break-inside: avoid; }
   .section-heading h2, .contact-section h2 { font-size: 28pt; }
   .section-heading { margin-bottom: 20px; }
   .profile-grid, .contact-section { gap: 20px; }
@@ -534,7 +534,8 @@ button { color: inherit; }
 }
 
 /* ── Workload section (EcommerceApi) ──────────────────────────────── */
-.workload-section {
+.workload-section,
+.ai-section {
   padding: 88px 0;
   border-top: 1px solid var(--line);
 }

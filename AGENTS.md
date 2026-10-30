@@ -7,6 +7,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 - Es la fuente única de trayectoria, stack, formación y certificaciones. El README del perfil (`lanuzalorenzo`) es una tarjeta: si cambia el contenido largo, actualiza la web y deja en el README solo posicionamiento, proyectos y enlaces.
 - Al cambiar módulos, prácticas, estados o enlaces del [portfolio](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo), revisa `#proyectos` y `#portfolio` y alinea los estados. «Runbook preparado» se muestra como «Diseño · runbook listo» y nunca como validado.
 - `#api` es la sección hermana de `#portfolio`: misma gramática (grupos desplegables, estado por fila, enlace a la evidencia) y densidad de tabla. Su fuente es la tabla «Estado de seguridad» de `lab-api-local-azure/README.md`; la web lleva una selección de 28 filas y enlaza al resto. Si cambia el estado en el repo, sincroniza la sección en la misma sesión.
+- `#ia` es una sección menor, no un tercer pilar: la unidad es el experimento, no el control, y se agrupa en Medido · Probado sin registro reproducible · Preparado y pendiente. Su fuente es el README de `lab-ia-aprendizaje` y sus evidencias fechadas; no se le añaden filas sin evidencia en el repo.
 - Español claro y directo, sin rótulos de registro. Estados: Validado · Parcial · Runbook preparado · Diseño · Pendiente.
 - Sin secretos, datos personales sensibles ni enlaces a repositorios privados.
 
