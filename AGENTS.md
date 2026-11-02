@@ -6,7 +6,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 
 - Es la fuente única de trayectoria, stack, formación y certificaciones. El README del perfil (`lanuzalorenzo`) es una tarjeta: si cambia el contenido largo, actualiza la web y deja en el README solo posicionamiento, proyectos y enlaces.
 - Al cambiar módulos, prácticas, estados o enlaces del [portfolio](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo), revisa `#proyectos` y `#portfolio` y alinea los estados. «Runbook preparado» se muestra como «Diseño · runbook listo» (= `Runbook preparado`) y nunca como validado.
-- `#api` es la sección hermana de `#portfolio`: misma gramática (grupos desplegables, estado por fila, enlace a la evidencia) y densidad de tabla. Su fuente es la matriz de `lab-api-local-azure/docs/capacidades.md`; la web lleva una selección de 28 filas y enlaza al resto. Si cambia el estado en el repo, sincroniza la sección en la misma sesión.
+- `#api` es la sección hermana de `#portfolio`: misma gramática (grupos desplegables, estado por fila, enlace a la evidencia) y densidad de tabla. Su fuente es la matriz de `lab-api-local-azure/docs/capacidades.md`; la web lleva una selección de los controles principales y enlaza al resto. El contador visible se mantiene en la sección; si cambia el estado en el repo, sincroniza la sección en la misma sesión.
 - `#ia` es una sección menor, no un tercer pilar: la unidad es el experimento, no el control, y se agrupa en Medido · Probado sin registro reproducible · Preparado y pendiente, que equivalen a Validado · Parcial · Diseño/Pendiente; no son estados nuevos. Su fuente es el README de `lab-ia-aprendizaje` y sus evidencias fechadas; no se le añaden filas sin evidencia en el repo.
 - El estándar editorial completo —español claro, apertura llana, jerga y claridad que no cambia lo que se afirma— está en el [contrato del portfolio](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md). En esta web: estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente), sin secretos, datos personales sensibles ni enlaces a repositorios privados.
 
@@ -14,7 +14,6 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 
 - La paleta son las variables de `:root` en `styles.css`; fuera de la web los valores se escriben a mano.
 - Las carpetas `assets/marca/`, `assets/iconos/` y `assets/social/` documentan sus piezas en su `README.md`.
-- Iconos: 64×64, `rx=16`, fondo navy con degradado y glifo blanco relleno. Sin etiqueta, sin número y sin color por repositorio ni por módulo.
 - Nada de dependencias externas para iconos ni diagramas: SVG en línea o archivos del propio repositorio.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
 
