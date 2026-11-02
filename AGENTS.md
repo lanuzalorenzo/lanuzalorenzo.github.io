@@ -21,7 +21,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 
 - Sitio estático compatible con GitHub Pages.
 - El workflow `.github/workflows/pages.yml` publica solo archivos públicos: `index.html`, `styles.css`, `app.js`, `assets`, faviconos, `.nojekyll`, `robots.txt` y `sitemap.xml`. Si añades un archivo público, inclúyelo en el paso de copia.
-- `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; los PR requieren su revisión y el bypass queda limitado a la cuenta del propietario.
+- `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; `main` exige PR, el check de verificación y rama actualizada; solo el propietario fusiona.
 - Al cambiar contenido, actualiza `lastmod` en `sitemap.xml`.
 
 ## Commits
