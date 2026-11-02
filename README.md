@@ -33,14 +33,17 @@ El botón **Descargar CV** entrega el PDF real alojado en `assets/cv/lanuza-lore
 
 ## Protección de la rama `main`
 
-`.github/CODEOWNERS` asigna la revisión del código a `@lanuzalorenzo`. Para exigir que los cambios de otras personas lleguen mediante un pull request aprobado por Lorenzo:
+`.github/CODEOWNERS` asigna la revisión del código a `@lanuzalorenzo`. La protección se aplica con un ruleset de rama activo para `main`:
 
-1. En GitHub, abre **Settings → Rules → Rulesets** y crea un ruleset de rama activo para `main`.
-2. Añade **Repository admin** a la lista de bypass actors con permiso **Always**. En este repositorio personal, esto permite al propietario hacer push directo.
-3. Activa **Require a pull request before merging**, exige al menos una aprobación y activa **Require review from Code Owners**.
-4. No añadas otros usuarios, equipos o roles a la lista de bypass.
+- Pull request obligatorio.
+- Cero aprobaciones obligatorias: el repositorio tiene un solo mantenedor y GitHub no permite aprobar el propio PR.
+- Check `Verificación (secretos y enlaces)` en verde.
+- Rama actualizada antes del merge.
+- Squash como único método de merge.
+- Force push y borrado de `main` bloqueados.
+- Sin bypass actors: solo el propietario tiene permiso de escritura y merge.
 
-Los autores no pueden aprobar sus propios pull requests en GitHub; el propietario puede aprobar los PR creados por otras personas. La regla de bypass para administración permite al propietario seguir publicando directamente en `main`.
+Los cambios de otras personas llegan por pull request y los fusiona el propietario. El propietario no publica directamente en `main`.
 
 ## Probar en local
 
