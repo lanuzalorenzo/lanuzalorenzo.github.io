@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07131e">
+    <meta name="description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo que queda pendiente.">
+    <link rel="canonical" href="https://lanuzalorenzo.github.io/ia.html">
+
+    <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://lanuzalorenzo.github.io/ia.html">
+    <meta property="og:title" content="IA local — Lorenzo Lanuza">
+    <meta property="og:description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo pendiente.">
+    <meta property="og:image" content="https://lanuzalorenzo.github.io/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lorenzo Lanuza — Software Engineer &amp; Architect, .NET y Azure">
+    <meta property="og:updated_time" content="2026-11-03T00:00:00+01:00">
+    <meta name="author" content="Lorenzo Lanuza Arellano">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lanuzalorenzo.github.io/ia.html">
+    <meta name="twitter:title" content="IA local — Lorenzo Lanuza">
+    <meta name="twitter:description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo pendiente.">
+    <meta name="twitter:image" content="https://lanuzalorenzo.github.io/assets/og-image.jpg">
+    <meta name="twitter:image:alt" content="Lorenzo Lanuza — Software Engineer &amp; Architect, .NET y Azure">
+
+    <title>IA local — Lorenzo Lanuza</title>
+    <link rel="icon" href="favicon.svg?v=20261030c" type="image/svg+xml">
+    <link rel="icon" href="favicon.png?v=20261030c" sizes="180x180" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png?v=20261030c" sizes="180x180">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="stylesheet" href="styles.css?v=20261103e">
+    <script src="app.js?v=20261103e" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Abrir menú</span>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html#perfil">Perfil</a>
+        <a href="index.html#experiencia">Experiencia</a>
+        <a href="index.html#proyectos">Proyectos</a>
+        <div class="site-nav-group" role="group" aria-label="Detalle de los proyectos">
+          <a href="portfolio.html">Portfolio de seguridad</a>
+          <a href="api.html">EcommerceApi</a>
+          <a href="ia.html" class="is-active" aria-current="page">IA local</a>
+        </div>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- ========= LABORATORIO DE IA LOCAL — experimentos y límites ========= -->
+      <section class="ai-section" id="ia" aria-labelledby="ai-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Laboratorio de IA local</p>
+            <h1 id="ai-title">IA local.<br><span>Medido, no supuesto.</span></h1>
+            <p class="portfolio-intro">Un servidor bare-metal con Ubuntu Server y Ollama, un cliente en el equipo de trabajo y una pregunta que ordena el resto: qué datos pueden salir de la red. No forma parte del modelo de seguridad. Es un laboratorio de aprendizaje y su unidad es el experimento, no el control: cada fila lleva el resultado, el límite y la evidencia que lo sostiene.</p>
+          </div>
+
+          <div class="portfolio-controls">
+            <p>3 grupos · 9 experimentos y límites, con su estado.</p>
+            <button class="portfolio-expand" type="button" data-expand-all="#ia" aria-expanded="false" aria-controls="ia-medido ia-probado ia-pendiente">Desplegar todos</button>
+          </div>
+
+          <div class="module-groups">
+
+            <details class="module-group" id="ia-medido" open>
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Medido</span>
+                <span class="group-count">2 resultados</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Instrumento de robustez: 113 casos congelados, 15 transformaciones activas y un control negativo</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-instrumento/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Uso de OpenCode en esta máquina, con sesiones reales y sus límites declarados</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-opencode-uso-real/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="ia-probado">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Probado, sin registro reproducible</span>
+                <span class="group-count">3 resultados</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Robustez sobre <code>qwen2.5:3b</code>: tres pasadas en los niveles N0 y N1. La orden directa funciona sin disfrazarla</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-ejecucion-v1/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Prompt endurecido: 15 inferencias en N0 con la misma obediencia que la línea base (0,50)</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-26-robustez-prompt-v2/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Modelo 7B con Continue: integración probada por el autor, sin registro reproducible. No es un PASS</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-inferencia-7b-continue/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="ia-pendiente">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Preparado y pendiente</span>
+                <span class="group-count">4 límites</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Instalación, red, SSH y GPU: runbook escrito, sin ejecución registrada</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/server-deployment-ubuntu-ollama.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Firewall y TLS en el puerto <code>11434</code>: previstos, con la escucha todavía sin verificar</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Control fuera del modelo: digest fijado y límites de lo que el asistente puede tocar</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Evaluación de funciones con LLM y RAG local, con casos y métricas propias</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/ai-security-evaluation.md" target="_blank" rel="noreferrer">Marco ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+          <div class="portfolio-cta">
+            <a class="button button-dark" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta completa <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="index.html" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
+      <p>Diseñado y construido con intención.</p>
+      <a href="#contenido">Volver arriba ↑</a>
+      <span>© <span id="current-year">2026</span> Lorenzo Lanuza</span>
+    </footer>
+  </body>
+</html>

@@ -13,6 +13,15 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 - **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
 
+## Estructura
+
+La cabecera, la navegación y el pie viven en `src/partials/shell.html`; el contenido de cada página, en `src/pages/`. Los cuatro HTML de la raíz son artefactos generados: no se editan a mano.
+
+```bash
+python3 scripts/build.py          # regenera index.html, portfolio.html, api.html e ia.html
+python3 scripts/build.py --check  # falla si lo versionado no coincide con lo generado
+```
+
 ## Publicar en GitHub Pages
 
 1. Crea un repositorio público llamado exactamente `lanuzalorenzo.github.io` en la cuenta `lanuzalorenzo`.
@@ -27,7 +36,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 3. En GitHub, abre **Settings → Pages** y selecciona **GitHub Actions** como origen de publicación.
 4. El workflow de `.github/workflows/pages.yml` desplegará el sitio. La dirección será `https://lanuzalorenzo.github.io/`.
 
-Cada `push` a `main` volverá a publicar la web. El workflow copia a `_site` solo los archivos públicos del sitio (`index.html`, `styles.css`, `app.js`, `assets`, favicons, `.nojekyll`, `robots.txt` y `sitemap.xml`), de modo que la documentación interna y el historial de Git no forman parte del artefacto. Al cambiar el contenido, actualiza `lastmod` en `sitemap.xml`.
+Cada `push` a `main` volverá a publicar la web. El workflow copia a `_site` solo los archivos públicos del sitio (`index.html`, `portfolio.html`, `api.html`, `ia.html`, `styles.css`, `app.js`, `assets`, favicons, `.nojekyll`, `robots.txt` y `sitemap.xml`), de modo que las fuentes de las páginas (`src/`), la documentación interna y el historial de Git no forman parte del artefacto. Al cambiar el contenido, actualiza `lastmod` en `sitemap.xml`.
 
 El botón **Descargar CV** entrega el PDF real alojado en `assets/cv/lanuza-lorenzo-cv.pdf` (CV de 2 páginas optimizado para ATS), no una copia impresa de la página. Para actualizarlo, reemplaza ese fichero manteniendo el mismo nombre: la URL no cambia y los enlaces ya compartidos siguen funcionando.
 

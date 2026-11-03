@@ -4,10 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07131e">
-    <meta
-      name="description"
-      content="Lorenzo Lanuza Arellano: ingeniero de software senior en .NET y Azure con seguridad aplicada. DevSecOps, AppSec y Cloud Security."
-    >
+    <meta name="description" content="Lorenzo Lanuza Arellano: ingeniero de software senior en .NET y Azure con seguridad aplicada. DevSecOps, AppSec y Cloud Security.">
     <link rel="canonical" href="https://lanuzalorenzo.github.io/">
 
     <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
@@ -22,8 +19,6 @@
     <meta property="og:image:alt" content="Lorenzo Lanuza — Software Engineer &amp; Architect, .NET y Azure">
     <meta property="og:updated_time" content="2026-11-03T00:00:00+01:00">
     <meta name="author" content="Lorenzo Lanuza Arellano">
-
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,7 +47,6 @@
       ]
     }
     </script>
-
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://lanuzalorenzo.github.io/">
@@ -66,8 +60,8 @@
     <link rel="icon" href="favicon.png?v=20261030c" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="favicon.png?v=20261030c" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261103d">
-    <script src="app.js?v=20261103c" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261103e">
+    <script src="app.js?v=20261103e" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -82,9 +76,9 @@
         <a href="#experiencia">Experiencia</a>
         <a href="#proyectos">Proyectos</a>
         <div class="site-nav-group" role="group" aria-label="Detalle de los proyectos">
-          <a href="#portfolio">Portfolio de seguridad</a>
-          <a href="#api">EcommerceApi</a>
-          <a href="#ia">IA local</a>
+          <a href="portfolio.html">Portfolio de seguridad</a>
+          <a href="api.html">EcommerceApi</a>
+          <a href="ia.html">IA local</a>
         </div>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -333,13 +327,13 @@
               <div class="project-body">
                 <div class="project-meta"><span>Proyecto integrado · Cloud Security</span></div>
                 <h3>Laboratorio de seguridad cloud</h3>
-                <p>Un modelo de Defense-in-Depth sobre una sola carga de trabajo: <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia sección.</p>
+                <p>Un modelo de Defense-in-Depth sobre una sola carga de trabajo: <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia página.</p>
                 <div class="project-tags" aria-label="Tecnologías">
                   <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
                 </div>
                 <div class="project-links">
-                  <a class="project-link" href="#portfolio">Portfolio de seguridad <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="#api">EcommerceApi <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="portfolio.html">Portfolio de seguridad <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="api.html">EcommerceApi <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Portfolio en GitHub <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
@@ -388,7 +382,7 @@
                   <span>Ubuntu Server</span><span>Netplan</span><span>SSH</span><span>Ollama</span><span>Qwen 2.5 Coder</span><span>OpenCode</span>
                 </div>
                 <div class="project-links">
-                  <a class="project-link" href="#ia">Experimentos y límites <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="ia.html">Experimentos y límites <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
@@ -399,551 +393,9 @@
         </div>
       </section>
 
-      <!-- ========= PORTFOLIO DE CIBERSEGURIDAD — detalle módulos ========= -->
-      <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
-        <div class="section-wrap">
-          <div class="section-heading">
-            <p class="eyebrow">04 — Portfolio de Ciberseguridad</p>
-            <h2 id="portfolio-title">Doce módulos.<br><span>Un modelo cohesivo.</span></h2>
-            <p class="portfolio-intro">El portfolio articula la seguridad como un modelo de <strong>Defense-in-Depth</strong> alrededor de una sola carga de trabajo: la API <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer"><code>EcommerceApi</code> <span aria-hidden="true">↗</span></a>. Cada módulo declara su estado real: <strong>validado</strong>, <strong>parcial</strong>, <strong>diseño</strong> o <strong>pendiente</strong>. No se presenta un diseño como una validación.</p>
-          </div>
-
-          <div class="portfolio-controls">
-            <p>12 módulos, agrupados por capa del modelo.</p>
-            <button class="portfolio-expand" type="button" data-expand-all="#portfolio" aria-expanded="false" aria-controls="capa-1 capa-2 capa-3 capa-4 capa-5">Desplegar todos</button>
-          </div>
-
-          <div class="module-groups">
-
-            <details class="module-group" id="capa-1" data-layer="1" open>
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Capa 1 · AppSec</span>
-                <span class="group-count">2 módulos</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="modules-grid" role="list">
-
-                  <article class="module-card" role="listitem" data-layer="1">
-                                <div class="module-head"><span class="module-num">01</span><span class="module-layer-badge">Capa 1 · AppSec</span></div>
-                                <span class="module-status status-partial">Parcial</span>
-                                <h3>Seguridad en Azure</h3>
-                                <p>OAuth 2.0 con PKCE, validación estricta de JWT y descubrimiento de claves JWKS para la API .NET.</p>
-                                <ul class="module-tags"><li>OAuth 2.0</li><li>PKCE</li><li>JWT · JWKS</li><li>Entra ID</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/01-seguridad-azure" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="1">
-                                <div class="module-head"><span class="module-num">11</span><span class="module-layer-badge">Capa 1 · AppSec ofensivo</span></div>
-                                <span class="module-status status-validated">Validado en local</span>
-                                <h3>Hacking ético de APIs</h3>
-                                <p>BOLA/BFLA, mass assignment, revisión de JWT y matriz OWASP API Top 10. Pruebas locales ejecutadas; pentest desplegado pendiente.</p>
-                                <ul class="module-tags"><li>OWASP API Top 10</li><li>BOLA · BFLA</li><li>JWT</li><li>xUnit</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/11-hacking-etico-api" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="capa-2" data-layer="2">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Capa 2 · DevSecOps</span>
-                <span class="group-count">1 módulo</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="modules-grid" role="list">
-
-                  <article class="module-card" role="listitem" data-layer="2">
-                                <div class="module-head"><span class="module-num">07</span><span class="module-layer-badge">Capa 2 · DevSecOps</span></div>
-                                <span class="module-status status-validated">Validado en CI</span>
-                                <h3>DevSecOps</h3>
-                                <p>Branch protection, Gitleaks, CodeQL, Trivy SCA, contenedor no-root, IaC con Bicep y Dependency Review. Pipeline en verde; OIDC y despliegue, fuera de alcance.</p>
-                                <ul class="module-tags"><li>CodeQL</li><li>Trivy · Gitleaks</li><li>Bicep</li><li>GitHub Actions</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/07-devsecops" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="capa-3" data-layer="3">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Capa 3 · Identidad</span>
-                <span class="group-count">2 módulos</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="modules-grid" role="list">
-
-                  <article class="module-card" role="listitem" data-layer="3">
-                                <div class="module-head"><span class="module-num">02</span><span class="module-layer-badge">Capa 3 · Identidad</span></div>
-                                <span class="module-status status-validated">Validado · PIM parcial</span>
-                                <h3>Identity Security</h3>
-                                <p>MFA, Passwordless, SSPR, PIM, RBAC, Managed Identities y Azure Key Vault.</p>
-                                <ul class="module-tags"><li>MFA</li><li>Passwordless</li><li>RBAC</li><li>Key Vault</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/02-identity-security" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="3">
-                                <div class="module-head"><span class="module-num">06</span><span class="module-layer-badge">Capa 3 · Identidad</span></div>
-                                <span class="module-status status-design">Diseño</span>
-                                <h3>Acceso privilegiado</h3>
-                                <p>La capa que exige licencia P1/P2: Conditional Access, PIM con aprobación y riesgo de identidad. Diseño, sin ejecutar.</p>
-                                <ul class="module-tags"><li>Conditional Access</li><li>PIM / JIT</li><li>Risk Policies</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/06-identity-protection" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="capa-4" data-layer="4">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Capa 4 · Postura y red</span>
-                <span class="group-count">4 módulos</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="modules-grid" role="list">
-
-                  <article class="module-card" role="listitem" data-layer="4">
-                                <div class="module-head"><span class="module-num">03</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
-                                <span class="module-status status-validated">Validado · documental</span>
-                                <h3>Cloud Audits</h3>
-                                <p>Auditoría de suscripción, recursos críticos e identidades: Secure Score, Azure Policy y revisión de configuraciones.</p>
-                                <ul class="module-tags"><li>Secure Score</li><li>Azure Policy</li><li>Identidades</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/03-cloud-audits" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="4">
-                                <div class="module-head"><span class="module-num">04</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
-                                <span class="module-status status-validated">Validado · documental</span>
-                                <h3>Defender for Cloud</h3>
-                                <p>Protección de cargas de trabajo Azure: CSPM, alertas de seguridad y remediación guiada con MCSB.</p>
-                                <ul class="module-tags"><li>MCSB</li><li>CSPM</li><li>Alertas</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/04-defender-for-cloud" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="4">
-                                <div class="module-head"><span class="module-num">05</span><span class="module-layer-badge">Capa 4 · Postura</span></div>
-                                <span class="module-status status-design">Diseño</span>
-                                <h3>Defender Suite</h3>
-                                <p>Mapa de los catorce productos de Defender: qué capa ve cada uno, cómo se solapan y qué licencia y recursos harían falta para probarlos.</p>
-                                <ul class="module-tags"><li>Defender XDR</li><li>CSPM · CNAPP</li><li>APIs · Containers</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/05-defender-suite" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="4">
-                                <div class="module-head"><span class="module-num">08</span><span class="module-layer-badge">Capa 4 · Red</span></div>
-                                <span class="module-status status-design">Diseño + IaC</span>
-                                <h3>Seguridad de Red Azure</h3>
-                                <p>VNet, NSG y Private Endpoints para segmentar la carga de trabajo, definidos en Bicep. Azure Firewall sigue en diseño; sin desplegar.</p>
-                                <ul class="module-tags"><li>VNet · NSG</li><li>Private Link</li><li>Bicep</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/08-seguridad-red-azure" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="capa-5" data-layer="5">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Capa 5 · Detección y respuesta</span>
-                <span class="group-count">3 módulos</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="modules-grid" role="list">
-
-                  <article class="module-card" role="listitem" data-layer="5">
-                                <div class="module-head"><span class="module-num">09</span><span class="module-layer-badge">Capa 5 · Detección</span></div>
-                                <span class="module-status status-design">Diseño</span>
-                                <h3>Microsoft Sentinel</h3>
-                                <p>SIEM cloud-native: reglas analíticas KQL, playbooks e investigación de incidentes. Workspace y diagnósticos definidos en Bicep; Sentinel sin habilitar ni datos.</p>
-                                <ul class="module-tags"><li>KQL</li><li>Playbooks</li><li>SIEM · SOAR</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/09-microsoft-sentinel" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="5">
-                                <div class="module-head"><span class="module-num">10</span><span class="module-layer-badge">Capa 5 · Detección</span></div>
-                                <span class="module-status status-validated">Validado en local</span>
-                                <h3>ELK Stack Security</h3>
-                                <p>Centralización de telemetría con Elasticsearch, Logstash y Kibana. Laboratorio local ejecutado con 15 eventos sintéticos, 6 consultas KQL y dashboard exportado.</p>
-                                <ul class="module-tags"><li>Elasticsearch</li><li>Logstash</li><li>Kibana</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/10-elk-stack-security" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                  <article class="module-card" role="listitem" data-layer="5">
-                                <div class="module-head"><span class="module-num">12</span><span class="module-layer-badge">Capa 5 · Forense</span></div>
-                                <span class="module-status status-partial">Parcial</span>
-                                <h3>Forense cloud y respuesta</h3>
-                                <p>Evidencia, línea temporal con KQL y playbook NIST SP 800-61. Tabletop ejecutado sobre documentación; recolección técnica y consultas con datos, pendientes.</p>
-                                <ul class="module-tags"><li>KQL</li><li>NIST 800-61</li><li>MITRE ATT&amp;CK</li><li>Cadena de custodia</li></ul>
-                                <a class="module-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/tree/main/12-forense-cloud-respuesta" target="_blank" rel="noreferrer">Ver módulo ↗</a>
-                              </article>
-
-                </div>
-              </div>
-            </details>
-
-          </div>
-
-          <div class="portfolio-cta">
-            <a class="button button-dark" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Ver repositorio completo <span aria-hidden="true">↗</span></a>
-            <a class="button button-light" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/docs/guia-de-lectura.md" target="_blank" rel="noreferrer">Guía de lectura <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========= LA CARGA DE TRABAJO — ingeniería de EcommerceApi ========= -->
-      <section class="workload-section" id="api" aria-labelledby="workload-title">
-        <div class="section-wrap">
-          <div class="section-heading">
-            <p class="eyebrow">05 — La carga de trabajo</p>
-            <h2 id="workload-title">EcommerceApi.<br><span>Por dentro.</span></h2>
-            <p class="portfolio-intro">No es una maqueta: es el banco de pruebas del portfolio y, a la vez, un backend completo. .NET 10 con arquitectura por capas, autenticación con Entra ID, persistencia transaccional con outbox y 87 pruebas que se ejecutan en CI. Cuatro <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/docs/adr" target="_blank" rel="noreferrer">ADR <span aria-hidden="true">↗</span></a> documentan las decisiones. Lo que sigue es el estado real de cada control, con enlace a su evidencia: lo que no está hecho también aparece.</p>
-          </div>
-
-          <div class="portfolio-controls">
-            <p>5 grupos · 28 controles y límites, con su estado.</p>
-            <button class="portfolio-expand" type="button" data-expand-all="#api" aria-expanded="false" aria-controls="api-seguridad api-pruebas api-datos api-entrega api-alcance">Desplegar todos</button>
-          </div>
-
-          <div class="module-groups">
-
-            <details class="module-group" id="api-seguridad" open>
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Seguridad de aplicación</span>
-                <span class="group-count">8 controles</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Validación de JWT: firma, emisor, audiencia, expiración y desfase de reloj</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Autorización por endpoint con política por defecto</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Controllers/OrdersController.cs" target="_blank" rel="noreferrer">OrdersController.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">BOLA/IDOR: los pedidos se filtran por <code>UserId</code></span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Controllers/OrdersController.cs" target="_blank" rel="noreferrer">OrdersController.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Mass assignment cerrado con DTO de entrada</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/EcommerceApi/Models" target="_blank" rel="noreferrer">Models ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">CORS restrictivo: sin allowlist se deniega el origen</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Rate limiting de 120 peticiones por minuto y por IP</span>
-                    <span class="module-status status-partial">Validado en local</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Cuerpo de petición limitado a 16 KB en escrituras</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Problem Details y cabeceras de seguridad</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="api-pruebas">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Pruebas y arquitectura</span>
-                <span class="group-count">87 pruebas</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Regla de dependencias entre capas, verificada por prueba</span>
-                    <span class="module-status status-validated">Validado en CI</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0002-capas-y-regla-de-dependencias.md" target="_blank" rel="noreferrer">ADR-0002 ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">45 pruebas de dominio y aplicación</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.UnitTests" target="_blank" rel="noreferrer">UnitTests ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">10 pruebas de infraestructura sobre SQLite real</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.Infrastructure.Tests" target="_blank" rel="noreferrer">Infrastructure.Tests ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">16 pruebas de integración HTTP: 401, validación, BOLA y contrato</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/tests/EcommerceApi.Tests" target="_blank" rel="noreferrer">Integration.Tests ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="api-datos">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Datos y mensajería</span>
-                <span class="group-count">5 controles</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Modelo de lectura separado para pedidos (CQRS ligero)</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0003-cqrs-ligero-en-pedidos.md" target="_blank" rel="noreferrer">ADR-0003 ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Persistencia transaccional en SQLite, importes en céntimos</span>
-                    <span class="module-status status-partial">Validado en local</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0004-persistencia-sqlite-y-outbox.md" target="_blank" rel="noreferrer">ADR-0004 ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Outbox transaccional con reintentos y dead-letter</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Infrastructure/Outbox/OutboxDispatcher.cs" target="_blank" rel="noreferrer">OutboxDispatcher.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Consumidor idempotente con registro de mensajes procesados</span>
-                    <span class="module-status status-partial">Validado en local</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Application/OrderProcessing/ProcessOrderHandler.cs" target="_blank" rel="noreferrer">ProcessOrderHandler.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Paginación por cursor con plan de índice comprobado</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/persistence.md" target="_blank" rel="noreferrer">persistence.md ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="api-entrega">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Entrega y CI</span>
-                <span class="group-count">5 controles</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Docker multi-stage con usuario no-root</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/Dockerfile" target="_blank" rel="noreferrer">Dockerfile ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Gitleaks sobre el historial completo</span>
-                    <span class="module-status status-validated">Validado en CI</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">CodeQL con el conjunto <code>security-extended</code></span>
-                    <span class="module-status status-validated">Validado en CI</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Trivy SCA bloqueante para CRITICAL y HIGH</span>
-                    <span class="module-status status-validated">Validado en CI</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/.github/workflows/devsecops-ci.yml" target="_blank" rel="noreferrer">devsecops-ci.yml ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Bicep con análisis Trivy config</span>
-                    <span class="module-status status-partial">Validado en plantilla</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/infra/main.bicep" target="_blank" rel="noreferrer">main.bicep ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="api-alcance">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Alcance y límites</span>
-                <span class="group-count">6 límites</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Publicación en Service Bus</span>
-                    <span class="module-status status-design">Diseño</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Infrastructure/Outbox/ServiceBusEventPublisher.cs" target="_blank" rel="noreferrer">ServiceBusEventPublisher.cs ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Function desplegada en Azure</span>
-                    <span class="module-status status-design">Diseño</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/functions/OrderProcessor" target="_blank" rel="noreferrer">OrderProcessor ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Despliegue real en Azure</span>
-                    <span class="module-status status-pending">Pendiente</span>
-                    <span class="spec-none" aria-hidden="true">—</span>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">OIDC de GitHub Actions a Azure</span>
-                    <span class="module-status status-pending">Pendiente</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/infra/README.md" target="_blank" rel="noreferrer">infra/README.md ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Scopes y roles granulares de Entra ID</span>
-                    <span class="module-status status-pending">Pendiente</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/entra-id.md" target="_blank" rel="noreferrer">entra-id.md ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Alta disponibilidad y copias de seguridad</span>
-                    <span class="module-status status-pending">Fuera de alcance</span>
-                    <span class="spec-none" aria-hidden="true">—</span>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-          </div>
-
-          <div class="portfolio-cta">
-            <a class="button button-dark" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
-            <a class="button button-light" href="https://github.com/lanuzalorenzo/lab-api-local-azure#estado-de-seguridad" target="_blank" rel="noreferrer">Tabla de estado completa <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========= LABORATORIO DE IA LOCAL — experimentos y límites ========= -->
-      <section class="ai-section" id="ia" aria-labelledby="ai-title">
-        <div class="section-wrap">
-          <div class="section-heading">
-            <p class="eyebrow">06 — Laboratorio de IA local</p>
-            <h2 id="ai-title">IA local.<br><span>Medido, no supuesto.</span></h2>
-            <p class="portfolio-intro">Un servidor bare-metal con Ubuntu Server y Ollama, un cliente en el equipo de trabajo y una pregunta que ordena el resto: qué datos pueden salir de la red. No forma parte del modelo de seguridad. Es un laboratorio de aprendizaje y su unidad es el experimento, no el control: cada fila lleva el resultado, el límite y la evidencia que lo sostiene.</p>
-          </div>
-
-          <div class="portfolio-controls">
-            <p>3 grupos · 9 experimentos y límites, con su estado.</p>
-            <button class="portfolio-expand" type="button" data-expand-all="#ia" aria-expanded="false" aria-controls="ia-medido ia-probado ia-pendiente">Desplegar todos</button>
-          </div>
-
-          <div class="module-groups">
-
-            <details class="module-group" id="ia-medido" open>
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Medido</span>
-                <span class="group-count">2 resultados</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Instrumento de robustez: 113 casos congelados, 15 transformaciones activas y un control negativo</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-instrumento/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Uso de OpenCode en esta máquina, con sesiones reales y sus límites declarados</span>
-                    <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-opencode-uso-real/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="ia-probado">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Probado, sin registro reproducible</span>
-                <span class="group-count">3 resultados</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Robustez sobre <code>qwen2.5:3b</code>: tres pasadas en los niveles N0 y N1. La orden directa funciona sin disfrazarla</span>
-                    <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-ejecucion-v1/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Prompt endurecido: 15 inferencias en N0 con la misma obediencia que la línea base (0,50)</span>
-                    <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-26-robustez-prompt-v2/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Modelo 7B con Continue: integración probada por el autor, sin registro reproducible. No es un PASS</span>
-                    <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-inferencia-7b-continue/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="module-group" id="ia-pendiente">
-              <summary class="module-group-head">
-                <span class="group-dot" aria-hidden="true"></span>
-                <span class="group-title">Preparado y pendiente</span>
-                <span class="group-count">4 límites</span>
-                <span class="group-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="module-group-body">
-                <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Instalación, red, SSH y GPU: runbook escrito, sin ejecución registrada</span>
-                    <span class="module-status status-design">Diseño · runbook listo</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/server-deployment-ubuntu-ollama.md" target="_blank" rel="noreferrer">Guía ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Firewall y TLS en el puerto <code>11434</code>: previstos, con la escucha todavía sin verificar</span>
-                    <span class="module-status status-design">Diseño</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Control fuera del modelo: digest fijado y límites de lo que el asistente puede tocar</span>
-                    <span class="module-status status-pending">Pendiente</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta ↗</a>
-                  </div>
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Evaluación de funciones con LLM y RAG local, con casos y métricas propias</span>
-                    <span class="module-status status-design">Diseño</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/ai-security-evaluation.md" target="_blank" rel="noreferrer">Marco ↗</a>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-          </div>
-
-          <div class="portfolio-cta">
-            <a class="button button-dark" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
-            <a class="button button-light" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta completa <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
       <section class="contact-section section-wrap" id="contacto" aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="eyebrow">07 — Contacto</p>
+          <p class="eyebrow">04 — Contacto</p>
           <h2 id="contact-title">¿Hablamos de<br><span>tu próximo reto?</span></h2>
           <p>Si buscas a alguien que construya software y responda por su seguridad, estaré encantado de conversar.</p>
           <a class="button button-light" href="mailto:lanuzalorenzo@gmail.com">Escríbeme un email <span aria-hidden="true">↗</span></a>
