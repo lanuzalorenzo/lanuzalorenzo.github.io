@@ -255,7 +255,7 @@ button { color: inherit; }
   .site-header { height: 68px; padding-inline: 24px; }
   .menu-toggle { display: flex; flex-direction: column; gap: 5px; width: 39px; height: 39px; border: 1px solid var(--line-strong); border-radius: 50%; }
   .menu-toggle span:not(.sr-only) { width: 14px; height: 1px; background: var(--ink); }
-  .site-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 9px 20px 17px; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .site-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; height: calc(100vh - 67px); height: calc(100dvh - 67px); overflow-y: auto; overscroll-behavior: contain; padding: 9px 20px 17px; background: linear-gradient(180deg, var(--paper), color-mix(in srgb, var(--paper) 68%, var(--paper-deep))); border-bottom: 1px solid var(--line); }
   .site-nav.is-open { display: flex; flex-direction: column; }
   .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .site-nav a.is-active { color: var(--accent-hover); }
