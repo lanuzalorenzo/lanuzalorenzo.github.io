@@ -11,6 +11,7 @@ const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 function setMenuOpen(isOpen) {
   menuToggle?.setAttribute("aria-expanded", String(isOpen));
   siteNav?.classList.toggle("is-open", isOpen);
+  document.documentElement.classList.toggle("menu-open", isOpen);
   if (menuToggleLabel) menuToggleLabel.textContent = isOpen ? "Cerrar menú" : "Abrir menú";
 }
 
@@ -22,8 +23,21 @@ function closeMenu() {
   setMenuOpen(false);
 }
 
+window.matchMedia("(min-width: 851px)").addEventListener("change", (event) => {
+  if (event.matches) closeMenu();
+});
+
 siteNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
+  link.addEventListener("click", () => {
+    const wasOpen = siteNav.classList.contains("is-open");
+    closeMenu();
+    if (!wasOpen) return;
+    const id = link.hash.slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+  });
 });
 
 document.addEventListener("keydown", (event) => {
