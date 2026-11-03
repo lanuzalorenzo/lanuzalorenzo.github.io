@@ -24,6 +24,15 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 - `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; `main` exige PR, el check de verificación y rama actualizada; solo el propietario fusiona.
 - Al cambiar contenido, actualiza `lastmod` en `sitemap.xml`.
 
+## Verificación
+
+```bash
+python3 scripts/check_links.py
+gitleaks detect --source . --redact --verbose --exit-code 2
+```
+
+Son los dos checks del trabajo `verify` de `.github/workflows/pages.yml`: enlaces relativos y secretos sobre el historial completo. El despliegue solo ocurre tras ese trabajo.
+
 ## Commits
 
 Formato: `type(scope): imperative summary in English`. Scopes: `site`, `repo`. Tipos: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`. Asunto imperativo, conciso y en inglés.
