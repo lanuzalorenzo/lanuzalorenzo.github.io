@@ -22,7 +22,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 - Sitio estático compatible con GitHub Pages.
 - El workflow `.github/workflows/pages.yml` publica solo archivos públicos: `index.html`, `portfolio.html`, `api.html`, `ia.html`, `styles.css`, `app.js`, `assets`, faviconos, `.nojekyll`, `robots.txt` y `sitemap.xml`. Si añades un archivo público, inclúyelo en el paso de copia.
 - El HTML de la raíz se genera con `python3 scripts/build.py` desde `src/partials/shell.html` y `src/pages/`; no se edita a mano. El trabajo `verify` lo comprueba con `--check`.
-- `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; `main` exige PR, el check de verificación y rama actualizada; solo el propietario fusiona.
+- `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; `main` exige PR, el check de verificación y rama actualizada; solo el propietario fusiona, salvo las PRs de Dependabot de parche y minor, que fusiona el flujo automático si pasan los checks.
 - Al cambiar contenido, actualiza `lastmod` en `sitemap.xml`.
 
 ## Verificación
