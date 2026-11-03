@@ -9,7 +9,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 - **Perfil:** presentación, especialidades, formación y certificaciones.
 - **Experiencia:** trayectoria profesional.
 - **Proyectos:** laboratorio de seguridad cloud (portfolio + `EcommerceApi`) y el laboratorio de aprendizaje en IA.
-- **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con siete evidencias indexadas (tres de ejecución, cuatro documentales o verificables).
+- **Portfolio de ciberseguridad:** doce módulos y un laboratorio final con ocho evidencias indexadas (cuatro de ejecución, cuatro documentales o verificables).
 - **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
 
