@@ -50,9 +50,9 @@ El botón **Descargar CV** entrega el PDF real alojado en `assets/cv/lanuza-lore
 - Rama actualizada antes del merge.
 - Squash como único método de merge.
 - Force push y borrado de `main` bloqueados.
-- Sin bypass actors: solo el propietario tiene permiso de escritura y merge.
+- Sin bypass actors: solo el propietario tiene permiso de escritura y merge, salvo el flujo automático de Dependabot para parches y minors con los checks en verde.
 
-Los cambios de otras personas llegan por pull request y los fusiona el propietario. El propietario no publica directamente en `main`.
+Los cambios de otras personas llegan por pull request y los fusiona el propietario. El propietario no publica directamente en `main`. La excepción es Dependabot: sus PRs de parche y minor las fusiona el flujo automático si pasan los checks.
 
 ## Probar en local
 
