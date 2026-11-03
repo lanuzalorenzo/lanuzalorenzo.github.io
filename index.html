@@ -66,8 +66,8 @@
     <link rel="icon" href="favicon.png?v=20261030c" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="favicon.png?v=20261030c" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261030e">
-    <script src="app.js?v=20261030c" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261103a">
+    <script src="app.js?v=20261103a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -81,9 +81,11 @@
         <a href="#perfil">Perfil</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#api">API</a>
-        <a href="#ia">IA</a>
+        <div class="site-nav-group" role="group" aria-label="Detalle de los proyectos">
+          <a href="#portfolio">Portfolio de seguridad</a>
+          <a href="#api">EcommerceApi</a>
+          <a href="#ia">IA local</a>
+        </div>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -329,15 +331,16 @@
                 <span class="visual-caption">12 MÓDULOS · DEFENSE-IN-DEPTH</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span><span>2 repositorios</span></div>
+                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span></div>
                 <h3>Laboratorio de seguridad cloud</h3>
-                <p>Un modelo de Defense-in-Depth aplicado a una sola carga de trabajo: <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas y 87 pruebas en CI. El portfolio documenta los 12 módulos con su estado y evidencia; la ingeniería de la API, en la sección siguiente.</p>
+                <p>Un modelo de Defense-in-Depth sobre una sola carga de trabajo: <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia sección.</p>
                 <div class="project-tags" aria-label="Tecnologías">
                   <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
                 </div>
                 <div class="project-links">
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Portfolio · 12 módulos <span aria-hidden="true">↗</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure" target="_blank" rel="noreferrer">EcommerceApi · 87 pruebas <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="#portfolio">Portfolio de seguridad <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="#api">EcommerceApi <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Portfolio en GitHub <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>
