@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = [...document.querySelectorAll('.site-nav > a[href^="#"]')];
+const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const filterButtons = [...document.querySelectorAll(".filter-button")];
 const projectCards = [...document.querySelectorAll(".project-card")];
 const noResults = document.querySelector("#no-results");
