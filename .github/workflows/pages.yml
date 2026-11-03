@@ -36,6 +36,9 @@ jobs:
       - name: Escanear secretos
         run: gitleaks detect --source . --redact --verbose --exit-code 2
 
+      - name: Comprobar el HTML generado
+        run: python3 scripts/build.py --check
+
       - name: Comprobar enlaces
         run: python3 scripts/check_links.py
 
@@ -55,7 +58,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp -R index.html styles.css app.js robots.txt sitemap.xml favicon.svg favicon.png assets .nojekyll _site/
+          cp -R index.html portfolio.html api.html ia.html styles.css app.js robots.txt sitemap.xml favicon.svg favicon.png assets .nojekyll _site/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

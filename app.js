@@ -8,6 +8,19 @@ const projectStatus = document.querySelector("#project-status");
 const expandButtons = [...document.querySelectorAll("[data-expand-all]")];
 const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 
+// Las anclas antiguas de la portada viven ahora en páginas propias. Se conserva
+// el fragmento para que un enlace a un grupo concreto caiga en su sitio.
+// `replace` no deja entrada en el historial: «atrás» vuelve a donde estaba.
+const legacyPages = [
+  ["#portfolio", "portfolio.html"],
+  ["#capa-", "portfolio.html"],
+  ["#api", "api.html"],
+  ["#ia", "ia.html"],
+];
+const atHome = location.pathname.endsWith("/") || /(?:^|\/)index\.html$/.test(location.pathname);
+const legacyPage = atHome ? legacyPages.find(([prefix]) => location.hash.startsWith(prefix)) : null;
+if (legacyPage) location.replace(legacyPage[1] + location.hash);
+
 function setMenuOpen(isOpen) {
   menuToggle?.setAttribute("aria-expanded", String(isOpen));
   siteNav?.classList.toggle("is-open", isOpen);
@@ -63,6 +76,9 @@ function setActiveSection(id) {
 }
 
 function updateActiveSection() {
+  // En las páginas de detalle el enlace activo lo fija el build: no hay spy.
+  if (navLinks.length === 0) return;
+
   const header = document.querySelector(".site-header");
   const marker = window.scrollY + (header?.offsetHeight ?? 78) + window.innerHeight * 0.18;
   const sections = [...document.querySelectorAll("main > section[id]")];
