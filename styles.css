@@ -417,6 +417,7 @@ main > section[tabindex="-1"]:focus { outline: none; }
   margin-bottom: 48px;
 }
 .module-groups { margin-bottom: 40px; border-top: 1px solid var(--line); }
+.lab-label { margin: 0 0 14px; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .module-group { border-bottom: 1px solid var(--line); }
 .module-group-head { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 14px; padding: 20px 0; cursor: pointer; list-style: none; }
 .module-group-head::-webkit-details-marker { display: none; }
