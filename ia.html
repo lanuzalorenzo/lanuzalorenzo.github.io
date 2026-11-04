@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07131e">
-    <meta name="description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo que queda pendiente.">
+    <meta name="description" content="Nueve guías y seis experimentos de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
     <link rel="canonical" href="https://lanuzalorenzo.github.io/ia.html">
 
     <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://lanuzalorenzo.github.io/ia.html">
-    <meta property="og:title" content="IA local — Lorenzo Lanuza">
-    <meta property="og:description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo pendiente.">
+    <meta property="og:title" content="IA aplicada — Lorenzo Lanuza">
+    <meta property="og:description" content="Nueve guías y seis experimentos de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
     <meta property="og:image" content="https://lanuzalorenzo.github.io/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -23,17 +23,17 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://lanuzalorenzo.github.io/ia.html">
-    <meta name="twitter:title" content="IA local — Lorenzo Lanuza">
-    <meta name="twitter:description" content="Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo pendiente.">
+    <meta name="twitter:title" content="IA aplicada — Lorenzo Lanuza">
+    <meta name="twitter:description" content="Nueve guías y seis experimentos de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
     <meta name="twitter:image" content="https://lanuzalorenzo.github.io/assets/og-image.jpg">
     <meta name="twitter:image:alt" content="Lorenzo Lanuza — Software Engineer &amp; Architect, .NET y Azure">
 
-    <title>IA local — Lorenzo Lanuza</title>
+    <title>IA aplicada — Lorenzo Lanuza</title>
     <link rel="icon" href="favicon.svg?v=20261030c" type="image/svg+xml">
     <link rel="icon" href="favicon.png?v=20261030c" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="favicon.png?v=20261030c" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261103e">
+    <link rel="stylesheet" href="styles.css?v=20261104a">
     <script src="app.js?v=20261103e" defer></script>
   </head>
   <body>
@@ -51,34 +51,135 @@
         <div class="site-nav-group" role="group" aria-label="Detalle de los proyectos">
           <a href="portfolio.html">Portfolio de seguridad</a>
           <a href="api.html">EcommerceApi</a>
-          <a href="ia.html" class="is-active" aria-current="page">IA local</a>
+          <a href="ia.html" class="is-active" aria-current="page">IA aplicada</a>
         </div>
         <a href="index.html#contacto">Contacto</a>
       </nav>
     </header>
 
     <main id="contenido">
-      <!-- ========= LABORATORIO DE IA LOCAL — experimentos y límites ========= -->
+      <!-- ========= LABORATORIO DE IA — guías y experimentos ========= -->
       <section class="ai-section" id="ia" aria-labelledby="ai-title">
         <div class="section-wrap">
           <div class="section-heading">
-            <p class="eyebrow">Laboratorio de IA local</p>
-            <h1 id="ai-title">IA local.<br><span>Medido, no supuesto.</span></h1>
-            <p class="portfolio-intro">Un servidor bare-metal con Ubuntu Server y Ollama, un cliente en el equipo de trabajo y una pregunta que ordena el resto: qué datos pueden salir de la red. No forma parte del modelo de seguridad. Es un laboratorio de aprendizaje y su unidad es el experimento, no el control: cada fila lleva el resultado, el límite y la evidencia que lo sostiene.</p>
+            <p class="eyebrow">Laboratorio de IA</p>
+            <h1 id="ai-title">Aprender IA.<br><span>Probado, no supuesto.</span></h1>
+            <p class="portfolio-intro">Empecé con un servidor propio y Ollama para no sacar datos de la red. Hoy el repositorio es más ancho: nueve guías para montar el entorno, trabajar con agentes y decidir qué puede salir del equipo, y debajo los experimentos que dicen qué se ha medido de verdad. No forma parte del modelo de seguridad: la unidad es el experimento, no el control, y cada fila lleva su estado.</p>
           </div>
 
           <div class="portfolio-controls">
-            <p>3 grupos · 9 experimentos y límites, con su estado.</p>
-            <button class="portfolio-expand" type="button" data-expand-all="#ia" aria-expanded="false" aria-controls="ia-medido ia-probado ia-pendiente">Desplegar todos</button>
+            <p>4 grupos de guías y 3 de experimentos y límites, con su estado.</p>
+            <button class="portfolio-expand" type="button" data-expand-all="#ia" aria-expanded="false" aria-controls="ia-montar ia-agente ia-frontera ia-fallo ia-medido ia-probado ia-pendiente">Desplegar todos</button>
           </div>
 
           <div class="module-groups">
+
+            <p class="lab-label">Guías · 9 procedimientos</p>
+
+            <details class="module-group" id="ia-montar" open>
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Montar el entorno</span>
+                <span class="group-count">3 guías</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Despliegue en Ubuntu Server: Netplan, OpenSSH y Ollama</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/server-deployment-ubuntu-ollama.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Drivers CUDA y visibilidad de la GPU para Ollama</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/gpu-setup.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Continue contra Ollama remoto, con la ventana de contexto de 16K sincronizada</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/continue-remote-ollama-setup.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="ia-agente">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Trabajar con el agente</span>
+                <span class="group-count">3 guías</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">OpenCode desde cero: qué es, por qué empezar en local y la primera sesión</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/opencode-desde-cero.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Continuidad entre sesiones con comandos y archivos de estado</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/opencode-session-continuity.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Instrucciones de repositorio: qué es público, qué queda privado y cómo filtrarlo</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/agents-md-publico-privado.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="ia-frontera">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Decidir qué sale de la red</span>
+                <span class="group-count">2 guías</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Local frente a cloud: criterios, flujo híbrido y configuración del modelo</span>
+                    <span class="module-status status-partial">Parcial</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/local-vs-cloud.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Seguir sin proveedor remoto: qué dejar en disco y qué falta para el simulacro</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/continuidad-ia-local.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="ia-fallo">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Cuando algo falla</span>
+                <span class="group-count">1 guía</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Diagnóstico conservador de problemas frecuentes, paso a paso</span>
+                    <span class="module-status status-design">Diseño · runbook listo</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/troubleshooting.md" target="_blank" rel="noreferrer">Guía ↗</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <p class="lab-label">Experimentos · 6 resultados y 3 límites</p>
 
             <details class="module-group" id="ia-medido" open>
               <summary class="module-group-head">
                 <span class="group-dot" aria-hidden="true"></span>
                 <span class="group-title">Medido</span>
-                <span class="group-count">2 resultados</span>
+                <span class="group-count">3 resultados</span>
                 <span class="group-toggle" aria-hidden="true"></span>
               </summary>
               <div class="module-group-body">
@@ -86,12 +187,17 @@
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Instrumento de robustez: 113 casos congelados, 15 transformaciones activas y un control negativo</span>
                     <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-instrumento/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-22-robustez-instrumento/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Uso de OpenCode en esta máquina, con sesiones reales y sus límites declarados</span>
                     <span class="module-status status-validated">Validado</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-opencode-uso-real/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-30-opencode-uso-real/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Coste de 30 días de sesiones: el 98% de la entrada es relectura de caché</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-11-02-coste-contexto-sesiones/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
                   </div>
                 </div>
               </div>
@@ -109,17 +215,17 @@
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Robustez sobre <code>qwen2.5:3b</code>: tres pasadas en los niveles N0 y N1. La orden directa funciona sin disfrazarla</span>
                     <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-22-robustez-ejecucion-v1/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-22-robustez-ejecucion-v1/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Prompt endurecido: 15 inferencias en N0 con la misma obediencia que la línea base (0,50)</span>
                     <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-26-robustez-prompt-v2/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-26-robustez-prompt-v2/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Modelo 7B con Continue: integración probada por el autor, sin registro reproducible. No es un PASS</span>
                     <span class="module-status status-partial">Parcial</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/evidencias/2026-10-30-inferencia-7b-continue/README.md" target="_blank" rel="noreferrer">Evidencia ↗</a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-30-inferencia-7b-continue/README.md" target="_blank" rel="noreferrer">Experimento ↗</a>
                   </div>
                 </div>
               </div>
@@ -129,16 +235,11 @@
               <summary class="module-group-head">
                 <span class="group-dot" aria-hidden="true"></span>
                 <span class="group-title">Preparado y pendiente</span>
-                <span class="group-count">4 límites</span>
+                <span class="group-count">3 límites</span>
                 <span class="group-toggle" aria-hidden="true"></span>
               </summary>
               <div class="module-group-body">
                 <div class="spec-table" role="list">
-                  <div class="spec-row" role="listitem">
-                    <span class="spec-name">Instalación, red, SSH y GPU: runbook escrito, sin ejecución registrada</span>
-                    <span class="module-status status-design">Diseño · runbook listo</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/server-deployment-ubuntu-ollama.md" target="_blank" rel="noreferrer">Guía ↗</a>
-                  </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Firewall y TLS en el puerto <code>11434</code>: previstos, con la escucha todavía sin verificar</span>
                     <span class="module-status status-design">Diseño</span>

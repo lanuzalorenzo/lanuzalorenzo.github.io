@@ -58,7 +58,7 @@ NAV = [
 NAV_GROUP = [
     ("portfolio.html", "Portfolio de seguridad"),
     ("api.html", "EcommerceApi"),
-    ("ia.html", "IA local"),
+    ("ia.html", "IA aplicada"),
 ]
 
 PAGES = [
@@ -94,10 +94,10 @@ PAGES = [
     },
     {
         "file": "ia.html",
-        "title": "IA local — Lorenzo Lanuza",
-        "description": "Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo que queda pendiente.",
-        "og_title": "IA local — Lorenzo Lanuza",
-        "og_description": "Nueve experimentos y límites de un laboratorio de IA local con Ollama: lo medido, lo probado sin registro reproducible y lo pendiente.",
+        "title": "IA aplicada — Lorenzo Lanuza",
+        "description": "Nueve guías y seis experimentos de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
+        "og_title": "IA aplicada — Lorenzo Lanuza",
+        "og_description": "Nueve guías y seis experimentos de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
         "og_type": "website",
         "canonical": f"{SITE}/ia.html",
         "head_extra": "",
