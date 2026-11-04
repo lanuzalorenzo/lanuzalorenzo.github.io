@@ -95,9 +95,9 @@ PAGES = [
     {
         "file": "ia.html",
         "title": "IA aplicada — Lorenzo Lanuza",
-        "description": "Nueve guías y seis experimentos de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
+        "description": "Guías, experimentos y un montaje validado de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
         "og_title": "IA aplicada — Lorenzo Lanuza",
-        "og_description": "Nueve guías y seis experimentos de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
+        "og_description": "Guías, experimentos y un montaje validado de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
         "og_type": "website",
         "canonical": f"{SITE}/ia.html",
         "head_extra": "",
