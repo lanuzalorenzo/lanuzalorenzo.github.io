@@ -558,6 +558,7 @@ main > section[tabindex="-1"]:focus { outline: none; }
   padding: 11px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
 }
+.module-group-body .spec-row:last-child { border-bottom: 0; }
 .spec-name {
   font-size: 0.9rem;
   line-height: 1.45;
