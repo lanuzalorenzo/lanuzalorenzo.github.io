@@ -34,7 +34,7 @@
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261105a">
+    <link rel="stylesheet" href="styles.css?v=20261105b">
     <script src="app.js?v=20261103e" defer></script>
   </head>
   <body>
@@ -43,7 +43,7 @@
       <a class="wordmark" href="{{home_href}}" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Abrir menú</span>
-        <span></span><span></span>
+        <span class="menu-line menu-line-top"></span><span class="menu-line menu-line-bottom"></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
 {{nav}}
@@ -56,8 +56,8 @@
 
     <footer class="site-footer">
       <a class="wordmark" href="{{home_href}}" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
-      <p>Diseñado y construido con intención.</p>
-      <a href="{{top_href}}">Volver arriba ↑</a>
+      <a href="https://github.com/lanuzalorenzo/lanuzalorenzo.github.io" target="_blank" rel="noreferrer">Código de esta web <span aria-hidden="true">↗</span></a>
+      <a href="{{top_href}}">Volver arriba <span aria-hidden="true">↑</span></a>
       <span>© <span id="current-year">2026</span> Lorenzo Lanuza</span>
     </footer>
   </body>
