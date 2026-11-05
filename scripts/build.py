@@ -74,9 +74,9 @@ PAGES = [
     },
     {
         "file": "portfolio.html",
-        "title": "Portfolio de ciberseguridad — Lorenzo Lanuza",
+        "title": "Portfolio de seguridad — Lorenzo Lanuza",
         "description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth sobre una sola carga de trabajo, con el estado y la evidencia de cada uno.",
-        "og_title": "Portfolio de ciberseguridad — Lorenzo Lanuza",
+        "og_title": "Portfolio de seguridad — Lorenzo Lanuza",
         "og_description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth, con el estado real y la evidencia de cada uno.",
         "og_type": "website",
         "canonical": f"{SITE}/portfolio.html",
@@ -95,9 +95,9 @@ PAGES = [
     {
         "file": "ia.html",
         "title": "IA aplicada — Lorenzo Lanuza",
-        "description": "Guías, experimentos y un montaje validado de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
+        "description": "Guías, experimentos y un montaje en uso de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
         "og_title": "IA aplicada — Lorenzo Lanuza",
-        "og_description": "Guías, experimentos y un montaje validado de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
+        "og_description": "Guías, experimentos y un montaje en uso de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.",
         "og_type": "website",
         "canonical": f"{SITE}/ia.html",
         "head_extra": "",
@@ -114,7 +114,7 @@ def render_nav(page: str) -> str:
         href = f"#{anchor}" if home else f"index.html#{anchor}"
         lines.append(f'        <a href="{href}">{label}</a>')
 
-    lines.append('        <div class="site-nav-group" role="group" aria-label="Detalle de los proyectos">')
+    lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos y laboratorios">')
     for target, label in NAV_GROUP:
         current = ' class="is-active" aria-current="page"' if target == page else ""
         lines.append(f'          <a href="{target}"{current}>{label}</a>')

@@ -120,7 +120,7 @@ La marca aparece poco y siempre como firma: el retrato, el punto cian del estado
 - Un solo tema, oscuro. No hay variante clara; la impresión es otra superficie y tiene su hoja.
 - Un solo acento. El cian ilumina, no compite.
 - El contenedor es recto; el radio se queda en etiquetas, píldoras y controles.
-- Titular en sans con un remate en serif itálica: la parte que matiza.
+- Titular en sans. El remate en serif itálica es una firma única: solo el titular del perfil.
 
 ## Colors
 
@@ -148,9 +148,9 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 ## Typography
 
 **Display y cuerpo:** Avenir Next, con Avenir y Segoe UI de reserva.
-**Remate:** Georgia, con Times New Roman de reserva, siempre en itálica y solo dentro de un titular.
+**Remate:** Georgia, con Times New Roman de reserva, siempre en itálica y solo en la firma del perfil.
 
-**Carácter:** la sans sostiene la lectura y da la voz técnica; la serif itálica introduce el matiz, como una nota al margen dentro de la frase.
+**Carácter:** la sans sostiene la lectura y da la voz técnica; la serif itálica marca una sola vez la firma de la sección de perfil y no se repite en el resto de titulares.
 
 ### Hierarchy
 - **Display** (760, `clamp(72px, 9.1vw, 122px)`, 0.82, -0.09em): titular de portada. Máximo dos líneas.
@@ -163,7 +163,7 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 ### Reglas con nombre
 **La regla del suelo de 11 px.** Un texto que hay que leer no baja de 11 px; en móvil, de 12. Por debajo solo hay textura, y la textura se puede borrar sin perder nada.
 
-**La regla del remate.** El titular empieza en sans y termina en serif itálica, nunca al revés y nunca entero en serif.
+**La regla del remate.** El titular del perfil empieza en sans y termina en serif itálica; el resto de titulares van enteros en sans. La serif no se repite sección a sección.
 
 ## Layout
 
@@ -235,7 +235,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 **Secuencia de bloques.** Las tres páginas se leen en el mismo orden:
 
-1. **Cabecera de página.** `section-heading`: antetítulo, `h1` de dos líneas con remate en serif y `portfolio-intro` con medida de 62 caracteres. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
+1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
 3. **Familia.** `lab-label` solo cuando la página mezcla dos naturalezas de artefacto. `ia.html` lo usa para separar «Guías» de «Resultados y límites».
 4. **Grupo.** `details.module-group` por tipo, familia, capa o tema. El `summary` lleva punto de apertura, título del grupo, número de filas y control `+ / −`. El título nombra el tipo, familia, capa o tema, nunca un estado.
@@ -323,7 +323,7 @@ En API e IA, el nombre es `span.spec-name` y no lleva detalle; la fila conserva 
 - **Do** derivar cada tono nuevo con `color-mix` de los tokens y declararlo en `:root`.
 - **Do** medir el contraste sobre el fondo real: 4,5:1 en texto, 3:1 en texto grande y bordes de control.
 - **Do** dejar el antetítulo: numera la sección en la portada y nombra la página en las páginas de detalle.
-- **Do** rematar el titular con Georgia itálica, en una parte corta.
+- **Do** reservar el remate Georgia itálica para la firma del perfil; el resto de titulares van en sans.
 - **Do** separar bloques con tono y línea antes que con una caja.
 - **Do** declarar el estado una vez, en la insignia de la fila.
 - **Do** agrupar por tipo, familia, capa o tema, y ordenar por número, fecha o fuente.
