@@ -29,11 +29,10 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 
 ```bash
 python3 scripts/build.py --check
-python3 scripts/check_links.py
 gitleaks detect --source . --redact --verbose --exit-code 2
 ```
 
-Son los checks del trabajo `verify` de `.github/workflows/pages.yml`: HTML generado al día, enlaces relativos y anclas, y secretos sobre el historial completo. El despliegue solo ocurre tras ese trabajo.
+Son los checks locales de `verify`: HTML generado al día y secretos sobre el historial completo. Los enlaces y anclas los comprueba la acción compartida de [`core`](https://github.com/lanuzalorenzo/core) desde el mismo workflow. El despliegue solo ocurre tras ese trabajo.
 
 ## Commits
 
