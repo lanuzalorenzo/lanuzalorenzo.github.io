@@ -120,7 +120,9 @@ def render_nav(page: str) -> str:
         lines.append(f'          <a href="{target}"{current}>{label}</a>')
     lines.append("        </div>")
 
-    lines.append('        <a href="%s">Contacto</a>' % ("#contacto" if home else "index.html#contacto"))
+    lines.append('        <div class="site-nav-group">')
+    lines.append('          <a href="%s">Contacto</a>' % ("#contacto" if home else "index.html#contacto"))
+    lines.append("        </div>")
     return "\n".join(lines)
 
 
