@@ -490,6 +490,7 @@ main > section[tabindex="-1"]:focus { outline: none; }
   padding: 11px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
 }
+.spec-row--guide { grid-template-columns: minmax(0, 1fr) minmax(0, 13rem); }
 .module-group-body .spec-row:last-child { border-bottom: 0; }
 .spec-copy { min-width: 0; }
 .spec-name {
