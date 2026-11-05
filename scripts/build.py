@@ -25,7 +25,7 @@ JSON_LD = """    <script type="application/ld+json">
       "name": "Lorenzo Lanuza Arellano",
       "url": "https://lanuzalorenzo.github.io/",
       "image": "https://lanuzalorenzo.github.io/assets/og-image.jpg?v=20261105a",
-      "jobTitle": "Software Engineer & Architect · .NET & Azure",
+      "jobTitle": "Senior Software Engineer & Architect · .NET & Azure",
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "IES Sierra de Guara"
@@ -64,9 +64,9 @@ NAV_GROUP = [
 PAGES = [
     {
         "file": "index.html",
-        "title": "Lorenzo Lanuza — Software Engineer &amp; Architect · .NET &amp; Azure",
+        "title": "Lorenzo Lanuza — Senior Software Engineer &amp; Architect · .NET &amp; Azure",
         "description": "Lorenzo Lanuza Arellano: ingeniero de software senior en .NET y Azure con seguridad aplicada. DevSecOps, AppSec y Cloud Security.",
-        "og_title": "Lorenzo Lanuza — Software Engineer &amp; Architect · .NET &amp; Azure",
+        "og_title": "Lorenzo Lanuza — Senior Software Engineer &amp; Architect · .NET &amp; Azure",
         "og_description": "Ingeniero de software senior en .NET y Azure. Aplico la seguridad dentro del desarrollo: identidad, AppSec y pipeline con gates.",
         "og_type": "profile",
         "canonical": f"{SITE}/",
