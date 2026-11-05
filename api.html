@@ -17,7 +17,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Lorenzo Lanuza — Software Engineer &amp; Architect, .NET y Azure">
-    <meta property="og:updated_time" content="2026-11-03T00:00:00+01:00">
+    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
     <meta name="author" content="Lorenzo Lanuza Arellano">
 
     <!-- Twitter Card -->
@@ -33,7 +33,7 @@
     <link rel="icon" href="favicon.png?v=20261030c" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="favicon.png?v=20261030c" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261104c">
+    <link rel="stylesheet" href="styles.css?v=20261105a">
     <script src="app.js?v=20261103e" defer></script>
   </head>
   <body>
@@ -68,7 +68,7 @@
           </div>
 
           <div class="portfolio-controls">
-            <p>5 grupos · 28 controles y límites, con su estado.</p>
+            <p>5 grupos · 28 controles y límites.</p>
             <button class="portfolio-expand" type="button" data-expand-all="#api" aria-expanded="false" aria-controls="api-seguridad api-pruebas api-datos api-entrega api-alcance">Desplegar todos</button>
           </div>
 
@@ -110,7 +110,7 @@
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Rate limiting de 120 peticiones por minuto y por IP</span>
-                    <span class="module-status status-partial">Validado en local</span>
+                    <span class="module-status status-partial">Parcial · local</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi/Program.cs" target="_blank" rel="noreferrer">Program.cs ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
@@ -131,7 +131,7 @@
               <summary class="module-group-head">
                 <span class="group-dot" aria-hidden="true"></span>
                 <span class="group-title">Pruebas y arquitectura</span>
-                <span class="group-count">87 pruebas</span>
+                <span class="group-count">4 controles</span>
                 <span class="group-toggle" aria-hidden="true"></span>
               </summary>
               <div class="module-group-body">
@@ -176,7 +176,7 @@
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Persistencia transaccional en SQLite, importes en céntimos</span>
-                    <span class="module-status status-partial">Validado en local</span>
+                    <span class="module-status status-partial">Parcial · local</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/docs/adr/0004-persistencia-sqlite-y-outbox.md" target="_blank" rel="noreferrer">ADR-0004 ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
@@ -186,7 +186,7 @@
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Consumidor idempotente con registro de mensajes procesados</span>
-                    <span class="module-status status-partial">Validado en local</span>
+                    <span class="module-status status-partial">Parcial · local</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/EcommerceApi.Application/OrderProcessing/ProcessOrderHandler.cs" target="_blank" rel="noreferrer">ProcessOrderHandler.cs ↗</a>
                   </div>
                   <div class="spec-row" role="listitem">
@@ -229,7 +229,7 @@
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Bicep con análisis Trivy config</span>
-                    <span class="module-status status-partial">Validado en plantilla</span>
+                    <span class="module-status status-partial">Parcial · plantilla</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-api-local-azure/blob/main/infra/main.bicep" target="_blank" rel="noreferrer">main.bicep ↗</a>
                   </div>
                 </div>
@@ -258,7 +258,7 @@
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Despliegue real en Azure</span>
                     <span class="module-status status-pending">Pendiente</span>
-                    <span class="spec-none" aria-hidden="true">—</span>
+                    <span class="spec-none">Sin evidencia</span>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">OIDC de GitHub Actions a Azure</span>
@@ -273,7 +273,7 @@
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Alta disponibilidad y copias de seguridad</span>
                     <span class="module-status status-pending">Fuera de alcance</span>
-                    <span class="spec-none" aria-hidden="true">—</span>
+                    <span class="spec-none">Sin evidencia</span>
                   </div>
                 </div>
               </div>
