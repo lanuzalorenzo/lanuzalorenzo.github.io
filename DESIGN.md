@@ -258,7 +258,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 |---|---|---|---|---|
 | `portfolio.html` | capa del modelo (5 grupos) | `spec-row` | insignia, una vez | 12 módulos |
 | `api.html` | familia de control (5 grupos) | `spec-row` | insignia, una vez | 28 controles y límites |
-| `ia.html` | guías por trabajo y resultados o límites por tema (7 grupos) | `spec-row` | insignia, una vez | 9 guías y 11 resultados y límites |
+| `ia.html` | guías por trabajo y resultados o límites por tema (7 grupos) | `spec-row` | insignia, una vez | 9 guías y 12 resultados y límites |
 
 ## El estado
 
@@ -315,7 +315,7 @@ En API e IA, el nombre es `span.spec-name` y no lleva detalle; la fila conserva 
 
 ## La regla de `ia.html`
 
-`ia.html` tiene dos familias y siete grupos. Arriba, bajo `lab-label` «Guías», cuatro grupos por trabajo: Montar el entorno (3), Trabajar con el agente (3), Decidir qué sale de la red (2) y Cuando algo falla (1). Debajo, bajo «Resultados y límites», tres grupos por tema: Entorno y uso (4), Instrumento y robustez (4) y Límites y alcance (3). Los grupos se definen por tema, no por estado; unos mezclan estados y otros no. El estado aparece una sola vez, en la insignia de cada fila. La barra de control cuenta 9 guías y 11 resultados y límites, sin nombrar estados. La página sigue siendo una página menor, no un tercer pilar.
+`ia.html` tiene dos familias y siete grupos. Arriba, bajo `lab-label` «Guías», cuatro grupos por trabajo: Montar el entorno (3), Trabajar con el agente (3), Decidir qué sale de la red (2) y Cuando algo falla (1). Debajo, bajo «Resultados y límites», tres grupos por tema: Entorno y uso (4), Instrumento y robustez (4) y Límites y alcance (4). Los grupos se definen por tema, no por estado; unos mezclan estados y otros no. El estado aparece una sola vez, en la insignia de cada fila. La barra de control cuenta 9 guías y 12 resultados y límites, sin nombrar estados. La página sigue siendo una página menor, no un tercer pilar.
 
 ## Do's and Don'ts
 
