@@ -24,7 +24,7 @@ JSON_LD = """    <script type="application/ld+json">
       "@type": "Person",
       "name": "Lorenzo Lanuza Arellano",
       "url": "https://lanuzalorenzo.github.io/",
-      "image": "https://lanuzalorenzo.github.io/assets/og-image.jpg?v=20261105a",
+      "image": "https://lanuzalorenzo.github.io/assets/social/og-image.jpg?v=20261105b",
       "jobTitle": "Senior Software Engineer & Architect · .NET & Azure",
       "alumniOf": {
         "@type": "EducationalOrganization",
