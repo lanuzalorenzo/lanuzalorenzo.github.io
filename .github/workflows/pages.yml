@@ -19,6 +19,8 @@ concurrency:
 jobs:
   verify:
     name: Verificación (secretos y enlaces)
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,7 +42,9 @@ jobs:
         run: python3 scripts/build.py --check
 
       - name: Comprobar enlaces
-        run: python3 scripts/check_links.py
+        uses: lanuzalorenzo/core/actions/check-links@v1.1
+        with:
+          skip: src
 
   deploy:
     name: Publicar
