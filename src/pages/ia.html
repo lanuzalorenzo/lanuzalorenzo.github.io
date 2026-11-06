@@ -8,7 +8,7 @@
           </div>
 
           <div class="portfolio-controls">
-            <p>9 guías y 12 resultados y límites.</p>
+            <p>9 guías y 13 resultados y límites.</p>
             <button class="portfolio-expand" type="button" data-expand-all="#ia" aria-expanded="false" aria-controls="ia-montar ia-agente ia-frontera ia-fallo ia-entorno ia-instrumento ia-limites">Desplegar todos</button>
           </div>
 
@@ -154,7 +154,7 @@
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-22-robustez-instrumento/README.md" target="_blank" rel="noreferrer">Experimento <span aria-hidden="true">↗</span></a>
                   </div>
                   <div class="spec-row" role="listitem">
-                    <span class="spec-name">Robustez sobre <code>qwen2.5:3b</code>: tres pasadas en los niveles N0 y N1. La orden directa funciona sin disfrazarla</span>
+                    <span class="spec-name">Robustez sobre <code>qwen2.5:3b</code>: tres repeticiones por caso en los niveles N0 y N1. La orden directa funciona sin disfrazarla</span>
                     <span class="module-status status-partial">Parcial</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/experimentos/2026-10-22-robustez-ejecucion-v1/README.md" target="_blank" rel="noreferrer">Experimento <span aria-hidden="true">↗</span></a>
                   </div>
@@ -176,15 +176,15 @@
               <summary class="module-group-head">
                 <span class="group-dot" aria-hidden="true"></span>
                 <span class="group-title">Límites y alcance</span>
-                <span class="group-count">4 límites</span>
+                <span class="group-count">5 límites</span>
                 <span class="group-toggle" aria-hidden="true"></span>
               </summary>
               <div class="module-group-body">
                 <div class="spec-table" role="list">
                   <div class="spec-row" role="listitem">
-                    <span class="spec-name">Firewall y TLS en el puerto <code>11434</code>: previstos, con la escucha todavía sin verificar</span>
+                    <span class="spec-name">Firewall y TLS en el puerto <code>11434</code>: no incluidos en la guía de despliegue; la escucha sigue sin verificar</span>
                     <span class="module-status status-design">Diseño</span>
-                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta <span aria-hidden="true">↗</span></a>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/guias/server-deployment-ubuntu-ollama.md#6-seguridad-antes-de-usarlo-desde-otro-equipo" target="_blank" rel="noreferrer">Guía <span aria-hidden="true">↗</span></a>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Control fuera del modelo: digest fijado y límites de lo que el asistente puede tocar</span>
@@ -192,9 +192,14 @@
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/hoja-de-ruta-seguridad-asistentes.md" target="_blank" rel="noreferrer">Hoja de ruta <span aria-hidden="true">↗</span></a>
                   </div>
                   <div class="spec-row" role="listitem">
-                    <span class="spec-name">Evaluación de funciones con LLM y RAG local, con casos y métricas propias</span>
+                    <span class="spec-name">Evaluación de funciones con LLM, con casos y métricas propias</span>
                     <span class="module-status status-design">Diseño</span>
                     <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/ai-security-evaluation.md" target="_blank" rel="noreferrer">Marco <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">RAG local: criterio de almacenamiento de vectores escrito, sin motor elegido ni prueba</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje/blob/main/docs/referencia/bitacora-decisiones-aprendizaje.md#entrada-06-dónde-guardar-los-vectores-del-rag-local" target="_blank" rel="noreferrer">Bitácora <span aria-hidden="true">↗</span></a>
                   </div>
                   <div class="spec-row" role="listitem">
                     <span class="spec-name">Hardware: qué modelo cabe en cada memoria, qué velocidad cabe esperar y cuándo compensa comprar el equipo</span>
