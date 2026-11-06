@@ -9,7 +9,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 - **Perfil:** presentación, especialidades, formación y certificaciones.
 - **Experiencia:** trayectoria profesional.
 - **Proyectos:** Portfolio de seguridad (con `EcommerceApi` como carga de trabajo) e IA aplicada.
-- **Portfolio de seguridad:** doce módulos y un laboratorio final con ocho evidencias indexadas (cuatro de ejecución, cuatro documentales o verificables).
+- **Portfolio de seguridad:** doce módulos y un laboratorio final con [evidencias indexadas](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/laboratorio-final/evidencias/README.md) por tipo y fecha.
 - **IA aplicada:** guías y experimentos de IA local con Ollama, con criterio y límites.
 - **La carga de trabajo (`EcommerceApi`):** el estado real de 28 controles y límites —seguridad, pruebas, datos, CI y alcance declarado— con enlace a la evidencia de cada uno.
 - **Contacto y CV:** enlaces profesionales y PDF optimizado para ATS.
