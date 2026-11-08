@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Esta licencia cubre el código de este repositorio: `scripts/`, `src/`, `styles.css`,
-`app.js` y los HTML generados. No cubre los textos, las imágenes, el CV ni la marca;
-eso se rige por `LICENSE-CONTENT`.
