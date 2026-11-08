@@ -1,0 +1,27 @@
+# Licencia del contenido
+
+Los textos, las fotografías, los diagramas, el PDF del CV y el monograma LL de este
+sitio son obra de Lorenzo Lanuza Arellano y se publican bajo
+**Creative Commons Atribución-SinDerivadas 4.0 Internacional (CC BY-ND 4.0)**.
+
+Texto completo de la licencia: <https://creativecommons.org/licenses/by-nd/4.0/legalcode.es>
+
+## Qué permite
+
+- Copiar y redistribuir el contenido en cualquier medio o formato.
+- Citarlo y enlazarlo, también con fines comerciales.
+
+## Qué no permite
+
+- Distribuir versiones modificadas del contenido ni crear obra derivada.
+- Republicar el CV, las fotografías o la marca como si fueran propios.
+- Sugerir que el autor respalda el uso que se hace del contenido.
+
+## Atribución
+
+Basta con nombrar a Lorenzo Lanuza Arellano y enlazar a <https://lanuzalorenzo.github.io>.
+
+## Alcance
+
+Esta licencia cubre el contenido, no el código. El código —`scripts/`, `src/`,
+`styles.css`, `app.js` y los HTML generados— se rige por `LICENSE` (MIT).

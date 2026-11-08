@@ -55,6 +55,10 @@ El botón **Descargar CV** entrega el PDF real alojado en `assets/cv/lanuza-lore
 
 Los cambios de otras personas llegan por pull request y los fusiona el propietario. El propietario no publica directamente en `main`. La excepción es Dependabot: sus PRs de parche y minor las fusiona el flujo automático si pasan los checks.
 
+## Licencia
+
+El código —`scripts/`, `src/`, `styles.css`, `app.js` y los HTML generados— va con **MIT** ([`LICENSE`](LICENSE)). Los textos, las fotografías, el CV y el monograma LL van con **CC BY-ND 4.0** ([`LICENSE-CONTENT`](LICENSE-CONTENT)): se pueden citar y compartir sin modificarlos y con atribución.
+
 ## Probar en local
 
 Abre `index.html` en un navegador o sirve la carpeta con un servidor estático, por ejemplo:
