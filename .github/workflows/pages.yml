@@ -29,13 +29,13 @@ jobs:
           fetch-depth: 0
 
       - name: Escanear secretos
-        uses: lanuzalorenzo/core/actions/gitleaks@v1.4
+        uses: lanuzalorenzo/core/actions/gitleaks@v1.3
 
       - name: Comprobar el HTML generado
         run: python3 scripts/build.py --check
 
       - name: Comprobar enlaces
-        uses: lanuzalorenzo/core/actions/check-links@v1.1
+        uses: lanuzalorenzo/core/actions/check-links@v1.3
         with:
           skip: src
 
