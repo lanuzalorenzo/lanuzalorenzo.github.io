@@ -25,6 +25,8 @@ python3 scripts/build.py --check  # falla si lo versionado no coincide con lo ge
 
 ## Publicar en GitHub Pages
 
+Las cabeceras HTTP las fija GitHub Pages, no este repositorio: no se presentan como control propio ni se comprueba aquí la cabecera `Server`.
+
 1. Crea un repositorio público llamado exactamente `lanuzalorenzo.github.io` en la cuenta `lanuzalorenzo`.
 2. Desde esta carpeta, publica los archivos en la rama `main`:
 
