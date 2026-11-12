@@ -146,7 +146,7 @@ button { color: inherit; }
 .impact-list li { position: relative; max-width: 340px; padding-left: 12px; color: var(--muted); font-size: 12px; }
 .impact-list li::before { position: absolute; left: 0; color: var(--accent-hover); content: "↗"; }
 
-.skills-block { margin-top: 76px; padding-top: 52px; border-top: 1px solid var(--line); }
+.skills-block { margin-top: 64px; }
 .block-head { margin-bottom: 30px; }
 .block-head .eyebrow { margin-bottom: 12px; }
 .block-head h3 { margin: 0; font-size: clamp(24px, 2.8vw, 34px); font-weight: 660; letter-spacing: -.06em; line-height: 1.05; }
