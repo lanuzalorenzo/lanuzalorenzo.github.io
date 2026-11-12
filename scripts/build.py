@@ -75,7 +75,7 @@ PAGES = [
     {
         "file": "portfolio.html",
         "title": "Portfolio de seguridad — Lorenzo Lanuza",
-        "description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth sobre una sola carga de trabajo, con el estado y la evidencia de cada uno.",
+        "description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth, con el estado y la evidencia de cada uno.",
         "og_title": "Portfolio de seguridad — Lorenzo Lanuza",
         "og_description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth, con el estado real y la evidencia de cada uno.",
         "og_type": "website",
