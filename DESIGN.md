@@ -158,7 +158,7 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 - **Lead** (600, 22px, 1.5, -0.04em): primer párrafo, el que resume.
 - **Body** (400, 15px, 1.65): prosa. Medida de 45–75 caracteres.
 - **Small** (400, 12–14px): apoyo, notas, detalles de una fila.
-- **Label** (750, 11px, 0.15em, caja alta): antetítulo, botón, índice, banda y rótulos del gráfico.
+- **Label** (750, 11px, 0.15em, caja alta): antetítulo, botón, índice, banda, rótulo de familia y rótulos del gráfico.
 
 ### Reglas con nombre
 **La regla del suelo de 11 px.** Un texto que hay que leer no baja de 11 px; en móvil, de 12. Por debajo solo hay textura, y la textura se puede borrar sin perder nada.
@@ -237,7 +237,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
-3. **Familia.** `lab-label` solo cuando la página mezcla dos naturalezas de artefacto. `ia.html` lo usa para separar «Guías» de «Resultados y límites».
+3. **Familia.** `lab-label` solo cuando la página mezcla dos naturalezas de artefacto. `ia.html` lo usa para separar «Guías» de «Resultados y límites». El rótulo lleva el token Label y la regla de 1 px va debajo, a 8 px del texto; el primer grupo empieza tras la regla y entre familias quedan 64 px de aire. Sin fondo y sin línea encima: la lista la abre la regla del rótulo y, cuando no hay rótulo, el borde superior de su primer grupo.
 4. **Grupo.** `details.module-group` por tipo, familia, capa o tema. El `summary` lleva punto de apertura, título del grupo, número de filas y control `+ / −`. El título nombra el tipo, familia, capa o tema, nunca un estado.
 5. **Filas.** `spec-table` con una `spec-row` por artefacto. La fila es la unidad de lectura y la única que declara estado.
 6. **Cierre.** `portfolio-cta` con dos enlaces: el repositorio y la fuente completa de la página —guía de lectura, tabla de estado o hoja de ruta.

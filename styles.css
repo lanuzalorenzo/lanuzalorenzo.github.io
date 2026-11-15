@@ -417,8 +417,11 @@ main > section[tabindex="-1"]:focus { outline: none; }
 .portfolio-workload { color: var(--accent); border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); transition: color .2s, border-color .2s; }
 .portfolio-workload:hover { color: var(--accent-hover); border-color: var(--accent-hover); }
 .portfolio-workload code { color: inherit; }
-.module-groups { margin-bottom: 40px; border-top: 1px solid var(--line); }
-.lab-label { margin: 0 0 14px; padding-top: 18px; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.module-groups { margin-bottom: 40px; }
+.module-groups > .module-group:first-child { border-top: 1px solid var(--line); }
+.lab-label { margin: 0; padding: 20px 0 8px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
+.module-group + .lab-label { padding-top: 64px; }
+@media (max-width: 620px) { .lab-label { font-size: 12px; } }
 .module-group { border-bottom: 1px solid var(--line); }
 .module-group-head { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 14px; padding: 20px 0; cursor: pointer; list-style: none; }
 .module-group-head::-webkit-details-marker { display: none; }
