@@ -13,6 +13,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 ## Convenciones visuales
 
 - La paleta son las variables de `:root` en `styles.css`; fuera de la web los valores se escriben a mano.
+- `identidad/` es la capa de marca que consumen las demás webs: tokens, cabecera, pie, nav, botones e insignias. Se genera desde `styles.css` con `identidad/extraer.py` y no se edita a mano; su contrato está en `identidad/LEEME.md`. No se publica: `pages.yml` no la copia.
 - Las carpetas `assets/marca/`, `assets/iconos/` y `assets/social/` documentan sus piezas en su `README.md`.
 - Nada de dependencias externas para iconos ni diagramas: SVG en línea o archivos del propio repositorio.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
@@ -32,7 +33,7 @@ python3 scripts/build.py --check
 gitleaks detect --source . --redact --verbose --exit-code 2
 ```
 
-Son los checks locales de `verify`: HTML generado al día y secretos sobre el historial completo. Los enlaces y anclas los comprueba la acción compartida de [`core`](https://github.com/lanuzalorenzo/core) desde el mismo workflow. El despliegue solo ocurre tras ese trabajo.
+Son los checks locales de `verify`: HTML generado al día, capa de identidad al día y secretos sobre el historial completo. Los enlaces y anclas los comprueba la acción compartida de [`core`](https://github.com/lanuzalorenzo/core) desde el mismo workflow. El despliegue solo ocurre tras ese trabajo.
 
 ## Commits
 
