@@ -11,6 +11,7 @@ editan a mano, y el trabajo `verify` comprueba que están al día.
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -173,9 +174,14 @@ def main(argv: list[str]) -> int:
             target.write_text(rendered, encoding="utf-8")
 
     if check:
+        identidad = subprocess.run([sys.executable, str(ROOT / "identidad" / "verificar.py")])
+        ejemplo = subprocess.run(
+            [sys.executable, str(ROOT / "identidad" / "ejemplo" / "build.py"), "--check"]
+        )
         if stale:
             print("HTML generado desactualizado: " + ", ".join(stale))
             print("Ejecuta `python3 scripts/build.py` y commitea el resultado.")
+        if identidad.returncode != 0 or ejemplo.returncode != 0 or stale:
             return 1
         print(f"OK: {len(PAGES)} páginas generadas y al día")
         return 0
