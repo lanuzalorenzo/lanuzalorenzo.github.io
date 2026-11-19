@@ -235,7 +235,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 **Secuencia de bloques.** Las cuatro páginas se leen en el mismo orden:
 
-1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
+1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62ch —unos 75 caracteres a 16,8 px—, que es ya el techo de la regla de cuerpo: `ch` mide el cero, no la letra media, y 75ch llevarían la línea a 90 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
 3. **Familia.** `lab-label` solo cuando la página mezcla dos naturalezas de artefacto. `ia.html` lo usa para separar «Guías» de «Resultados y límites». El rótulo lleva el token Label y la regla de 1 px va debajo, a 8 px del texto; el primer grupo empieza tras la regla y entre familias quedan 64 px de aire. Sin fondo y sin línea encima: la lista la abre la regla del rótulo y, cuando no hay rótulo, el borde superior de su primer grupo.
 4. **Grupo.** `details.module-group` por tipo, familia, capa o tema. El `summary` lleva punto de apertura, título del grupo, número de filas y control `+ / −`. El título nombra el tipo, familia, capa o tema, nunca un estado.
