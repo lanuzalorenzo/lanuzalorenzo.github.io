@@ -198,6 +198,7 @@ button { color: inherit; }
   --graphic-muted: var(--muted);
 }
 .project-visual-cloud { background-image: radial-gradient(color-mix(in srgb, var(--ink) 5%, transparent) 1px, transparent 1px), linear-gradient(158deg, var(--paper-deep), var(--paper)); background-size: 14px 14px, auto; }
+.project-graphic-comicteca .graphic-node .node-title, .project-graphic-comicteca .graphic-node .node-sub, .project-graphic-comicteca .graphic-boundary text, .project-graphic-comicteca .graphic-workload text { font-size: 14px; }
 .project-graphic { position: absolute; inset: 0; width: 100%; height: 100%; }
 .project-label, .visual-caption { position: absolute; z-index: 2; left: 21px; color: var(--graphic-muted); font-size: 11px; font-weight: 750; letter-spacing: .12em; }
 .project-label { top: 19px; }

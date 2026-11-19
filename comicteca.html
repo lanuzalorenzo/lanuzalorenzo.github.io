@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07131e">
+    <meta name="description" content="Comicteca, la aplicación principal del portfolio: una web Blazor WebAssembly y una API .NET 10 con los controles compartidos ya probados en el banco de pruebas.">
+    <link rel="canonical" href="https://lanuzalorenzo.github.io/comicteca.html">
+
+    <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://lanuzalorenzo.github.io/comicteca.html">
+    <meta property="og:title" content="Comicteca — Lorenzo Lanuza">
+    <meta property="og:description" content="Comicteca, la aplicación principal del portfolio: una web Blazor WebAssembly y una API .NET 10 con los controles compartidos ya probados en el banco de pruebas.">
+    <meta property="og:image" content="https://lanuzalorenzo.github.io/assets/social/og-image.jpg?v=20261105b">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lorenzo Lanuza — Senior Software Engineer &amp; Architect, .NET y Cloud Security">
+    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
+    <meta name="author" content="Lorenzo Lanuza Arellano">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lanuzalorenzo.github.io/comicteca.html">
+    <meta name="twitter:title" content="Comicteca — Lorenzo Lanuza">
+    <meta name="twitter:description" content="Comicteca, la aplicación principal del portfolio: una web Blazor WebAssembly y una API .NET 10 con los controles compartidos ya probados en el banco de pruebas.">
+    <meta name="twitter:image" content="https://lanuzalorenzo.github.io/assets/social/og-image.jpg?v=20261105b">
+    <meta name="twitter:image:alt" content="Lorenzo Lanuza — Senior Software Engineer &amp; Architect, .NET y Cloud Security">
+
+    <title>Comicteca — Lorenzo Lanuza</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/marca/favicon-16.png?v=20261105a">
+    <link rel="icon" href="favicon.svg?v=20261105a" type="image/svg+xml">
+    <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="stylesheet" href="styles.css?v=20261115a">
+    <script src="app.js?v=20261103e" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Abrir menú</span>
+        <span class="menu-line menu-line-top"></span><span class="menu-line menu-line-bottom"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html#perfil">Perfil</a>
+        <a href="index.html#experiencia">Experiencia</a>
+        <a href="index.html#proyectos">Proyectos</a>
+        <div class="site-nav-group" role="group" aria-label="Proyectos y laboratorios">
+          <a href="portfolio.html">Portfolio de seguridad</a>
+          <a href="comicteca.html" class="is-active" aria-current="page">Comicteca</a>
+          <a href="api.html">EcommerceApi</a>
+          <a href="ia.html">IA aplicada</a>
+        </div>
+        <div class="site-nav-group">
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- ========= LA APLICACIÓN PRINCIPAL — Comicteca, control a control ========= -->
+      <section class="workload-section" id="comicteca" aria-labelledby="workload-title">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">La aplicación principal</p>
+            <h1 id="workload-title">Comicteca, control a control.</h1>
+            <p class="portfolio-intro">Comicteca es la aplicación principal <a class="portfolio-workload" href="portfolio.html">del portfolio</a>: una herramienta de uso propio para llevar mi colección de cómics, no un producto. La forman una web Blazor WebAssembly y una API .NET 10 sobre SQLite en local. Los controles compartidos —CORS, cabeceras y CSP, límite por IP, ProblemDetails, salud, Docker sin root, CodeQL y Trivy— llegan aquí después de estar en verde en el <a class="portfolio-workload" href="api.html">banco de pruebas</a>. Lo que sigue es lo que puedo demostrar hoy, con enlace a su prueba; el despliegue sigue pendiente y el aviso de novedades, en diseño.</p>
+          </div>
+
+          <div class="portfolio-controls">
+            <p>5 grupos · 27 controles y límites.</p>
+            <button class="portfolio-expand" type="button" data-expand-all="#comicteca" aria-expanded="false" aria-controls="comicteca-aplicacion comicteca-controles comicteca-identidad comicteca-entrega comicteca-alcance">Desplegar todos</button>
+          </div>
+
+          <div class="module-groups">
+
+            <details class="module-group" id="comicteca-aplicacion" open>
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">La aplicación</span>
+                <span class="group-count">5 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Carga la colección desde el CSV de demostración</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/datos.md" target="_blank" rel="noreferrer">docs/datos.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Agrupa por serie y editorial y resume los tomos</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Busca por título y editorial</span>
+                    <span class="module-status status-partial">Parcial · sin prueba</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/src/Comicteca.Web/Pages/Home.razor" target="_blank" rel="noreferrer">Home.razor <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Alta y baja de series y tomos desde la web</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/tree/main/tests/e2e" target="_blank" rel="noreferrer">tests/e2e <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Alta y baja de series y tomos por API</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/src/Comicteca.Application/ISerieWriter.cs" target="_blank" rel="noreferrer">ISerieWriter.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="comicteca-controles">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Controles compartidos</span>
+                <span class="group-count">6 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CORS con denegación por defecto</span>
+                    <span class="module-status status-validated">Validado en local y CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/shared-dotnet" target="_blank" rel="noreferrer">LL.Security <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Cabeceras de seguridad y CSP en la API y en la web</span>
+                    <span class="module-status status-validated">Validado en local y CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Límite de 120 peticiones por minuto y por IP</span>
+                    <span class="module-status status-validated">Validado en local y CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/src/Comicteca.Api/Program.cs" target="_blank" rel="noreferrer">Program.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Cuerpo de petición limitado a 16 KB</span>
+                    <span class="module-status status-validated">Validado en Docker</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">ProblemDetails ante una excepción no controlada</span>
+                    <span class="module-status status-validated">Validado en local y CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/shared-dotnet" target="_blank" rel="noreferrer">LL.Hosting <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Salud anónima sin datos de la colección</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/src/Comicteca.Api/Program.cs" target="_blank" rel="noreferrer">Program.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="comicteca-identidad">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Identidad y datos</span>
+                <span class="group-count">5 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Entra ID con una sola cuenta permitida, con emisor de prueba y tenant real</span>
+                    <span class="module-status status-validated">Validado en local y CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">La API no arranca sin los valores de autenticación</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/adr/0006-autenticacion-siempre.md" target="_blank" rel="noreferrer">ADR 0006 <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Rastro de cada escritura con la cuenta que la hizo</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Dos identidades en la base: migración y aplicación</span>
+                    <span class="module-status status-partial">Parcial · Azure SQL</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/adr/0009-dos-identidades-en-la-base.md" target="_blank" rel="noreferrer">ADR 0009 <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Copia de SQLite restaurable e íntegra</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/pruebas.md" target="_blank" rel="noreferrer">docs/pruebas.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="comicteca-entrega">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Entrega y CI</span>
+                <span class="group-count">6 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Compilación en Release sin avisos y formato</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Interfaz en Chromium a 375 px con sesión</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/tree/main/tests/e2e" target="_blank" rel="noreferrer">tests/e2e <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Gitleaks sobre el historial completo</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CodeQL con el conjunto <code>security-extended</code></span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Trivy sobre las dos imágenes y web sin root</span>
+                    <span class="module-status status-validated">Validado en CI</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">97 pruebas .NET y 18 comprobaciones de interfaz</span>
+                    <span class="module-status status-validated">Validado en local</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="comicteca-alcance">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Alcance y límites</span>
+                <span class="group-count">5 límites</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Despliegue en Azure</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/adr/0003-hospedaje-de-la-api.md" target="_blank" rel="noreferrer">ADR 0003 <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Azure SQL en producción</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Alta con la cuenta real de Entra ID</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/entra-id.md" target="_blank" rel="noreferrer">docs/entra-id.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Renovación de MSAL bajo la CSP</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">capacidades.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Aviso de novedades por serie</span>
+                    <span class="module-status status-design">Diseño</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/plan.md" target="_blank" rel="noreferrer">docs/plan.md <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+          <div class="portfolio-cta">
+            <a class="button button-dark" href="https://github.com/lanuzalorenzo/comicteca" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="https://github.com/lanuzalorenzo/comicteca/blob/main/docs/capacidades.md" target="_blank" rel="noreferrer">Tabla de estado completa <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="index.html" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
+      <a href="https://github.com/lanuzalorenzo/lanuzalorenzo.github.io" target="_blank" rel="noreferrer">Código de esta web <span aria-hidden="true">↗</span></a>
+      <a href="#contenido">Volver arriba <span aria-hidden="true">↑</span></a>
+      <span>© <span id="current-year">2026</span> Lorenzo Lanuza</span>
+    </footer>
+  </body>
+</html>
