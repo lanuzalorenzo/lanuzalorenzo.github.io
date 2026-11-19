@@ -58,6 +58,7 @@ NAV = [
 ]
 NAV_GROUP = [
     ("portfolio.html", "Portfolio de seguridad"),
+    ("comicteca.html", "Comicteca"),
     ("api.html", "EcommerceApi"),
     ("ia.html", "IA aplicada"),
 ]
@@ -81,6 +82,16 @@ PAGES = [
         "og_description": "Doce módulos de seguridad agrupados por capa del modelo Defense-in-Depth, con el estado real y la evidencia de cada uno.",
         "og_type": "website",
         "canonical": f"{SITE}/portfolio.html",
+        "head_extra": "",
+    },
+    {
+        "file": "comicteca.html",
+        "title": "Comicteca — Lorenzo Lanuza",
+        "description": "Comicteca, la aplicación principal del portfolio: una web Blazor WebAssembly y una API .NET 10 con los controles compartidos ya probados en el banco de pruebas.",
+        "og_title": "Comicteca — Lorenzo Lanuza",
+        "og_description": "Comicteca, la aplicación principal del portfolio: una web Blazor WebAssembly y una API .NET 10 con los controles compartidos ya probados en el banco de pruebas.",
+        "og_type": "website",
+        "canonical": f"{SITE}/comicteca.html",
         "head_extra": "",
     },
     {

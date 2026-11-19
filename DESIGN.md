@@ -231,9 +231,9 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 ## Gramática de página
 
-**Alcance.** Esta gramática es la de las tres páginas de detalle: `portfolio.html`, `api.html` e `ia.html`. Las tres usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: sus tarjetas de proyecto no declaran estado.
+**Alcance.** Esta gramática es la de las cuatro páginas de detalle: `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. Las cuatro usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: sus tarjetas de proyecto no declaran estado.
 
-**Secuencia de bloques.** Las tres páginas se leen en el mismo orden:
+**Secuencia de bloques.** Las cuatro páginas se leen en el mismo orden:
 
 1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
@@ -250,13 +250,14 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 **Tipo y estado pueden coincidir.** Que hoy todos los resultados estén validados o parciales, y todos los límites en diseño o pendiente, no convierte «Resultados» en un grupo por estado. El criterio es la naturaleza del artefacto o el tema; si un grupo solo se puede nombrar con un estado, no es un grupo.
 
-**El tono no forma parte de la gramática.** `portfolio.html` puede mantener `surface-deep` y `api.html` e `ia.html` el fondo `paper`; lo común es la estructura, no la banda de color.
+**El tono no forma parte de la gramática.** `portfolio.html` puede mantener `surface-deep` y `comicteca.html`, `api.html` e `ia.html` el fondo `paper`; lo común es la estructura, no la banda de color.
 
 ### Estado actual
 
 | Página | Agrupa por | Fila | Estado | Contenido |
 |---|---|---|---|---|
 | `portfolio.html` | capa del modelo (5 grupos) | `spec-row` | insignia, una vez | 12 módulos |
+| `comicteca.html` | familia de control (5 grupos) | `spec-row` | insignia, una vez | 27 controles y límites |
 | `api.html` | familia de control (5 grupos) | `spec-row` | insignia, una vez | 28 controles y límites |
 | `ia.html` | guías por trabajo y resultados o límites por tema (7 grupos) | `spec-row` | insignia solo en resultados y límites | 9 guías y 13 resultados y límites |
 
@@ -284,7 +285,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 ## Fila tipo
 
-La misma fila sirve a `portfolio.html`, `api.html` e `ia.html`. No hay tarjeta de módulo, caja por control ni rejilla de resultados: la página es una lista de grupos y cada grupo, una lista de filas.
+La misma fila sirve a `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. No hay tarjeta de módulo, caja por control ni rejilla de resultados: la página es una lista de grupos y cada grupo, una lista de filas.
 
 | Campo | Obligatorio | Qué lleva | Dónde |
 |---|---|---|---|

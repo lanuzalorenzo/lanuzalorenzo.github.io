@@ -78,6 +78,7 @@
         <a href="#proyectos">Proyectos</a>
         <div class="site-nav-group" role="group" aria-label="Proyectos y laboratorios">
           <a href="portfolio.html">Portfolio de seguridad</a>
+          <a href="comicteca.html">Comicteca</a>
           <a href="api.html">EcommerceApi</a>
           <a href="ia.html">IA aplicada</a>
         </div>
@@ -98,7 +99,7 @@
             </figure>
           </div>
           <p class="hero-role">Senior Software Engineer &amp; Architect <span>.NET &amp; Cloud Security</span></p>
-          <p class="hero-intro">Construyo backend .NET en Azure y aplico la seguridad dentro del propio ciclo: identidad, análisis en el pipeline y control de dependencias. Todo lo que cuento aquí está en repositorios que se pueden abrir y revisar.</p>
+          <p class="hero-intro">Construyo backend .NET en Azure y aplico la seguridad dentro del propio ciclo: identidad, análisis en el pipeline y control de dependencias. Mi aplicación principal es <strong>Comicteca</strong>, que recibe los controles ya probados en un banco de pruebas. Todo lo que cuento aquí está en repositorios que se pueden abrir y revisar.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#proyectos">Explorar proyectos <span aria-hidden="true">↘</span></a>
             <a class="button button-quiet" href="assets/cv/lanuza-lorenzo-cv.pdf" download="Lanuza-Lorenzo-CV.pdf" type="application/pdf">Descargar CV <span aria-hidden="true">↗</span></a>
@@ -161,7 +162,7 @@
         <div class="metrics" role="group" aria-label="Cifras del trabajo">
           <a class="metric" href="#experiencia"><strong>10<span>+</span></strong><span>años en ingeniería<br>de software</span></a>
           <a class="metric" href="portfolio.html"><strong>12</strong><span>módulos con su estado</span></a>
-          <a class="metric" href="api.html"><strong>28</strong><span>controles y límites<br>en EcommerceApi</span></a>
+          <a class="metric" href="comicteca.html"><strong>27</strong><span>controles y límites<br>en Comicteca</span></a>
         </div>
         <div class="skills-block" id="especialidades">
           <div class="block-head">
@@ -281,12 +282,12 @@
       <section class="projects-section" id="proyectos" aria-labelledby="projects-title">
         <div class="section-wrap">
           <div class="section-heading section-heading-row">
-            <div><p class="eyebrow">03 — Laboratorios y proyectos</p><h2 id="projects-title">Dos laboratorios, evidencia abierta.</h2></div>
-            <p class="heading-note">Un modelo de seguridad sobre una API real y un laboratorio de IA aplicada independiente.</p>
+            <div><p class="eyebrow">03 — Aplicación y laboratorios</p><h2 id="projects-title">Una aplicación principal, dos laboratorios.</h2></div>
+            <p class="heading-note">Comicteca recibe lo probado en EcommerceApi; el laboratorio de IA aplicada va aparte.</p>
           </div>
           <div class="project-controls">
             <div class="filter-list" role="group" aria-label="Filtrar proyectos por categoría">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>02</span></button>
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>03</span></button>
               <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cloud Security</button>
               <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">IA y herramientas</button>
             </div>
@@ -294,7 +295,60 @@
           <p class="sr-only" id="project-status" role="status" aria-live="polite"></p>
           <div class="project-grid" id="project-grid">
 
-            <!-- Portfolio de seguridad (portfolio + carga de trabajo) -->
+            <!-- Comicteca (aplicación principal) -->
+            <article class="project-card" data-category="security">
+              <div class="project-visual project-visual-cloud">
+                <span class="project-label">APLICACIÓN PRINCIPAL</span>
+                <svg class="project-graphic project-graphic-comicteca" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+                  <g class="graphic-boundary">
+                    <rect x="28" y="62" width="404" height="178" rx="16" />
+                    <text x="46" y="84">SESIÓN ENTRA ID</text>
+                  </g>
+                  <g class="graphic-node">
+                    <rect x="46" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="96" y="141">BLAZOR</text>
+                    <text class="node-sub" x="96" y="159">WebAssembly</text>
+                  </g>
+                  <g class="graphic-node graphic-node-core">
+                    <rect x="180" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="230" y="141">API .NET</text>
+                    <text class="node-sub" x="230" y="159">por capas</text>
+                  </g>
+                  <g class="graphic-node">
+                    <rect x="314" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="364" y="141">SQLITE</text>
+                    <text class="node-sub" x="364" y="159">Azure SQL</text>
+                  </g>
+                  <g class="graphic-link">
+                    <line x1="146" y1="147" x2="177" y2="147" />
+                    <path d="m172 141 6 6-6 6" />
+                  </g>
+                  <g class="graphic-link">
+                    <line x1="280" y1="147" x2="311" y2="147" />
+                    <path d="m306 141 6 6-6 6" />
+                  </g>
+                  <g class="graphic-workload">
+                    <rect x="172" y="254" width="116" height="20" rx="10" />
+                    <text x="230" y="264">COMICTECA</text>
+                  </g>
+                </svg>
+                <span class="visual-caption">USO PROPIO · DATOS DE DEMOSTRACIÓN</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span>Aplicación principal · uso propio</span><span>Blazor · .NET 10</span></div>
+                <h3>Comicteca</h3>
+                <p>Lleva mi colección de cómics: carga desde CSV, agrupa por serie y editorial, busca y permite altas y bajas desde la web o por API. Los controles compartidos llegan aquí después de estar en verde en el banco de pruebas; el despliegue sigue pendiente y el aviso de novedades está en diseño.</p>
+                <div class="project-tags" role="group" aria-label="Tecnologías">
+                  <span>Blazor WASM</span><span>.NET 10</span><span>Entra ID</span><span>SQLite</span><span>Docker</span>
+                </div>
+                <div class="project-links">
+                  <a class="project-link" href="comicteca.html">Ver la aplicación <span aria-hidden="true">↓</span></a>
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/comicteca" target="_blank" rel="noreferrer">Repositorio <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Portfolio de seguridad (portfolio + banco de pruebas) -->
             <article class="project-card" data-category="security">
               <div class="project-visual project-visual-cloud">
                 <span class="project-label">CIBERSEGURIDAD</span>
@@ -328,17 +382,16 @@
                 <span class="visual-caption">12 MÓDULOS · DEFENSE-IN-DEPTH</span>
               </div>
               <div class="project-body">
-                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span></div>
+                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span><span>EcommerceApi · banco de pruebas</span></div>
                 <h3>Portfolio de seguridad</h3>
-                <p>Un modelo de Defense-in-Depth sobre un banco de pruebas, <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas donde se estrena cada control. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia página.</p>
-                <p>Esa línea base se aplica en la aplicación principal, <strong>Comicteca</strong>, una aplicación Blazor WebAssembly con API .NET 10 sobre SQLite que recibe los controles cuando ya están probados. Es de uso propio, no un producto.</p>
+                <p>Un modelo de Defense-in-Depth que se estrena en el banco de pruebas, <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas, y se aplica en la aplicación principal, <strong>Comicteca</strong>. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia página.</p>
                 <div class="project-tags" role="group" aria-label="Tecnologías">
                   <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
                 </div>
                 <div class="project-links">
                   <a class="project-link" href="portfolio.html">Ver los 12 módulos <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="api.html">EcommerceApi <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/comicteca" target="_blank" rel="noreferrer">Aplicación principal: Comicteca <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="comicteca.html">Comicteca <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Repositorio del portfolio <span aria-hidden="true">↗</span></a>
                 </div>
               </div>

@@ -14,6 +14,7 @@ const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 const legacyPages = [
   ["#portfolio", "portfolio.html"],
   ["#capa-", "portfolio.html"],
+  ["#comicteca", "comicteca.html"],
   ["#api", "api.html"],
   ["#ia", "ia.html"],
 ];
