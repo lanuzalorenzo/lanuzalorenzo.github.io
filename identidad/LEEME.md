@@ -43,7 +43,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.0.0/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.2.0/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
@@ -64,6 +64,10 @@ html = sitio.pagina(
     actual="index.html", contenido=cuerpo,
 )
 ```
+
+Si el consumidor tiene su propio layout, `Sitio.cabecera(nav=...)` y
+`Sitio.pie(nota=...)` devuelven la cabecera y el pie con los mismos tokens y
+condicionales; el consumidor solo aporta la nav y su distribución.
 
 `ejemplo/` es el mismo caso completo, con `sitio.toml` y dos páginas. Se compila
 con `python3 identidad/ejemplo/build.py`; `--check` compone sin escribir y

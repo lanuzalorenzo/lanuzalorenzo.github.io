@@ -98,6 +98,42 @@ class Sitio:
             lineas.append("        </div>")
         return "\n".join(lineas)
 
+    # ── Fragmentos para un consumidor con layout propio ────────────────
+    def _fragmento(self, etiqueta: str, campos: dict) -> str:
+        """Devuelve un bloque de la plantilla con sus condicionales y tokens."""
+        plantilla = self.plantilla.read_text(encoding="utf-8")
+        patron = rf'<{etiqueta} class="site-{etiqueta}">.*?</{etiqueta}>'
+        encontrado = re.search(patron, plantilla, re.S)
+        if not encontrado:
+            raise SystemExit(f"shell: falta <{etiqueta}> en {self.plantilla.name}")
+        bloque = self._bloques(encontrado.group(0), campos)
+        for nombre, valor in campos.items():
+            bloque = bloque.replace("{{" + nombre + "}}", str(valor))
+        faltan = sorted(set(TOKEN.findall(bloque)))
+        if faltan:
+            raise SystemExit(
+                "shell: campos sin resolver en el fragmento: " + ", ".join(faltan)
+            )
+        return bloque
+
+    def cabecera(self, nav: str = "", inicio: str = "#inicio") -> str:
+        """Cabecera de la plantilla; `nav` llega ya compuesta por el consumidor."""
+        return self._fragmento("header", {
+            "nav": nav,
+            "inicio": inicio,
+            "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
+        })
+
+    def pie(self, inicio: str = "#inicio", arriba: str = "#contenido", nota: str = "") -> str:
+        """Pie de la plantilla, con el enlace al código del perfil público."""
+        return self._fragmento("footer", {
+            "inicio": inicio,
+            "arriba": arriba,
+            "pie_nota": nota,
+            "repo": self.repo if self.perfil == "publica" else "",
+            "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
+        })
+
     def og_meta(self, titulo: str, descripcion: str, canonical: str, tipo: str,
                 imagen: str = "", imagen_alt: str = "") -> str:
         lineas = [
