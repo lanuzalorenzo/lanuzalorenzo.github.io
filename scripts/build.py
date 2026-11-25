@@ -61,6 +61,7 @@ NAV_GROUP = [
     ("comicteca.html", "Comicteca"),
     ("api.html", "EcommerceApi"),
     ("ia.html", "IA aplicada"),
+    (f"{SITE}/biblioteca-tecnica/", "Biblioteca"),
 ]
 
 PAGES = [
@@ -126,7 +127,7 @@ def render_nav(page: str) -> str:
         href = f"#{anchor}" if home else f"index.html#{anchor}"
         lines.append(f'        <a href="{href}">{label}</a>')
 
-    lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos y laboratorios">')
+    lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">')
     for target, label in NAV_GROUP:
         current = ' class="is-active" aria-current="page"' if target == page else ""
         lines.append(f'          <a href="{target}"{current}>{label}</a>')
