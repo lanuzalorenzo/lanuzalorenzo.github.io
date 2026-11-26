@@ -63,7 +63,7 @@
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261126b">
+    <link rel="stylesheet" href="styles.css?v=20261126c">
     <script src="app.js?v=20261126a" defer></script>
   </head>
   <body>
@@ -124,15 +124,9 @@
           <div class="orbit orbit-two"></div>
           <div class="orbit orbit-three"></div>
           <div class="art-core"><span>ARQ</span><strong>+</strong><span>SEC</span></div>
-          <span class="orbit-label label-top">01 / ARCHITECTURE</span>
-          <span class="orbit-label label-right">02 / DEVSECOPS</span>
-          <span class="orbit-label label-bottom">03 / CYBERSECURITY</span>
-          <span class="art-cross cross-one">+</span>
-          <span class="art-cross cross-two">+</span>
-          <span class="art-line"></span>
-        </div>
-        <div class="hero-index">
-          <a href="#perfil"><span>Desplázate al perfil</span><span class="index-line" aria-hidden="true"></span><span aria-hidden="true">↓</span></a>
+          <span class="orbit-label label-top">ARCHITECTURE</span>
+          <span class="orbit-label label-right">DEVSECOPS</span>
+          <span class="orbit-label label-bottom">CYBERSECURITY</span>
         </div>
       </section>
 
@@ -297,219 +291,25 @@
             <div><p class="eyebrow">03 — Proyectos</p><h2 id="projects-title">Una aplicación principal, tres laboratorios.</h2></div>
             <p class="heading-note">Comicteca recibe lo probado en EcommerceApi; eventos-api es el laboratorio asíncrono y el de IA aplicada va aparte. El corpus de apuntes, también aparte, en la <a class="portfolio-workload" href="https://lanuzalorenzo.github.io/biblioteca-tecnica/">biblioteca técnica</a>.</p>
           </div>
-          <div class="project-controls">
-            <div class="filter-list" role="group" aria-label="Filtrar proyectos por categoría">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>04</span></button>
-              <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cloud Security</button>
-              <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">IA y herramientas</button>
-            </div>
-          </div>
-          <p class="sr-only" id="project-status" role="status" aria-live="polite"></p>
-          <div class="project-grid" id="project-grid">
-
-            <!-- Comicteca (aplicación principal) -->
-            <article class="project-card" data-category="security">
-              <div class="project-visual project-visual-cloud">
-                <span class="project-label">APLICACIÓN PRINCIPAL</span>
-                <svg class="project-graphic project-graphic-comicteca" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <g class="graphic-boundary">
-                    <rect x="28" y="62" width="404" height="178" rx="16" />
-                    <text x="46" y="84">SESIÓN ENTRA ID</text>
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="46" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="96" y="141">BLAZOR</text>
-                    <text class="node-sub" x="96" y="159">WebAssembly</text>
-                  </g>
-                  <g class="graphic-node graphic-node-core">
-                    <rect x="180" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="230" y="141">API .NET</text>
-                    <text class="node-sub" x="230" y="159">por capas</text>
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="314" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="364" y="141">SQLITE</text>
-                    <text class="node-sub" x="364" y="159">Azure SQL</text>
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="146" y1="147" x2="177" y2="147" />
-                    <path d="m172 141 6 6-6 6" />
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="280" y1="147" x2="311" y2="147" />
-                    <path d="m306 141 6 6-6 6" />
-                  </g>
-                  <g class="graphic-workload">
-                    <rect x="172" y="254" width="116" height="20" rx="10" />
-                    <text x="230" y="264">COMICTECA</text>
-                  </g>
-                </svg>
-                <span class="visual-caption">USO PROPIO · DATOS DE DEMOSTRACIÓN</span>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span>Aplicación principal · uso propio</span><span>Blazor · .NET 10</span></div>
-                <h3>Comicteca</h3>
-                <p>Lleva mi colección de cómics: carga desde CSV, agrupa por serie y editorial, busca y permite altas y bajas desde la web o por API. Los controles compartidos llegan aquí después de estar en verde en el banco de pruebas; el despliegue sigue pendiente y el aviso de novedades está en diseño.</p>
-                <div class="project-tags" role="group" aria-label="Tecnologías">
-                  <span>Blazor WASM</span><span>.NET 10</span><span>Entra ID</span><span>SQLite</span><span>Docker</span>
-                </div>
-                <div class="project-links">
-                  <a class="project-link" href="comicteca.html">Ver la aplicación <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/comicteca" target="_blank" rel="noreferrer">Repositorio <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Portfolio de seguridad (portfolio + banco de pruebas) -->
-            <article class="project-card" data-category="security">
-              <div class="project-visual project-visual-cloud">
-                <span class="project-label">CIBERSEGURIDAD</span>
-                <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <g class="graphic-axis"><path d="M230 48v18M230 82v38M230 136v46M230 198v26" /></g>
-                  <g class="graphic-layer">
-                    <ellipse cx="230" cy="74" rx="84" ry="21" />
-                    <text x="230" y="74">DETECTION</text>
-                  </g>
-                  <g class="graphic-layer">
-                    <ellipse cx="230" cy="128" rx="118" ry="26" />
-                    <text x="230" y="128">DEFENSE</text>
-                  </g>
-                  <g class="graphic-layer graphic-layer-base">
-                    <ellipse cx="230" cy="190" rx="152" ry="34" />
-                    <text x="230" y="190">IDENTITY</text>
-                  </g>
-                  <g class="graphic-pins">
-                    <circle cx="303" cy="84" r="2.4" /><circle cx="157" cy="84" r="2.4" />
-                    <circle cx="157" cy="64" r="2.4" /><circle cx="303" cy="64" r="2.4" />
-                    <circle cx="332" cy="141" r="2.4" /><circle cx="128" cy="141" r="2.4" />
-                    <circle cx="128" cy="115" r="2.4" /><circle cx="332" cy="115" r="2.4" />
-                    <circle cx="362" cy="207" r="2.4" /><circle cx="98" cy="207" r="2.4" />
-                    <circle cx="98" cy="173" r="2.4" /><circle cx="362" cy="173" r="2.4" />
-                  </g>
-                  <g class="graphic-workload">
-                    <rect x="172" y="230" width="116" height="20" rx="10" />
-                    <text x="230" y="240">EcommerceApi</text>
-                  </g>
-                </svg>
-                <span class="visual-caption">12 MÓDULOS · DEFENSE-IN-DEPTH</span>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span>Proyecto integrado · Cloud Security</span><span>EcommerceApi · banco de pruebas</span></div>
-                <h3>Portfolio de seguridad</h3>
-                <p>Un modelo de Defense-in-Depth que se estrena en el banco de pruebas, <strong>EcommerceApi</strong>, un backend .NET 10 con arquitectura por capas, y se aplica en la aplicación principal, <strong>Comicteca</strong>. El portfolio declara el estado y la evidencia de cada módulo; la ingeniería de la API, control a control, tiene su propia página.</p>
-                <div class="project-tags" role="group" aria-label="Tecnologías">
-                  <span>OAuth 2.0 · PKCE</span><span>Azure · .NET</span><span>Defender · Sentinel</span><span>Bicep</span>
-                </div>
-                <div class="project-links">
-                  <a class="project-link" href="portfolio.html">Ver los 12 módulos <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="api.html">EcommerceApi <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="comicteca.html">Comicteca <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Repositorio del portfolio <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- eventos-api (laboratorio asíncrono) -->
-            <article class="project-card" data-category="security">
-              <div class="project-visual project-visual-cloud">
-                <span class="project-label">COLA DE EVENTOS</span>
-                <svg class="project-graphic project-graphic-eventos" viewBox="20 30 420 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <g class="graphic-boundary">
-                    <rect x="28" y="62" width="404" height="178" rx="16" />
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="46" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="96" y="147">PUBLICA</text>
-                  </g>
-                  <g class="graphic-node graphic-node-core">
-                    <rect x="180" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="230" y="147">COLA</text>
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="314" y="116" width="100" height="62" rx="10" />
-                    <text class="node-title" x="364" y="147">RECLAMA</text>
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="146" y1="147" x2="177" y2="147" />
-                    <path d="m172 141 6 6-6 6" />
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="280" y1="147" x2="311" y2="147" />
-                    <path d="m306 141 6 6-6 6" />
-                  </g>
-                  <g class="graphic-link">
-                    <path d="M364 178v22H230v-22" />
-                    <path d="m225 183 5-5 5 5" />
-                  </g>
-                  <text class="graphic-return-label" x="297" y="216">reintento</text>
-                </svg>
-                <span class="visual-caption">LEASE 300 S</span>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span>Laboratorio asíncrono · cola</span><span>.NET 10 · PostgreSQL</span></div>
-                <h3>eventos-api</h3>
-                <p>Una cola de eventos con sobre opaco: el productor publica, el consumidor reclama con un lease de cinco minutos (300 s) y confirma con el hash del commit o rechaza con un motivo; si falla, el evento vuelve con espera creciente. La idempotencia, el bloqueo de fila y el fencing por entrega viven en PostgreSQL y se prueban con concurrencia real; el servicio no conoce el dominio que transporta.</p>
-                <div class="project-tags" role="group" aria-label="Tecnologías">
-                  <span>.NET 10</span><span>PostgreSQL</span><span>Lease + ack</span><span>Entra ID</span><span>Docker</span>
-                </div>
-                <div class="project-links">
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/eventos-api" target="_blank" rel="noreferrer">Repositorio <span aria-hidden="true">↗</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/eventos-api/actions/workflows/ci.yml" target="_blank" rel="noreferrer">CI <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- IA aplicada (independiente) -->
-            <article class="project-card" data-category="ai">
-              <div class="project-visual project-visual-ai">
-                <span class="project-label">IA LOCAL</span>
-                <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <g class="graphic-boundary">
-                    <rect x="34" y="76" width="392" height="148" rx="16" />
-                    <text x="52" y="98">ENTORNO LOCAL</text>
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="50" y="117" width="92" height="66" rx="10" />
-                    <text class="node-title" x="96" y="144">SERVIDOR</text>
-                    <text class="node-sub" x="96" y="162">Ubuntu Server</text>
-                  </g>
-                  <g class="graphic-node graphic-node-core">
-                    <rect x="184" y="117" width="92" height="66" rx="10" />
-                    <text class="node-title" x="230" y="144">OLLAMA</text>
-                    <text class="node-sub" x="230" y="162">Qwen 2.5 Coder</text>
-                  </g>
-                  <g class="graphic-node">
-                    <rect x="318" y="117" width="92" height="66" rx="10" />
-                    <text class="node-title" x="364" y="144">AGENTE</text>
-                    <text class="node-sub" x="364" y="162">código local</text>
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="142" y1="150" x2="181" y2="150" />
-                    <path d="m176 144 6 6-6 6" />
-                  </g>
-                  <g class="graphic-link">
-                    <line x1="276" y1="150" x2="315" y2="150" />
-                    <path d="m310 144 6 6-6 6" />
-                  </g>
-                </svg>
-                <span class="visual-caption">MÉTODO · MEDICIÓN</span>
-              </div>
-              <div class="project-body">
-                <div class="project-meta"><span>Laboratorio independiente · entorno local</span><span>Guías · Experimentos</span></div>
-                <h3>IA aplicada</h3>
-                <p>Guías y experimentos sobre IA aplicada al desarrollo: montar un modelo local con Ollama, trabajar con agentes como OpenCode, decidir qué datos pueden salir de la red y medir lo que se afirma. El servidor bare-metal sigue ahí como banco de pruebas; lo que se publica es el criterio y el resultado, no solo el montaje. No forma parte del modelo de seguridad.</p>
-                <div class="project-tags" role="group" aria-label="Tecnologías">
-                  <span>Ollama</span><span>OpenCode</span><span>Agentes</span><span>Evaluación</span><span>Coste</span><span>Privacidad</span>
-                </div>
-                <div class="project-links">
-                  <a class="project-link" href="ia.html">Guías y experimentos <span aria-hidden="true">↓</span></a>
-                  <a class="project-link" href="https://github.com/lanuzalorenzo/lab-ia-aprendizaje" target="_blank" rel="noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <p class="no-results" id="no-results" hidden>No hay proyectos que coincidan con la búsqueda.</p>
-          </div>
+          <nav class="lab-index" aria-label="Aplicación principal y laboratorios">
+            <a class="lab-row lab-row-main" href="comicteca.html">
+              <span class="lab-kicker">Aplicación principal · uso propio</span>
+              <span class="lab-name">Comicteca<span class="lab-arrow" aria-hidden="true">↘</span></span>
+              <span class="lab-note">Web Blazor, API .NET 10 y SQLite en local; recibe los controles ya probados en el banco de pruebas.</span>
+            </a>
+            <a class="lab-row" href="portfolio.html">
+              <span class="lab-name">Portfolio de seguridad<span class="lab-arrow" aria-hidden="true">↘</span></span>
+              <span class="lab-note">Defense-in-Depth · evidencia por módulo</span>
+            </a>
+            <a class="lab-row" href="https://github.com/lanuzalorenzo/eventos-api" target="_blank" rel="noreferrer">
+              <span class="lab-name">eventos-api<span class="lab-arrow" aria-hidden="true">↗</span></span>
+              <span class="lab-note">Cola asíncrona · PostgreSQL</span>
+            </a>
+            <a class="lab-row" href="ia.html">
+              <span class="lab-name">IA aplicada<span class="lab-arrow" aria-hidden="true">↘</span></span>
+              <span class="lab-note">Ollama local · guías y mediciones</span>
+            </a>
+          </nav>
         </div>
       </section>
 

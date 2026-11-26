@@ -89,14 +89,6 @@ components:
     rounded: "{rounded.none}"
     padding: "0 19px"
     height: "48px"
-  filter-button:
-    backgroundColor: "transparent"
-    textColor: "{colors.muted}"
-    rounded: "{rounded.none}"
-    padding: "8px 12px"
-  filter-button-active:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.paper}"
   card:
     backgroundColor: "{colors.surface}"
     rounded: "{rounded.none}"
@@ -170,7 +162,7 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 Retícula de contenido de 1180 px, con 40 px de margen lateral en escritorio. Las secciones alternan tres tonos: `paper` en el plano, `paper-deep` en experiencia y `surface-deep` en proyectos. Separan bloques sin añadir cajas.
 
 - El contenido se capa a 680 px entre 728 y 850 px de ancho; el margen lateral mínimo es 24 px, y 20 en móvil.
-- A 900, la rejilla de proyectos pasa a una columna y cada tarjeta se parte en dos: texto y visual.
+- A 900, el índice de proyectos pasa a una sola columna.
 - A 850 el encabezado se estrecha y la portada mantiene dos columnas, con el gráfico más pequeño.
 - A 620 la portada pasa a bloque y las rejillas de dos y tres columnas caen a una, salvo la de métricas, que se queda en tres.
 - La fila de trayectoria pasa de tres columnas a dos a 620.
@@ -191,13 +183,13 @@ No hay sombras difusas de color. La profundidad se construye por tono —`paper`
 
 ## Shapes
 
-El contenedor es recto: las bandas y las tarjetas de proyecto y de aptitud no llevan radio ni borde propio. El radio queda para lo pequeño:
+El contenedor es recto: las bandas, la fila destacada del índice y las tarjetas de aptitud no llevan radio ni borde propio. El radio queda para lo pequeño:
 
 - Etiqueta de módulo: `4px`.
-- Píldora de estado, de proyecto o de capa: `999px`.
+- Píldora de estado o de capa: `999px`.
 - Círculo: `50%` en retrato, punto de estado y control redondo.
 
-Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-strong` solo cuando el borde delimita un control y necesita 3:1. Sin tarjeta dentro de tarjeta. Los rótulos del gráfico son textura: no llevan un dato que no esté en la tarjeta y no bajan de 11 px.
+Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-strong` solo cuando el borde delimita un control y necesita 3:1. Sin tarjeta dentro de tarjeta. Los rótulos del gráfico son textura: no llevan un dato que no esté en la placa y no bajan de 11 px; si no caben, se acortan o se quitan.
 
 ## Components
 
@@ -208,17 +200,22 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 - **Hover / Focus:** el foco es un contorno de 2 px en cian con 4 px de separación. Nunca se quita.
 
 ### Chips
-- **Style:** filtro recto de 11 px, borde `line-strong`, texto secundario.
-- **State:** activo en cian sólido con texto navy.
 - **Insignias:** píldora de `999px`, fondo transparente y borde `line`; el color de estado va solo en el texto. Detalle en «El estado».
 
 ### Cards / Containers
-- **Corner Style:** ninguna en ninguna tarjeta.
-- **Background:** `surface` sobre `paper` y sobre `surface-deep`; `paper-deep` y `surface-deep` hacen de banda.
+- **Corner Style:** ninguna.
+- **Background:** `surface` sobre `paper`; `paper-deep` y `surface-deep` hacen de banda.
 - **Shadow Strategy:** sin sombra. La profundidad la da el tono.
-- **Border:** ninguno en proyecto y aptitud. La tarjeta de módulo se retiró al aplicar la fila tipo; no se documenta como componente vigente.
-- **Internal Padding:** 32–36 px en la tarjeta de proyecto en escritorio; 22–26 en aptitud.
-- **Sobre la banda:** las tarjetas de proyecto y de aptitud se apoyan sobre `surface-deep`.
+- **Border:** ninguno en aptitud; la tarjeta de módulo se retiró al aplicar la fila tipo. El proyecto no es tarjeta: es una fila del índice de la portada, sin relleno propio.
+- **Internal Padding:** 22–26 px en la tarjeta de aptitud.
+- **Sobre la banda:** las tarjetas de aptitud se apoyan sobre `surface-deep`.
+
+### Índice de proyectos
+- **Forma:** la portada no escala con el catálogo. Un índice de filas: la aplicación principal ocupa una fila completa, con antetítulo en cian, nombre a 28–40 px y una línea; debajo, los laboratorios en tres columnas con nombre, descriptor de tres palabras y flecha. Una línea de 1 px es la única separación.
+- **Sin cajas:** ni tarjetas, ni filtros, ni píldoras de tecnologías. Cada fila tiene un solo destino; el detalle y el diagrama viven en su página.
+- **Crecimiento:** un proyecto nuevo es una fila más, no un bloque nuevo.
+- **Diagramas:** cada uno vive en la cabecera de su página, en `.page-diagram`, con 560 px de ancho máximo; en la portada solo queda el del hero. El SVG no lleva texto: los rótulos son HTML posicionado sobre él, a 11 px, y por debajo de 620 se quedan solo los títulos.
+- **Medida:** a 900 el índice pasa a una sola columna.
 
 ### Navigation
 - **Global:** la cabecera enlaza los destinos con URL propia —Portfolio de seguridad, Comicteca, EcommerceApi, IA aplicada y Biblioteca— y «Contacto». La marca es el enlace al inicio: `/` desde una página de detalle y `#inicio` en la portada; no hay un enlace «Inicio» aparte. En la portada, «Contacto» es `#contacto`; desde una página de detalle, `/#contacto`. El resto de secciones de la portada no se enlazan desde la cabecera.
@@ -234,11 +231,11 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 ## Gramática de página
 
-**Alcance.** Esta gramática es la de las cuatro páginas de detalle: `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. Las cuatro usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, índice, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: sus tarjetas de proyecto no declaran estado.
+**Alcance.** Esta gramática es la de las cuatro páginas de detalle: `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. Las cuatro usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, índice, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: su índice de proyectos no declara estado.
 
 **Secuencia de bloques.** Las cuatro páginas se leen en el mismo orden:
 
-1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62ch —unos 75 caracteres a 16,8 px—, que es ya el techo de la regla de cuerpo: `ch` mide el cero, no la letra media, y 75ch llevarían la línea a 90 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza.
+1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62ch —unos 75 caracteres a 16,8 px—, que es ya el techo de la regla de cuerpo: `ch` mide el cero, no la letra media, y 75ch llevarían la línea a 90 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza. Si la página tiene diagrama propio, va justo después del intro en `.page-diagram`, con 560 px de ancho máximo.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
 3. **Familia.** `lab-label` solo cuando la página mezcla dos naturalezas de artefacto. `ia.html` lo usa para separar «Guías» de «Resultados y límites». El rótulo lleva el token Label y la regla de 1 px va debajo, a 8 px del texto; el primer grupo empieza tras la regla y entre familias quedan 64 px de aire. Sin fondo y sin línea encima: la lista la abre la regla del rótulo y, cuando no hay rótulo, el borde superior de su primer grupo.
 4. **Grupo.** `details.module-group` por tipo, familia, capa o tema. El `summary` lleva punto de apertura, título del grupo, número de filas y control `+ / −`. El título nombra el tipo, familia, capa o tema, nunca un estado.
