@@ -55,6 +55,8 @@ MARCA = {
     ".site-nav.is-open",
     ".site-nav-group",
     ".site-nav-group::before",
+    ".site-nav-group:first-child",
+    ".site-nav-group:first-child::before",
     ".menu-toggle",
     ".menu-toggle span:not(.sr-only)",
     '.menu-toggle[aria-expanded="true"] .menu-line-top',

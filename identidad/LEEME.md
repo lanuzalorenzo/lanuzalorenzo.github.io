@@ -43,7 +43,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.2.0/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.3.0/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
