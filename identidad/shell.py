@@ -7,7 +7,6 @@
         titulo="…",
         descripcion="…",
         canonical="https://…/",
-        nav=[("#perfil", "Perfil"), {"grupo": "Proyectos"}, ("api.html", "API")],
         actual="api.html",
         contenido=cuerpo,
     )
@@ -56,7 +55,7 @@ class Sitio:
         raiz: str = "",
         estilos: tuple[str, ...] | list[str] = (),
         version: str = "",
-        repo: str = "https://github.com/lanuzalorenzo/lanuzalorenzo.github.io",
+        repo: str = "https://github.com/lanuzalorenzo",
         nota: str = "© 2026 Lorenzo Lanuza",
         plantilla: Path | str | None = None,
     ) -> None:

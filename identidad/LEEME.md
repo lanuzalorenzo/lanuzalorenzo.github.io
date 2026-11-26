@@ -60,7 +60,6 @@ sitio = Sitio(perfil="publica", estilos=["_identidad/identidad.css", "sitio.css"
               version="1", repo="https://github.com/…")
 html = sitio.pagina(
     titulo="…", descripcion="…", canonical="https://…/",
-    nav=[("#perfil", "Perfil"), {"grupo": "Proyectos"}, ("api.html", "API")],
     actual="index.html",
     contenido=cuerpo,
 )

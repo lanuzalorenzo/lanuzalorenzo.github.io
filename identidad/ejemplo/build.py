@@ -4,7 +4,7 @@
     python3 identidad/ejemplo/build.py           # escribe salida/
     python3 identidad/ejemplo/build.py --check   # compone sin escribir y valida
 
-Es el punto de partida de una web nueva: `sitio.toml` declara el perfil, la nav
+Es el punto de partida de una web nueva: `sitio.toml` declara el perfil
 y las páginas; `paginas/` guarda el contenido de cada una; `shell.py` pone la
 cabecera, el pie y los metadatos. Solo biblioteca estándar.
 """
@@ -40,10 +40,6 @@ def construir(pagina: dict, config: dict) -> str:
         "titulo": pagina["titulo"],
         "descripcion": pagina.get("descripcion", ""),
         "canonical": pagina.get("canonical", ""),
-        "nav": [
-            (item["href"], item["etiqueta"]) if "href" in item else item
-            for item in config.get("nav", [])
-        ],
         "actual": pagina["fichero"],
         "contenido": contenido,
         "head_extra": (
@@ -61,7 +57,7 @@ def main(argv: list[str]) -> int:
     config = tomllib.loads((AQUI / "sitio.toml").read_text(encoding="utf-8"))
     salida = AQUI / "salida"
 
-    # Componer siempre: es lo que prueba que la plantilla, la nav y el perfil
+    # Componer siempre: es lo que prueba que la plantilla y el perfil
     # encajan. En `--check` no se escribe nada.
     paginas = {pagina["fichero"]: construir(pagina, config) for pagina in config["paginas"]}
     if check:
