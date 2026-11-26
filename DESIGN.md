@@ -221,7 +221,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 - **Sobre la banda:** las tarjetas de proyecto y de aptitud se apoyan sobre `surface-deep`.
 
 ### Navigation
-- **Global:** la cabecera enlaza los destinos con URL propia —Portfolio de seguridad, Comicteca, EcommerceApi, IA aplicada y Biblioteca— y «Inicio» y «Contacto». En la portada, ambos son anclas (`#inicio`, `#contacto`); desde una página de detalle, «Inicio» vuelve a la portada y «Contacto» la cierra con `index.html#contacto`. El resto de secciones de la portada no se enlazan desde la cabecera.
+- **Global:** la cabecera enlaza los destinos con URL propia —Portfolio de seguridad, Comicteca, EcommerceApi, IA aplicada y Biblioteca— y «Contacto». La marca es el enlace al inicio: `/` desde una página de detalle y `#inicio` en la portada; no hay un enlace «Inicio» aparte. En la portada, «Contacto» es `#contacto`; desde una página de detalle, `/#contacto`. El resto de secciones de la portada no se enlazan desde la cabecera.
 - **Local:** la portada lleva tras el hero un índice «En esta página» con Perfil, Experiencia, Proyectos y Contacto, numerados como los antetítulos; es la vía para saltar entre las secciones de la portada. La sección visible se marca en tinta clara con línea cian, como el destino activo de la cabecera.
 - **Style:** enlaces de 12 px y peso 650 en gris azulado. El activo va en tinta clara con una línea cian de 2 px sobre el borde del encabezado; sin subrayado de texto.
 - **Llegada:** al abrir una URL con ancla, el salto inicial es instantáneo y el bloque destino queda alineado bajo la cabecera y como punto de partida de la navegación por teclado. Los clics posteriores sí usan el desplazamiento suave.
