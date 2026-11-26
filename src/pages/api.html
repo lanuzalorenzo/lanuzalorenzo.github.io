@@ -7,6 +7,39 @@
             <p class="portfolio-intro">No es una maqueta: es el banco de pruebas <a class="portfolio-workload" href="portfolio.html">del portfolio</a> y, a la vez, un backend completo. La aplicación principal es <a class="portfolio-workload" href="comicteca.html">Comicteca</a>; aquí se estrena y se mide cada control antes de pasar allí. .NET 10 con arquitectura por capas, autenticación con Entra ID, persistencia transaccional con outbox y 91 pruebas que se ejecutan en CI. Nueve <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/lab-api-local-azure/tree/main/docs/adr" target="_blank" rel="noreferrer">ADR <span aria-hidden="true">↗</span></a> documentan las decisiones. Lo que sigue es el estado real de cada control, con enlace a su evidencia: lo que no está hecho también aparece.</p>
           </div>
 
+          <div class="project-visual page-diagram">
+            <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+              <g class="graphic-boundary">
+                <rect x="28" y="62" width="404" height="178" rx="16" />
+              </g>
+              <g class="graphic-node">
+                <rect x="46" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-node graphic-node-core">
+                <rect x="180" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-node">
+                <rect x="314" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-link">
+                <line x1="146" y1="147" x2="177" y2="147" />
+                <path d="m172 141 6 6-6 6" />
+              </g>
+              <g class="graphic-link">
+                <line x1="280" y1="147" x2="311" y2="147" />
+                <path d="m306 141 6 6-6 6" />
+              </g>
+            </svg>
+            <span class="dl dl-boundary" style="left:10.00%;top:28.00%">BANCO DE PRUEBAS</span>
+            <span class="dl dl-title" style="left:20.87%;top:47.00%">ENTRA ID</span>
+            <span class="dl dl-sub" style="left:20.87%;top:53.00%">token JWT</span>
+            <span class="dl dl-title" style="left:50.00%;top:47.00%">API .NET</span>
+            <span class="dl dl-sub" style="left:50.00%;top:53.00%">10 · por capas</span>
+            <span class="dl dl-title" style="left:79.13%;top:47.00%">SQLITE</span>
+            <span class="dl dl-sub" style="left:79.13%;top:53.00%">con outbox</span>
+            <span class="dl dl-workload" style="left:50.00%;top:88.00%">EcommerceApi</span>
+          </div>
+
           <div class="portfolio-controls">
             <p>5 grupos · 28 controles y límites.</p>
             <button class="portfolio-expand" type="button" data-expand-all="#api" aria-expanded="false" aria-controls="api-seguridad api-pruebas api-datos api-entrega api-alcance">Desplegar todos</button>
