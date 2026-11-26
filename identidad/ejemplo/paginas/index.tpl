@@ -1,4 +1,4 @@
-<section class="section-wrap content-section" id="inicio">
+<section class="frame content-section" id="inicio">
   <div class="section-heading">
     <p class="eyebrow">Ejemplo</p>
     <h1>Una web nueva con la identidad ya puesta</h1>
@@ -7,7 +7,7 @@
   <p><a class="button button-quiet" href="api.html">Ver la segunda página <span aria-hidden="true">→</span></a></p>
 </section>
 
-<section class="section-wrap content-section" id="perfil">
+<section class="frame content-section" id="perfil">
   <div class="section-heading">
     <p class="eyebrow">Perfil</p>
     <h2>Qué se hereda y qué no</h2>

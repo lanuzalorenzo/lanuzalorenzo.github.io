@@ -163,11 +163,14 @@ class Sitio:
 
     # ── Página ────────────────────────────────────────────────────────
     def pagina(self, **campos) -> str:
-        if "titulo" not in campos or "contenido" not in campos:
-            raise TypeError("pagina() necesita al menos `titulo` y `contenido`")
+        if "titulo" not in campos or not ("contenido" in campos or "cuerpo" in campos):
+            raise TypeError("pagina() necesita `titulo` y `contenido` o `cuerpo`")
 
         titulo = campos.pop("titulo")
-        contenido = campos.pop("contenido")
+        contenido = campos.pop("contenido", None)
+        cuerpo = campos.pop("cuerpo", None)
+        if cuerpo is None:
+            cuerpo = f'    <main id="contenido">\n{contenido}\n    </main>'
         descripcion = campos.pop("descripcion", "")
         canonical = campos.pop("canonical", "")
         nav = campos.pop("nav", ())
@@ -193,11 +196,16 @@ class Sitio:
                 canonical, tipo, imagen, imagen_alt,
             ),
             "estilos": self.estilos_html(),
-            "nav": self.nav_html(nav, actual),
-            "contenido": contenido,
+            "nav": nav if isinstance(nav, str) else self.nav_html(nav, actual),
+            "cuerpo": cuerpo,
+            "contenido": contenido or "",
             "inicio": inicio,
             "arriba": arriba,
-            "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
+            "marca_svg": campos.pop("marca_svg", f"{self.raiz}_identidad/marca-tile.svg"),
+            "head_extra": campos.pop("head_extra", ""),
+            "scripts": campos.pop("scripts", ""),
+            "atributos_cuerpo": campos.pop("atributos_cuerpo", ""),
+            "antes_cabecera": campos.pop("antes_cabecera", ""),
             "menu_js": f"{self.raiz}_identidad/menu.js" + (f"?v={self.version}" if self.version else ""),
             "repo": self.repo if self.perfil == "publica" else "",
             "pie_nota": self.nota,

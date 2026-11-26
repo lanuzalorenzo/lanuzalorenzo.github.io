@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#07131e">
     <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#07131e">
     <meta name="description" content="{{descripcion}}">
     <title>{{titulo}}</title>
 <!-- perfil:publica -->
@@ -17,10 +17,12 @@
     <meta name="robots" content="noindex, nofollow">
 <!-- /perfil:local -->
     <link rel="icon" type="image/svg+xml" href="{{marca_svg}}">
+{{head_extra}}
 {{estilos}}
   </head>
-  <body>
+  <body{{atributos_cuerpo}}>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+{{antes_cabecera}}
     <header class="site-header">
       <a class="wordmark" href="{{inicio}}" aria-label="Lorenzo Lanuza, inicio"><img src="{{marca_svg}}" alt="" width="40" height="40"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -32,9 +34,7 @@
       </nav>
     </header>
 
-    <main id="contenido">
-{{contenido}}
-    </main>
+{{cuerpo}}
 
     <footer class="site-footer">
       <a class="wordmark" href="{{inicio}}" aria-label="Lorenzo Lanuza, inicio"><img src="{{marca_svg}}" alt="" width="40" height="40"></a>
@@ -44,6 +44,9 @@
       <a href="{{arriba}}">Volver arriba <span aria-hidden="true">↑</span></a>
       <span>{{pie_nota}}</span>
     </footer>
+<!-- si:menu_js -->
     <script src="{{menu_js}}" defer></script>
+<!-- /si:menu_js -->
+{{scripts}}
   </body>
 </html>
