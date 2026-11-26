@@ -186,7 +186,7 @@ button { color: inherit; }
 .page-diagram .dl-boundary { transform: translate(0, -50%); color: var(--muted); letter-spacing: .18em; }
 .page-diagram .dl-sub { transform: translate(-50%, -50%); color: var(--muted); font-size: 11px; font-weight: 550; letter-spacing: .04em; text-transform: none; }
 .page-diagram .dl-layer { letter-spacing: .2em; }
-.page-diagram .dl-workload { color: var(--muted); font-weight: 650; letter-spacing: .05em; text-transform: none; }
+.page-diagram .dl-workload { transform: translate(-50%, -50%); padding: 2px 10px; background: color-mix(in srgb, var(--paper) 80%, transparent); border: 1px dashed var(--graphic-line-soft); border-radius: 999px; color: var(--muted); font-weight: 650; letter-spacing: .05em; text-transform: none; }
 @media (max-width: 620px) {
   .page-diagram .dl-sub { display: none; }
   .page-diagram .dl-title { top: 50% !important; }
@@ -194,6 +194,9 @@ button { color: inherit; }
 @media (max-width: 480px) {
   .page-diagram .dl { letter-spacing: .02em; }
   .page-diagram .dl-boundary { letter-spacing: .12em; }
+}
+@media (max-width: 360px) {
+  .page-diagram .dl { letter-spacing: 0; }
 }
 @media (max-width: 900px) {
   .lab-index { grid-template-columns: 1fr; gap: 0; margin-top: 36px; }
@@ -220,7 +223,6 @@ button { color: inherit; }
 .graphic-layer ellipse { fill: color-mix(in srgb, var(--ink) 4%, transparent); stroke: var(--graphic-line-soft); stroke-width: 1; }
 .graphic-layer-base ellipse { fill: color-mix(in srgb, var(--ink) 7%, transparent); stroke: var(--graphic-line); stroke-opacity: .6; }
 .graphic-pins circle { fill: var(--graphic-line); opacity: .8; }
-.graphic-workload rect { fill: color-mix(in srgb, var(--paper) 80%, transparent); stroke: var(--graphic-line-soft); stroke-dasharray: 3 3; }
 .graphic-boundary rect { fill: color-mix(in srgb, var(--ink) 2%, transparent); stroke: var(--graphic-line-soft); stroke-width: 1; stroke-dasharray: 5 5; }
 .graphic-node rect { fill: color-mix(in srgb, var(--ink) 4%, transparent); stroke: var(--graphic-line-soft); stroke-width: 1; }
 .graphic-node-core rect { fill: color-mix(in srgb, var(--accent-hover) 12%, transparent); stroke: var(--graphic-line); stroke-opacity: .6; }
