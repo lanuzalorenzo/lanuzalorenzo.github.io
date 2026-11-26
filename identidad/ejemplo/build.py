@@ -32,7 +32,6 @@ def construir(pagina: dict, config: dict) -> str:
         raiz=config.get("raiz", ""),
         estilos=config.get("estilos", []),
         version=config.get("version", ""),
-        repo=config.get("repo", ""),
         nota=config.get("nota", ""),
     )
     contenido = (AQUI / "paginas" / pagina["contenido"]).read_text(encoding="utf-8").strip("\n")

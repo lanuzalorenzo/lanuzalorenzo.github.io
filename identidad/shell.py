@@ -2,7 +2,7 @@
 
     from shell import Sitio
 
-    sitio = Sitio(perfil="publica", estilos=["styles.css"], repo="https://…")
+    sitio = Sitio(perfil="publica", estilos=["styles.css"])
     html = sitio.pagina(
         titulo="…",
         descripcion="…",
@@ -55,7 +55,6 @@ class Sitio:
         raiz: str = "",
         estilos: tuple[str, ...] | list[str] = (),
         version: str = "",
-        repo: str = "https://github.com/lanuzalorenzo",
         nota: str = "© 2026 Lorenzo Lanuza",
         plantilla: Path | str | None = None,
     ) -> None:
@@ -66,7 +65,6 @@ class Sitio:
         self.raiz = raiz if raiz in ("", "/") or raiz.endswith("/") else f"{raiz}/"
         self.estilos = list(estilos)
         self.version = version
-        self.repo = repo
         self.nota = nota
         self.plantilla = Path(plantilla) if plantilla else PLANTILLA
 
@@ -159,7 +157,6 @@ class Sitio:
             "inicio": inicio or "/",
             "arriba": arriba,
             "pie_nota": nota,
-            "repo": self.repo if self.perfil == "publica" else "",
             "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
         })
 
@@ -244,7 +241,6 @@ class Sitio:
             "atributos_cuerpo": campos.pop("atributos_cuerpo", ""),
             "antes_cabecera": campos.pop("antes_cabecera", ""),
             "menu_js": f"{self.raiz}_identidad/menu.js" + (f"?v={self.version}" if self.version else ""),
-            "repo": self.repo if self.perfil == "publica" else "",
             "pie_nota": self.nota,
         }
         relleno.update(campos)
