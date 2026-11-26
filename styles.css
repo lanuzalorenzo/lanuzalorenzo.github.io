@@ -102,7 +102,7 @@ button { color: inherit; }
 
 .ticker { overflow: hidden; padding: 15px 0; background: var(--accent); color: var(--paper); }
 .ticker-track { display: flex; align-items: center; white-space: nowrap; }
-.ticker-set { display: flex; flex: 1; align-items: center; justify-content: space-between; gap: 24px; padding-inline: max(24px, calc((100% - var(--frame)) / 2)); }
+.ticker-set { display: flex; flex: 1; align-items: center; justify-content: space-between; gap: 24px; padding-inline: max(40px, calc((100% - var(--frame)) / 2)); }
 .ticker-set + .ticker-set, .ticker-set > i:last-child { display: none; }
 .ticker-track span { font-size: 11px; font-weight: 800; letter-spacing: .17em; }
 .ticker-track i { font-size: 13px; font-style: normal; }
@@ -255,8 +255,9 @@ main > section[tabindex="-1"]:focus { outline: none; }
 
 @media (max-width: 850px) {
   :root { --header-h: 68px; }
+  .frame { width: calc(100% - 48px); }
   /* El tope de lectura es de esta web, no del marco compartido (`.frame`). */
-  main .frame { width: calc(100% - 48px); max-width: 680px; }
+  main .frame { max-width: 680px; }
   .site-header { padding-inline: 24px; }
   .menu-toggle { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; width: 44px; height: 44px; border: 1px solid var(--line-strong); border-radius: 50%; }
   .menu-toggle span:not(.sr-only) { width: 16px; height: 2px; border-radius: 1px; background: var(--ink); transition: transform .2s; }
@@ -348,7 +349,8 @@ main > section[tabindex="-1"]:focus { outline: none; }
   :root { color-scheme: light; --paper: #fff; --paper-deep: #fff; --ink: #17211e; --muted: #4d5952; --line: #cbd0c8; --accent: #087bb8; --accent-hover: #006693; --state-valid: #047857; --state-partial: #92400e; --state-design: #1d4ed8; --state-pending: #475569; }
   body { font-size: 10pt; }
   .skip-link, .site-header, .hero-art, .ticker, .page-index, .hero-actions, .hero-links, .site-footer, .contact-section .button { display: none !important; }
-  main .frame { width: 100%; max-width: none; }
+  .frame { width: 100%; }
+  main .frame { max-width: none; }
   .hero { display: block; min-height: 0; padding: 0 0 24px; }
   .hero h1 { font-size: 54pt; }
   .hero-portrait { width: 80px; }

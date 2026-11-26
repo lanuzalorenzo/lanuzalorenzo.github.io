@@ -13,7 +13,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 ## Convenciones visuales
 
 - La paleta son las variables de `:root` en `styles.css`; fuera de la web los valores se escriben a mano.
-- `identidad/` es la capa de marca que consumen las demás webs: tokens, cabecera, pie, nav, botones e insignias. Se genera desde `styles.css` con `identidad/extraer.py` y no se edita a mano; el consumo está en `identidad/LEEME.md` y su mantenimiento —extracción, verificación y ejemplo— en `identidad/MANTENIMIENTO.md`. No se publica: `pages.yml` no la copia.
+- `identidad/` es la capa de marca que consumen las demás webs: tokens, cabecera, pie, nav, botones e insignias. Se genera desde `styles.css` con `identidad/extraer.py` y no se edita a mano; el consumo está en `identidad/LEEME.md` y su mantenimiento —extracción, verificación y ejemplo— en `identidad/MANTENIMIENTO.md`. Al cambiar la capa: sube `VERSION`, regenera, publica la etiqueta `identidad-vX` y actualiza todos los consumidores en el mismo lote. No se publica: `pages.yml` no la copia.
 - Las carpetas `assets/marca/`, `assets/iconos/` y `assets/social/` documentan sus piezas en su `README.md`.
 - Nada de dependencias externas para iconos ni diagramas: SVG en línea o archivos del propio repositorio.
 - Conserva el diseño adaptable, la accesibilidad, la navegación por teclado y el soporte para movimiento reducido.
@@ -22,7 +22,7 @@ Sitio estático publicado con GitHub Pages. Presenta el perfil profesional compl
 
 - Sitio estático compatible con GitHub Pages.
 - El workflow `.github/workflows/pages.yml` publica solo archivos públicos: `index.html`, `portfolio.html`, `comicteca.html`, `api.html`, `ia.html`, `styles.css`, `app.js`, `assets`, faviconos, `.nojekyll`, `robots.txt` y `sitemap.xml`. Si añades un archivo público, inclúyelo en el paso de copia.
-- El HTML de la raíz se genera con `python3 scripts/build.py` desde `src/partials/shell.html` y `src/pages/`; no se edita a mano. El trabajo `verify` lo comprueba con `--check`.
+- El HTML de la raíz se genera con `python3 scripts/build.py` desde `src/pages/`, con el esqueleto de `identidad/shell.py` y `identidad/plantilla.tpl`; no se edita a mano. El trabajo `verify` lo comprueba con `--check`.
 - `.github/CODEOWNERS` apunta a `@lanuzalorenzo`; `main` exige PR, el check de verificación y rama actualizada; solo el propietario fusiona, salvo las PRs de Dependabot de parche y minor, que fusiona el flujo automático si pasan los checks.
 - Al cambiar contenido, actualiza `lastmod` en `sitemap.xml`.
 

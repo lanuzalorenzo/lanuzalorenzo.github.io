@@ -16,7 +16,6 @@
 <!-- perfil:local -->
     <meta name="robots" content="noindex, nofollow">
 <!-- /perfil:local -->
-    <link rel="icon" type="image/svg+xml" href="{{marca_svg}}">
 {{head_extra}}
 {{estilos}}
   </head>

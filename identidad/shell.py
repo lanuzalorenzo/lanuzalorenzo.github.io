@@ -120,14 +120,14 @@ class Sitio:
         """Cabecera de la plantilla; `nav` llega ya compuesta por el consumidor."""
         return self._fragmento("header", {
             "nav": nav,
-            "inicio": inicio or self.raiz or "/",
+            "inicio": inicio or "/",
             "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
         })
 
     def pie(self, inicio: str | None = None, arriba: str = "#contenido", nota: str = "") -> str:
         """Pie de la plantilla, con el enlace al código del perfil público."""
         return self._fragmento("footer", {
-            "inicio": inicio or self.raiz or "/",
+            "inicio": inicio or "/",
             "arriba": arriba,
             "pie_nota": nota,
             "repo": self.repo if self.perfil == "publica" else "",
@@ -159,6 +159,8 @@ class Sitio:
             lineas.append(f'    <meta name="twitter:url" content="{canonical}">')
         if imagen:
             lineas.append(f'    <meta name="twitter:image" content="{imagen}">')
+            if imagen_alt:
+                lineas.append(f'    <meta name="twitter:image:alt" content="{imagen_alt}">')
         return "\n".join(lineas)
 
     # ── Página ────────────────────────────────────────────────────────
@@ -169,7 +171,11 @@ class Sitio:
         titulo = campos.pop("titulo")
         contenido = campos.pop("contenido", None)
         cuerpo = campos.pop("cuerpo", None)
+        if contenido is not None and cuerpo is not None:
+            raise TypeError("pagina() acepta `contenido` o `cuerpo`, no los dos")
         if cuerpo is None:
+            if contenido is None:
+                raise TypeError("pagina() necesita `contenido` o `cuerpo`")
             cuerpo = f'    <main id="contenido">\n{contenido}\n    </main>'
         descripcion = campos.pop("descripcion", "")
         canonical = campos.pop("canonical", "")
@@ -178,12 +184,9 @@ class Sitio:
         imagen = campos.pop("imagen", "")
         imagen_alt = campos.pop("imagen_alt", "")
         tipo = campos.pop("og_tipo", "website")
-        if "inicio" in campos:
-            inicio = campos.pop("inicio")
-        elif actual in (None, "index.html"):
-            inicio = "#inicio"
-        else:
-            inicio = self.raiz or "/"
+        # La marca enlaza a la raíz del dominio, también desde una web servida
+        # en un subdirectorio. Quien no viva en la raíz pasa `inicio` explícito.
+        inicio = campos.pop("inicio", "/")
         arriba = campos.pop("arriba", "#contenido")
 
         relleno = {
@@ -198,7 +201,6 @@ class Sitio:
             "estilos": self.estilos_html(),
             "nav": nav if isinstance(nav, str) else self.nav_html(nav, actual),
             "cuerpo": cuerpo,
-            "contenido": contenido or "",
             "inicio": inicio,
             "arriba": arriba,
             "marca_svg": campos.pop("marca_svg", f"{self.raiz}_identidad/marca-tile.svg"),
