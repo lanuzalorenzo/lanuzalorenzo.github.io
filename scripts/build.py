@@ -49,12 +49,12 @@ JSON_LD = """    <script type="application/ld+json">
     </script>
 """
 
-# Secciones de la portada y página propia de cada detalle. La nav se genera
-# desde aquí: una entrada nueva se añade en un solo sitio.
+# La cabecera enlaza destinos con URL propia. Las secciones de la portada se
+# navegan con el índice local «En esta página», que se escribe en
+# `src/pages/index.html`: así ningún enlace de la cabecera salta a un ancla de
+# otra página. «Contacto» es la excepción, porque cierra la portada.
 NAV = [
-    ("perfil", "Perfil"),
-    ("experiencia", "Experiencia"),
-    ("proyectos", "Proyectos"),
+    ("index.html", "Inicio"),
 ]
 NAV_GROUP = [
     ("portfolio.html", "Portfolio de seguridad"),
@@ -123,9 +123,10 @@ def render_nav(page: str) -> str:
     home = page == "index.html"
     lines = []
 
-    for anchor, label in NAV:
-        href = f"#{anchor}" if home else f"index.html#{anchor}"
-        lines.append(f'        <a href="{href}">{label}</a>')
+    for target, label in NAV:
+        href = "#inicio" if home and target == "index.html" else target
+        current = ' class="is-active" aria-current="page"' if target == page else ""
+        lines.append(f'        <a href="{href}"{current}>{label}</a>')
 
     lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">')
     for target, label in NAV_GROUP:

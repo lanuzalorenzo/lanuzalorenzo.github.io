@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+const navLinks = [...document.querySelectorAll('.page-index a[href^="#"]')];
 const filterButtons = [...document.querySelectorAll(".filter-button")];
 const projectCards = [...document.querySelectorAll(".project-card")];
 const noResults = document.querySelector("#no-results");
@@ -21,6 +21,17 @@ const legacyPages = [
 const atHome = location.pathname.endsWith("/") || /(?:^|\/)index\.html$/.test(location.pathname);
 const legacyPage = atHome ? legacyPages.find(([prefix]) => location.hash.startsWith(prefix)) : null;
 if (legacyPage) location.replace(legacyPage[1] + location.hash);
+
+// Llegada con ancla: el <head> marca <html class="landing-hash"> para que el
+// salto inicial no se anime. Al cargar se retira y vuelve el desplazamiento
+// suave para los clics siguientes. El destino ya es el punto de partida de la
+// navegación por teclado.
+const landingRoot = document.documentElement;
+if (landingRoot.classList.contains("landing-hash")) {
+  const releaseLanding = () => landingRoot.classList.remove("landing-hash");
+  if (document.readyState === "complete") releaseLanding();
+  else window.addEventListener("load", releaseLanding, { once: true });
+}
 
 function setMenuOpen(isOpen) {
   menuToggle?.setAttribute("aria-expanded", String(isOpen));

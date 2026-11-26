@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07131e">
+    <!-- La llegada con ancla no se anima; app.js retira la clase al cargar. -->
+    <script>if (location.hash) document.documentElement.classList.add("landing-hash");</script>
     <meta name="description" content="Lorenzo Lanuza Arellano: ingeniero de software senior en .NET y Azure con seguridad aplicada. DevSecOps, AppSec y Cloud Security.">
     <link rel="canonical" href="https://lanuzalorenzo.github.io/">
 
@@ -61,8 +63,8 @@
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261115a">
-    <script src="app.js?v=20261103e" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261126a">
+    <script src="app.js?v=20261126a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -73,9 +75,7 @@
         <span class="menu-line menu-line-top"></span><span class="menu-line menu-line-bottom"></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-        <a href="#perfil">Perfil</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#inicio" class="is-active" aria-current="page">Inicio</a>
         <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">
           <a href="portfolio.html">Portfolio de seguridad</a>
           <a href="comicteca.html">Comicteca</a>
@@ -136,6 +136,18 @@
           <a href="#perfil"><span>Desplázate al perfil</span><span class="index-line" aria-hidden="true"></span><span aria-hidden="true">↓</span></a>
         </div>
       </section>
+
+      <nav class="page-index" aria-labelledby="page-index-label">
+        <div class="section-wrap page-index-inner">
+          <p class="page-index-label" id="page-index-label">En esta página</p>
+          <ol class="page-index-list">
+            <li><a href="#perfil"><span aria-hidden="true">01</span>Perfil</a></li>
+            <li><a href="#experiencia"><span aria-hidden="true">02</span>Experiencia</a></li>
+            <li><a href="#proyectos"><span aria-hidden="true">03</span>Proyectos</a></li>
+            <li><a href="#contacto"><span aria-hidden="true">04</span>Contacto</a></li>
+          </ol>
+        </div>
+      </nav>
 
       <section class="ticker" aria-label="Especialidades">
         <div class="ticker-track">
@@ -283,7 +295,7 @@
       <section class="projects-section" id="proyectos" aria-labelledby="projects-title">
         <div class="section-wrap">
           <div class="section-heading section-heading-row">
-            <div><p class="eyebrow">03 — Aplicación y laboratorios</p><h2 id="projects-title">Una aplicación principal, tres laboratorios.</h2></div>
+            <div><p class="eyebrow">03 — Proyectos</p><h2 id="projects-title">Una aplicación principal, tres laboratorios.</h2></div>
             <p class="heading-note">Comicteca recibe lo probado en EcommerceApi; eventos-api es el laboratorio asíncrono y el de IA aplicada va aparte. El corpus de apuntes, también aparte, en la <a class="portfolio-workload" href="https://lanuzalorenzo.github.io/biblioteca-tecnica/">biblioteca técnica</a>.</p>
           </div>
           <div class="project-controls">
