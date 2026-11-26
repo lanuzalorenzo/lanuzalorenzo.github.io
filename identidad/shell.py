@@ -34,6 +34,18 @@ TOKEN = re.compile(r"\{\{([a-z_]+)\}\}")
 
 PERFILES = ("publica", "local")
 
+# La nav es de la marca, no de cada web: los mismos destinos y el mismo orden
+# en todas. `actual` marca la sección en la que está el visitante.
+NAV = (
+    ("https://lanuzalorenzo.github.io/portfolio.html", "Portfolio de seguridad", "portfolio.html"),
+    ("https://lanuzalorenzo.github.io/comicteca.html", "Comicteca", "comicteca.html"),
+    ("https://lanuzalorenzo.github.io/api.html", "EcommerceApi", "api.html"),
+    ("https://lanuzalorenzo.github.io/ia.html", "IA aplicada", "ia.html"),
+    ("https://lanuzalorenzo.github.io/biblioteca-tecnica/", "Biblioteca", "biblioteca"),
+    ("https://lanuzalorenzo.github.io/#contacto", "Contacto", "contacto"),
+)
+CONTACTO = "Contacto"
+
 
 class Sitio:
     """Compone páginas con la cabecera, el pie y los tokens de la marca."""
@@ -44,8 +56,8 @@ class Sitio:
         raiz: str = "",
         estilos: tuple[str, ...] | list[str] = (),
         version: str = "",
-        repo: str = "",
-        nota: str = "",
+        repo: str = "https://github.com/lanuzalorenzo/lanuzalorenzo.github.io",
+        nota: str = "© 2026 Lorenzo Lanuza",
         plantilla: Path | str | None = None,
     ) -> None:
         if perfil not in PERFILES:
@@ -73,6 +85,24 @@ class Sitio:
             consulta = f"?v={self.version}" if self.version and "?" not in destino else ""
             lineas.append(f'    <link rel="stylesheet" href="{destino}{consulta}">')
         return "\n".join(lineas)
+
+    def nav_canonica(self, actual: str | None = None) -> str:
+        """La nav de la marca, idéntica en todas las webs que consumen el paquete."""
+        def enlace(item) -> str:
+            href, etiqueta, slug = item
+            activo = ' class="is-active" aria-current="page"' if actual == slug else ""
+            return f'          <a href="{href}"{activo}>{etiqueta}</a>'
+
+        grupo = "\n".join(enlace(item) for item in NAV if item[1] != CONTACTO)
+        contacto = "\n".join(enlace(item) for item in NAV if item[1] == CONTACTO)
+        return (
+            '        <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">\n'
+            f"{grupo}\n"
+            "        </div>\n"
+            '        <div class="site-nav-group">\n'
+            f"{contacto}\n"
+            "        </div>"
+        )
 
     def nav_html(self, items, actual: str | None = None) -> str:
         lineas: list[str] = []
@@ -179,7 +209,7 @@ class Sitio:
             cuerpo = f'    <main id="contenido">\n{contenido}\n    </main>'
         descripcion = campos.pop("descripcion", "")
         canonical = campos.pop("canonical", "")
-        nav = campos.pop("nav", ())
+        nav = campos.pop("nav", None)
         actual = campos.pop("actual", None)
         imagen = campos.pop("imagen", "")
         imagen_alt = campos.pop("imagen_alt", "")
@@ -199,7 +229,13 @@ class Sitio:
                 canonical, tipo, imagen, imagen_alt,
             ),
             "estilos": self.estilos_html(),
-            "nav": nav if isinstance(nav, str) else self.nav_html(nav, actual),
+            "nav": (
+                nav
+                if isinstance(nav, str)
+                else self.nav_html(nav, actual)
+                if nav
+                else self.nav_canonica(actual)
+            ),
             "cuerpo": cuerpo,
             "inicio": inicio,
             "arriba": arriba,
