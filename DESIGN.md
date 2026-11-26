@@ -159,7 +159,7 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 
 ## Layout
 
-Retícula de contenido de 1180 px, con 40 px de margen lateral en escritorio. Las secciones alternan tres tonos: `paper` en el plano, `paper-deep` en experiencia y `surface-deep` en proyectos. Separan bloques sin añadir cajas.
+Marco de contenido del paquete de identidad (`.frame`): crece con la ventana hasta 1440 px, con 40 px de margen lateral en escritorio, 48 px a 850 y 40 px a 620; el tope de 680 px entre 728 y 850 px es propio de esta web. Por debajo de 1260 px el marco mide 1180 px. Las secciones alternan tres tonos: `paper` en el plano, `paper-deep` en experiencia y `surface-deep` en proyectos. Separan bloques sin añadir cajas.
 
 - El contenido se capa a 680 px entre 728 y 850 px de ancho; el margen lateral mínimo es 24 px, y 20 en móvil.
 - A 900, el índice de proyectos pasa a una sola columna.
@@ -242,7 +242,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 5. **Filas.** `spec-table` con una `spec-row` por artefacto. La fila es la unidad de lectura y la única que declara estado.
 6. **Cierre.** `portfolio-cta` con dos enlaces: el repositorio y la fuente completa de la página —guía de lectura, tabla de estado o hoja de ruta.
 
-**Lo que se repite.** La cabecera, la barra de control, el `summary` de grupo, la fila, la insignia y el cierre; el ancho de 1180 px, el paso vertical entre secciones y los cortes de 850 y 620 px. Cambia el contenido —títulos, nombres, enlaces y estados—, no la forma.
+**Lo que se repite.** La cabecera, la barra de control, el `summary` de grupo, la fila, la insignia y el cierre; el marco `.frame` del paquete, el paso vertical entre secciones y los cortes de 850 y 620 px. Cambia el contenido —títulos, nombres, enlaces y estados—, no la forma.
 
 **Lo que no se repite.** Ni una tarjeta por artefacto, ni un contador por estado, ni una insignia en el título del grupo, ni una insignia de más en la fila, ni un color de estado fuera de su insignia.
 

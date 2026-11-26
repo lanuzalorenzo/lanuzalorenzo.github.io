@@ -42,7 +42,7 @@ MARCA = {
     'main > section[tabindex="-1"]:focus',
     ".eyebrow",
     # Estructura
-    ".section-wrap",
+    ".frame",
     # Cabecera y navegación
     ".site-header",
     ".wordmark",

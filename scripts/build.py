@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Ensambla las páginas del sitio a partir de `src/partials` y `src/pages`.
+"""Ensambla las páginas del sitio con el esqueleto del paquete de identidad.
 
     python3 scripts/build.py          # escribe los HTML en la raíz del repo
     python3 scripts/build.py --check  # falla si lo versionado no coincide
 
-Solo biblioteca estándar. Los HTML de la raíz son artefactos: se generan, no se
-editan a mano, y el trabajo `verify` comprueba que están al día.
+Solo biblioteca estándar. La cabecera, el pie y el documento salen de
+`identidad/plantilla.tpl`; aquí solo se aportan los datos y el contenido de
+`src/pages/`. Los HTML de la raíz son artefactos: se generan, no se editan a
+mano, y el trabajo `verify` comprueba que están al día.
 """
 
 from __future__ import annotations
 
-import re
 import subprocess
 import sys
 from pathlib import Path
@@ -18,6 +19,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 SITE = "https://lanuzalorenzo.github.io"
+REPO = "https://github.com/lanuzalorenzo/lanuzalorenzo.github.io"
+VERSION_CSS = "20261126d"
+VERSION_JS = "20261126a"
+OG_IMAGE = f"{SITE}/assets/social/og-image.jpg?v=20261105b"
+OG_IMAGE_ALT = "Lorenzo Lanuza — Senior Software Engineer &amp; Architect, .NET y Cloud Security"
+
+sys.path.insert(0, str(ROOT / "identidad"))
+from shell import Sitio  # noqa: E402
+
+# Lo que no viaja en los campos de `pagina()`: favicons, sitemap y autoría.
+HEAD_COMUN = """    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
+    <meta name="author" content="Lorenzo Lanuza Arellano">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/marca/favicon-16.png?v=20261105a">
+    <link rel="icon" href="favicon.svg?v=20261105a" type="image/svg+xml">
+    <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
+    <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">"""
+SCRIPTS = f'    <script src="app.js?v={VERSION_JS}" defer></script>'
+NOTA_PIE = '© <span id="current-year">2026</span> Lorenzo Lanuza'
 
 JSON_LD = """    <script type="application/ld+json">
     {
@@ -134,33 +154,34 @@ def render_nav(page: str) -> str:
 
 
 def render_page(page: dict) -> str:
-    shell = (SRC / "partials" / "shell.html").read_text(encoding="utf-8")
     content = (SRC / "pages" / page["file"]).read_text(encoding="utf-8").strip("\n")
     home = page["file"] == "index.html"
-
-    fields = {
-        "{{title}}": page["title"],
-        "{{description}}": page["description"],
-        "{{og_title}}": page["og_title"],
-        "{{og_description}}": page["og_description"],
-        "{{og_type}}": page["og_type"],
-        "{{canonical}}": page["canonical"],
-        "{{head_extra}}": page["head_extra"].rstrip("\n"),
-        "{{nav}}": render_nav(page["file"]),
-        "{{content}}": content,
-        "{{home_href}}": "#inicio" if home else "/",
-        "{{top_href}}": "#inicio" if home else "#contenido",
-    }
-
-    for token, value in fields.items():
-        if token not in shell:
-            raise SystemExit(f"build: falta el token {token} en src/partials/shell.html")
-        shell = shell.replace(token, value)
-
-    leftover = sorted(set(re.findall(r"\{\{[a-z_]+\}\}", shell)))
-    if leftover:
-        raise SystemExit(f"build: tokens sin resolver: {', '.join(leftover)}")
-    return shell
+    sitio = Sitio(
+        perfil="publica",
+        estilos=["styles.css"],
+        version=VERSION_CSS,
+        repo=REPO,
+        nota=NOTA_PIE,
+    )
+    return sitio.pagina(
+        titulo=page["title"],
+        descripcion=page["description"],
+        canonical=page["canonical"],
+        og_titulo=page["og_title"],
+        og_descripcion=page["og_description"],
+        og_tipo=page["og_type"],
+        imagen=OG_IMAGE,
+        imagen_alt=OG_IMAGE_ALT,
+        nav=render_nav(page["file"]),
+        actual=page["file"],
+        contenido=content,
+        inicio="#inicio" if home else "/",
+        arriba="#inicio" if home else "#contenido",
+        marca_svg="assets/marca/marca-tile.svg",
+        menu_js="",
+        head_extra=HEAD_COMUN + ("\n" + page["head_extra"].rstrip("\n") if page["head_extra"] else ""),
+        scripts=SCRIPTS,
+    )
 
 
 def main(argv: list[str]) -> int:

@@ -3,44 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#07131e">
-    <!-- La llegada con ancla no se anima; app.js retira la clase al cargar. -->
-    <script>if (location.hash) document.documentElement.classList.add("landing-hash");</script>
     <meta name="description" content="Guías, experimentos y un montaje en uso de IA aplicada al desarrollo: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
+    <title>IA aplicada — Lorenzo Lanuza</title>
     <link rel="canonical" href="https://lanuzalorenzo.github.io/ia.html">
-
-    <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:url" content="https://lanuzalorenzo.github.io/ia.html">
     <meta property="og:title" content="IA aplicada — Lorenzo Lanuza">
     <meta property="og:description" content="Guías, experimentos y un montaje en uso de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
+    <meta property="og:url" content="https://lanuzalorenzo.github.io/ia.html">
     <meta property="og:image" content="https://lanuzalorenzo.github.io/assets/social/og-image.jpg?v=20261105b">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Lorenzo Lanuza — Senior Software Engineer &amp; Architect, .NET y Cloud Security">
-    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
-    <meta name="author" content="Lorenzo Lanuza Arellano">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://lanuzalorenzo.github.io/ia.html">
     <meta name="twitter:title" content="IA aplicada — Lorenzo Lanuza">
     <meta name="twitter:description" content="Guías, experimentos y un montaje en uso de IA aplicada: montar el entorno, trabajar con agentes, decidir qué sale de la red y medir lo que se afirma.">
+    <meta name="twitter:url" content="https://lanuzalorenzo.github.io/ia.html">
     <meta name="twitter:image" content="https://lanuzalorenzo.github.io/assets/social/og-image.jpg?v=20261105b">
-    <meta name="twitter:image:alt" content="Lorenzo Lanuza — Senior Software Engineer &amp; Architect, .NET y Cloud Security">
-
-    <title>IA aplicada — Lorenzo Lanuza</title>
+    <link rel="icon" type="image/svg+xml" href="assets/marca/marca-tile.svg">
+    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
+    <meta name="author" content="Lorenzo Lanuza Arellano">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/marca/favicon-16.png?v=20261105a">
     <link rel="icon" href="favicon.svg?v=20261105a" type="image/svg+xml">
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <link rel="stylesheet" href="styles.css?v=20261126d">
-    <script src="app.js?v=20261126a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="Lorenzo Lanuza, inicio"><img src="assets/marca/marca-tile.svg" alt="" width="40" height="40"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -64,7 +58,7 @@
     <main id="contenido">
       <!-- ========= LABORATORIO DE IA — guías y experimentos ========= -->
       <section class="ai-section" id="ia" aria-labelledby="ai-title">
-        <div class="section-wrap">
+        <div class="frame">
           <div class="section-heading">
             <p class="eyebrow">IA aplicada</p>
             <h1 id="ai-title">IA local: probado, no supuesto.</h1>
@@ -334,5 +328,6 @@
       <a href="#contenido">Volver arriba <span aria-hidden="true">↑</span></a>
       <span>© <span id="current-year">2026</span> Lorenzo Lanuza</span>
     </footer>
+    <script src="app.js?v=20261126a" defer></script>
   </body>
 </html>

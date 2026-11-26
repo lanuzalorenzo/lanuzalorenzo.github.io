@@ -1,24 +1,24 @@
-# Capa de identidad
+# Capa de identidad — consumo
 
-Cabecera, pie, navegación, botones, insignias y tokens de la marca, en un paquete
-que otra web consume tal cual. Se separa en dos piezas: el CSS con los valores y
-la plantilla con el marcado. Cada web pone su contenido y su distribución; no
-rehace la cabecera.
+Cabecera, pie, navegación, botones, insignias, tokens y el marco de página, en
+un paquete que otra web consume tal cual. Se separa en dos piezas: el CSS con
+los valores y la plantilla con el marcado. Cada web pone su contenido y su
+distribución; no rehace la cabecera.
 
 ## Qué hay
 
 | Archivo | Qué es |
 |---|---|
-| `identidad.css` | Tokens, tipografía base, cabecera y nav, pie, botones, insignias, foco y movimiento reducido |
-| `plantilla.tpl` | Shell con marcadores `{{...}}` y bloques por perfil |
-| `shell.py` | Compone una página con la plantilla: perfiles, nav, metadatos y comprobación de marcadores |
+| `identidad.css` | Tokens (incluido `--frame`), tipografía base, cabecera y nav, pie, botones, insignias, foco y movimiento reducido |
+| `plantilla.tpl` | Shell completo con marcadores `{{...}}` y bloques por perfil |
+| `shell.py` | Compone una página con la plantilla: perfiles, nav, metadatos, cuerpo y comprobación de marcadores |
 | `menu.js` | Abrir y cerrar el menú en móvil; sin dependencias |
 | `marca-tile.svg` | La baldosa de la marca, la misma que sirve la web |
-| `SHA256SUMS` | Huellas de los cinco archivos anteriores |
+| `SHA256SUMS` | Huellas de `identidad.css`, `plantilla.tpl`, `shell.py`, `menu.js`, `marca-tile.svg` y `VERSION` |
 | `VERSION` | Versión del paquete; `identidad.css` la declara en su cabecera |
-| `extraer.py` | Genera `identidad.css` desde `styles.css`; no se edita el CSS a mano |
-| `verificar.py` | Comprueba que el paquete está al día; `--update` reescribe las huellas |
-| `ejemplo/` | Sitio mínimo que usa el paquete; sirve de punto de partida |
+
+`extraer.py`, `verificar.py` y `ejemplo/` viven en el repositorio dueño y no se
+distribuyen: son su mantenimiento, no el contrato de consumo.
 
 ## Perfiles
 
@@ -43,9 +43,9 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.3.0/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.0/identidad
 mkdir -p _identidad
-for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION; do
+for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION LEEME.md; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
 done
 (cd _identidad && sha256sum -c SHA256SUMS)
@@ -61,42 +61,37 @@ sitio = Sitio(perfil="publica", estilos=["_identidad/identidad.css", "sitio.css"
 html = sitio.pagina(
     titulo="…", descripcion="…", canonical="https://…/",
     nav=[("#perfil", "Perfil"), {"grupo": "Proyectos"}, ("api.html", "API")],
-    actual="index.html", contenido=cuerpo,
+    actual="index.html",
+    contenido=cuerpo,
 )
 ```
 
-Si el consumidor tiene su propio layout, `Sitio.cabecera(nav=...)` y
+`contenido` se coloca dentro de `<main id="contenido">`. Un consumidor con
+reparto propio pasa `cuerpo` —el bloque completo entre la cabecera y el pie— y
+deja `contenido` fuera; los dos no se mezclan.
+
+Si el consumidor solo quiere las piezas, `Sitio.cabecera(nav=...)` y
 `Sitio.pie(nota=...)` devuelven la cabecera y el pie con los mismos tokens y
-condicionales; el consumidor solo aporta la nav y su distribución.
+condicionales; el consumidor aporta la nav y su distribución.
 
 `ejemplo/` es el mismo caso completo, con `sitio.toml` y dos páginas. Se compila
 con `python3 identidad/ejemplo/build.py`; `--check` compone sin escribir y
 verifica que la plantilla, la nav y el perfil encajan.
 
-## Cómo se actualiza
+## Lo que trae la capa
 
-La fuente es `styles.css` de esta web. El CSS del paquete no se retoca: se
-regenera.
-
-```bash
-python3 identidad/extraer.py          # reescribe identidad.css
-# subir VERSION
-python3 identidad/verificar.py --update
-```
-
-`verificar.py` falla si `identidad.css` no coincide con `styles.css`, si la
-baldosa no es la de `assets/marca/`, si `SHA256SUMS` no corresponde o si la
-versión de la cabecera no es la de `VERSION`. `--update` se niega a reescribir
-las huellas si el contenido cambió y `VERSION` sigue igual que en `HEAD`: una
-versión no puede publicar dos contenidos. `scripts/build.py --check` lo ejecuta,
-junto con el ejemplo, así que la deriva se detecta antes de publicar.
+- **Marco de página** (`.frame`): ancho común con `--frame` como tope y márgenes
+  laterales de 40 px, 24 px a 850 y 20 px a 620. Cada web coloca su contenido
+  dentro; el reparto interno es suyo.
+- **Cabecera y pie** ya compuestos, con la nav que recibe el consumidor.
+- **Botones e insignias de estado**, con el color en el texto.
+- **Tokens**: paleta, tipografía y alturas.
 
 ## Lo que no trae
 
 Ni la gramática de página del portfolio, ni las filas de artefacto, ni la imagen
-Open Graph, ni el juego completo de faviconos, ni las secciones de la portada.
-Eso es de cada web. Tampoco trae la regla de marca: los valores están aquí, la
-regla vive con su dueño.
+Open Graph, ni el juego completo de faviconos, ni las secciones de la portada,
+ni la rejilla de un visor con lateral. Eso es de cada web.
 
 ## Lo que el paquete garantiza
 

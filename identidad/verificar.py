@@ -26,7 +26,7 @@ PAQUETE = RAIZ / "identidad"
 FUENTE_MARCA = RAIZ / "assets" / "marca" / "marca-tile.svg"
 
 # Lo que consume una web: si cambia un byte, sube la versión.
-MANIFIESTO = ("identidad.css", "plantilla.tpl", "shell.py", "menu.js", "marca-tile.svg")
+MANIFIESTO = ("identidad.css", "plantilla.tpl", "shell.py", "menu.js", "marca-tile.svg", "VERSION")
 
 
 def huella(ruta: Path) -> str:

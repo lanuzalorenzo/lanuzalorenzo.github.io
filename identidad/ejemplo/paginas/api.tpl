@@ -1,4 +1,4 @@
-<section class="section-wrap content-section" id="api">
+<section class="frame content-section" id="api">
   <div class="section-heading">
     <p class="eyebrow">Ejemplo</p>
     <h1>La misma cabecera, el mismo pie</h1>
