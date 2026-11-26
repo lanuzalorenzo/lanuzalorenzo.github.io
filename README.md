@@ -17,7 +17,7 @@ Sitio estático de presentación profesional, experiencia, especialidades y proy
 
 ## Estructura
 
-La cabecera, la navegación y el pie viven en `src/partials/shell.html`; el contenido de cada página, en `src/pages/`. Los cinco HTML de la raíz son artefactos generados: no se editan a mano.
+La cabecera, la navegación y el pie viven en `identidad/plantilla.tpl` y los compone `identidad/shell.py`; el contenido de cada página, en `src/pages/`. Los cinco HTML de la raíz son artefactos generados: no se editan a mano.
 
 ```bash
 python3 scripts/build.py          # regenera index.html, portfolio.html, comicteca.html, api.html e ia.html

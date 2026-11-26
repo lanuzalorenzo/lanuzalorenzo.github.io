@@ -46,6 +46,10 @@ def construir(pagina: dict, config: dict) -> str:
         ],
         "actual": pagina["fichero"],
         "contenido": contenido,
+        "head_extra": (
+            f'<link rel="icon" href="{config.get("raiz", "")}'
+            '_identidad/marca-tile.svg" type="image/svg+xml">'
+        ),
     }
     if "inicio" in config:
         campos["inicio"] = config["inicio"]

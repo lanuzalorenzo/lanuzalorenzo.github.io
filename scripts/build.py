@@ -29,7 +29,8 @@ sys.path.insert(0, str(ROOT / "identidad"))
 from shell import Sitio  # noqa: E402
 
 # Lo que no viaja en los campos de `pagina()`: favicons, sitemap y autoría.
-HEAD_COMUN = """    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
+HEAD_COMUN = """    <script>if (location.hash) document.documentElement.classList.add("landing-hash");</script>
+    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
     <meta name="author" content="Lorenzo Lanuza Arellano">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/marca/favicon-16.png?v=20261105a">
     <link rel="icon" href="favicon.svg?v=20261105a" type="image/svg+xml">
@@ -175,7 +176,6 @@ def render_page(page: dict) -> str:
         nav=render_nav(page["file"]),
         actual=page["file"],
         contenido=content,
-        inicio="#inicio" if home else "/",
         arriba="#inicio" if home else "#contenido",
         marca_svg="assets/marca/marca-tile.svg",
         menu_js="",

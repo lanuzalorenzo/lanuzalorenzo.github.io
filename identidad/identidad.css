@@ -1,5 +1,5 @@
 /* Capa de marca · lanuzalorenzo.github.io
-   Versión 1.4.0. Archivo generado por identidad/extraer.py desde styles.css.
+   Versión 1.4.1. Archivo generado por identidad/extraer.py desde styles.css.
    No editar a mano: cambia styles.css, sube VERSION y regenera. */
 
 :root {
@@ -287,6 +287,9 @@ main > section[tabindex="-1"]:focus {
   :root {
     --header-h: 68px;
   }
+  .frame {
+    width: calc(100% - 48px);
+  }
   .site-header {
     padding-inline: 24px;
   }
@@ -414,6 +417,9 @@ main > section[tabindex="-1"]:focus {
   }
   .skip-link, .site-header, .site-footer {
     display: none !important;
+  }
+  .frame {
+    width: 100%;
   }
   a {
     color: inherit;

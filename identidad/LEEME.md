@@ -43,7 +43,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.0/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.1/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION LEEME.md; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
@@ -69,6 +69,10 @@ html = sitio.pagina(
 `contenido` se coloca dentro de `<main id="contenido">`. Un consumidor con
 reparto propio pasa `cuerpo` —el bloque completo entre la cabecera y el pie— y
 deja `contenido` fuera; los dos no se mezclan.
+
+La marca de la cabecera y del pie enlaza siempre a la raíz del dominio (`/`),
+también desde una web servida en un subdirectorio. Solo se pasa `inicio` cuando
+el sitio no vive en la raíz.
 
 Si el consumidor solo quiere las piezas, `Sitio.cabecera(nav=...)` y
 `Sitio.pie(nota=...)` devuelven la cabecera y el pie con los mismos tokens y
