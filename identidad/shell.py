@@ -7,7 +7,7 @@
         titulo="…",
         descripcion="…",
         canonical="https://…/",
-        nav=[("index.html#perfil", "Perfil"), {"grupo": "Proyectos"}, ("api.html", "API")],
+        nav=[("#perfil", "Perfil"), {"grupo": "Proyectos"}, ("api.html", "API")],
         actual="api.html",
         contenido=cuerpo,
     )
@@ -89,9 +89,9 @@ class Sitio:
                 continue
             href, etiqueta = item
             if actual and actual != "index.html" and href.startswith("#"):
-                href = f"index.html{href}"
+                href = f"{self.raiz or '/'}{href}"
             href = self.absoluta(href)
-            activo = ' class="is-active" aria-current="page"' if href == actual else ""
+            activo = ' class="is-active" aria-current="page"' if actual and href in (actual, self.absoluta(actual)) else ""
             sangria = "          " if grupo else "        "
             lineas.append(f'{sangria}<a href="{href}"{activo}>{etiqueta}</a>')
         if grupo:
@@ -116,18 +116,18 @@ class Sitio:
             )
         return bloque
 
-    def cabecera(self, nav: str = "", inicio: str = "#inicio") -> str:
+    def cabecera(self, nav: str = "", inicio: str | None = None) -> str:
         """Cabecera de la plantilla; `nav` llega ya compuesta por el consumidor."""
         return self._fragmento("header", {
             "nav": nav,
-            "inicio": inicio,
+            "inicio": inicio or self.raiz or "/",
             "marca_svg": f"{self.raiz}_identidad/marca-tile.svg",
         })
 
-    def pie(self, inicio: str = "#inicio", arriba: str = "#contenido", nota: str = "") -> str:
+    def pie(self, inicio: str | None = None, arriba: str = "#contenido", nota: str = "") -> str:
         """Pie de la plantilla, con el enlace al código del perfil público."""
         return self._fragmento("footer", {
-            "inicio": inicio,
+            "inicio": inicio or self.raiz or "/",
             "arriba": arriba,
             "pie_nota": nota,
             "repo": self.repo if self.perfil == "publica" else "",
@@ -180,7 +180,7 @@ class Sitio:
         elif actual in (None, "index.html"):
             inicio = "#inicio"
         else:
-            inicio = f"{self.raiz}index.html"
+            inicio = self.raiz or "/"
         arriba = campos.pop("arriba", "#contenido")
 
         relleno = {
