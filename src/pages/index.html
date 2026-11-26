@@ -191,12 +191,12 @@
       <section class="projects-section" id="proyectos" aria-labelledby="projects-title">
         <div class="section-wrap">
           <div class="section-heading section-heading-row">
-            <div><p class="eyebrow">03 — Aplicación y laboratorios</p><h2 id="projects-title">Una aplicación principal, dos laboratorios.</h2></div>
-            <p class="heading-note">Comicteca recibe lo probado en EcommerceApi; el laboratorio de IA aplicada va aparte. El corpus de apuntes, también aparte, en la <a class="portfolio-workload" href="https://lanuzalorenzo.github.io/biblioteca-tecnica/">biblioteca técnica</a>.</p>
+            <div><p class="eyebrow">03 — Aplicación y laboratorios</p><h2 id="projects-title">Una aplicación principal, tres laboratorios.</h2></div>
+            <p class="heading-note">Comicteca recibe lo probado en EcommerceApi; eventos-api es el laboratorio asíncrono y el de IA aplicada va aparte. El corpus de apuntes, también aparte, en la <a class="portfolio-workload" href="https://lanuzalorenzo.github.io/biblioteca-tecnica/">biblioteca técnica</a>.</p>
           </div>
           <div class="project-controls">
             <div class="filter-list" role="group" aria-label="Filtrar proyectos por categoría">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>03</span></button>
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>04</span></button>
               <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cloud Security</button>
               <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">IA y herramientas</button>
             </div>
@@ -302,6 +302,56 @@
                   <a class="project-link" href="api.html">EcommerceApi <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="comicteca.html">Comicteca <span aria-hidden="true">↓</span></a>
                   <a class="project-link" href="https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo" target="_blank" rel="noreferrer">Repositorio del portfolio <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- eventos-api (laboratorio asíncrono) -->
+            <article class="project-card" data-category="security">
+              <div class="project-visual project-visual-cloud">
+                <span class="project-label">COLA DE EVENTOS</span>
+                <svg class="project-graphic project-graphic-eventos" viewBox="20 30 420 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+                  <g class="graphic-boundary">
+                    <rect x="28" y="62" width="404" height="178" rx="16" />
+                  </g>
+                  <g class="graphic-node">
+                    <rect x="46" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="96" y="147">PUBLICA</text>
+                  </g>
+                  <g class="graphic-node graphic-node-core">
+                    <rect x="180" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="230" y="147">COLA</text>
+                  </g>
+                  <g class="graphic-node">
+                    <rect x="314" y="116" width="100" height="62" rx="10" />
+                    <text class="node-title" x="364" y="147">RECLAMA</text>
+                  </g>
+                  <g class="graphic-link">
+                    <line x1="146" y1="147" x2="177" y2="147" />
+                    <path d="m172 141 6 6-6 6" />
+                  </g>
+                  <g class="graphic-link">
+                    <line x1="280" y1="147" x2="311" y2="147" />
+                    <path d="m306 141 6 6-6 6" />
+                  </g>
+                  <g class="graphic-link">
+                    <path d="M364 178v22H230v-22" />
+                    <path d="m225 183 5-5 5 5" />
+                  </g>
+                  <text class="graphic-return-label" x="297" y="216">reintento</text>
+                </svg>
+                <span class="visual-caption">LEASE 300 S</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span>Laboratorio asíncrono · cola</span><span>.NET 10 · PostgreSQL</span></div>
+                <h3>eventos-api</h3>
+                <p>Una cola de eventos con sobre opaco: el productor publica, el consumidor reclama con un lease de cinco minutos (300 s) y confirma con el hash del commit o rechaza con un motivo; si falla, el evento vuelve con espera creciente. La idempotencia, el bloqueo de fila y el fencing por entrega viven en PostgreSQL y se prueban con concurrencia real; el servicio no conoce el dominio que transporta.</p>
+                <div class="project-tags" role="group" aria-label="Tecnologías">
+                  <span>.NET 10</span><span>PostgreSQL</span><span>Lease + ack</span><span>Entra ID</span><span>Docker</span>
+                </div>
+                <div class="project-links">
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/eventos-api" target="_blank" rel="noreferrer">Repositorio <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="https://github.com/lanuzalorenzo/eventos-api/actions/workflows/ci.yml" target="_blank" rel="noreferrer">CI <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>
