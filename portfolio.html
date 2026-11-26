@@ -36,7 +36,7 @@
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261126b">
+    <link rel="stylesheet" href="styles.css?v=20261126c">
     <script src="app.js?v=20261126a" defer></script>
   </head>
   <body>
@@ -70,6 +70,40 @@
             <h1 id="portfolio-title">Doce módulos, cada uno con su estado.</h1>
             <p class="portfolio-intro">El portfolio articula la seguridad como un modelo de <strong>Defense-in-Depth</strong> sobre dos cargas con papeles distintos. La aplicación principal es <a class="portfolio-workload" href="comicteca.html"><code>Comicteca</code></a>, una aplicación de uso propio que recibe los controles cuando ya están probados; el banco de pruebas es <a class="portfolio-workload" href="api.html"><code>EcommerceApi</code></a>, donde cada control se estrena y se mide. Cada módulo declara su estado real: <strong>validado</strong>, <strong>parcial</strong>, <strong>diseño</strong> o <strong>pendiente</strong>. No se presenta un diseño como una validación. El detalle de cada carga, control a control, tiene su propia página.</p>
           </div>
+
+            <div class="project-visual page-diagram">
+            <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+                              <g class="graphic-axis"><path d="M230 48v18M230 82v38M230 136v46M230 198v26" /></g>
+                              <g class="graphic-layer">
+                                <ellipse cx="230" cy="74" rx="84" ry="21" />
+
+                              </g>
+                              <g class="graphic-layer">
+                                <ellipse cx="230" cy="128" rx="118" ry="26" />
+
+                              </g>
+                              <g class="graphic-layer graphic-layer-base">
+                                <ellipse cx="230" cy="190" rx="152" ry="34" />
+
+                              </g>
+                              <g class="graphic-pins">
+                                <circle cx="303" cy="84" r="2.4" /><circle cx="157" cy="84" r="2.4" />
+                                <circle cx="157" cy="64" r="2.4" /><circle cx="303" cy="64" r="2.4" />
+                                <circle cx="332" cy="141" r="2.4" /><circle cx="128" cy="141" r="2.4" />
+                                <circle cx="128" cy="115" r="2.4" /><circle cx="332" cy="115" r="2.4" />
+                                <circle cx="362" cy="207" r="2.4" /><circle cx="98" cy="207" r="2.4" />
+                                <circle cx="98" cy="173" r="2.4" /><circle cx="362" cy="173" r="2.4" />
+                              </g>
+                              <g class="graphic-workload">
+                                <rect x="172" y="230" width="116" height="20" rx="10" />
+
+                              </g>
+                            </svg>
+              <span class="dl dl-layer" style="left:50.00%;top:24.67%">DETECTION</span>
+              <span class="dl dl-layer" style="left:50.00%;top:42.67%">DEFENSE</span>
+              <span class="dl dl-layer" style="left:50.00%;top:63.33%">IDENTITY</span>
+              <span class="dl dl-workload" style="left:50.00%;top:80.00%">EcommerceApi</span>
+            </div>
 
           <div class="portfolio-controls">
             <p>12 módulos, agrupados por capa del modelo.</p>

@@ -36,7 +36,7 @@
     <link rel="icon" href="favicon.png?v=20261105a" sizes="180x180" type="image/png">
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="stylesheet" href="styles.css?v=20261126b">
+    <link rel="stylesheet" href="styles.css?v=20261126c">
     <script src="app.js?v=20261126a" defer></script>
   </head>
   <body>
@@ -70,6 +70,50 @@
             <h1 id="workload-title">Comicteca, control a control.</h1>
             <p class="portfolio-intro">Comicteca es la aplicación principal <a class="portfolio-workload" href="portfolio.html">del portfolio</a>: una herramienta de uso propio para llevar mi colección de cómics, no un producto. La forman una web Blazor WebAssembly y una API .NET 10 sobre SQLite en local. Los controles compartidos —CORS, cabeceras y CSP, límite por IP, ProblemDetails, salud, Docker sin root, CodeQL y Trivy— llegan aquí después de estar en verde en el <a class="portfolio-workload" href="api.html">banco de pruebas</a>. Lo que sigue es lo que puedo demostrar hoy, con enlace a su prueba; el despliegue sigue pendiente y el aviso de novedades, en diseño.</p>
           </div>
+
+            <div class="project-visual page-diagram">
+            <svg class="project-graphic project-graphic-comicteca" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+                              <g class="graphic-boundary">
+                                <rect x="28" y="62" width="404" height="178" rx="16" />
+
+                              </g>
+                              <g class="graphic-node">
+                                <rect x="46" y="116" width="100" height="62" rx="10" />
+
+
+                              </g>
+                              <g class="graphic-node graphic-node-core">
+                                <rect x="180" y="116" width="100" height="62" rx="10" />
+
+
+                              </g>
+                              <g class="graphic-node">
+                                <rect x="314" y="116" width="100" height="62" rx="10" />
+
+
+                              </g>
+                              <g class="graphic-link">
+                                <line x1="146" y1="147" x2="177" y2="147" />
+                                <path d="m172 141 6 6-6 6" />
+                              </g>
+                              <g class="graphic-link">
+                                <line x1="280" y1="147" x2="311" y2="147" />
+                                <path d="m306 141 6 6-6 6" />
+                              </g>
+                              <g class="graphic-workload">
+                                <rect x="172" y="254" width="116" height="20" rx="10" />
+
+                              </g>
+                            </svg>
+              <span class="dl dl-boundary" style="left:10.00%;top:28.00%">SESIÓN ENTRA ID</span>
+              <span class="dl dl-title" style="left:20.87%;top:47.00%">BLAZOR</span>
+              <span class="dl dl-sub" style="left:20.87%;top:53.00%">WebAssembly</span>
+              <span class="dl dl-title" style="left:50.00%;top:47.00%">API .NET</span>
+              <span class="dl dl-sub" style="left:50.00%;top:53.00%">por capas</span>
+              <span class="dl dl-title" style="left:79.13%;top:47.00%">SQLITE</span>
+              <span class="dl dl-sub" style="left:79.13%;top:53.00%">Azure SQL</span>
+              <span class="dl dl-workload" style="left:50.00%;top:88.00%">COMICTECA</span>
+            </div>
 
           <div class="portfolio-controls">
             <p>5 grupos · 27 controles y límites.</p>

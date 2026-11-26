@@ -1,10 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll('.page-index a[href^="#"]')];
-const filterButtons = [...document.querySelectorAll(".filter-button")];
-const projectCards = [...document.querySelectorAll(".project-card")];
-const noResults = document.querySelector("#no-results");
-const projectStatus = document.querySelector("#project-status");
 const expandButtons = [...document.querySelectorAll("[data-expand-all]")];
 const menuToggleLabel = menuToggle?.querySelector(".sr-only");
 
@@ -117,33 +113,6 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 window.addEventListener("resize", updateActiveSection);
 updateActiveSection();
-
-function updateProjects() {
-  const activeFilter = document.querySelector(".filter-button.is-active")?.dataset.filter ?? "all";
-  let visibleCount = 0;
-
-  projectCards.forEach((card) => {
-    const isVisible = activeFilter === "all" || card.dataset.category === activeFilter;
-    card.hidden = !isVisible;
-    visibleCount += Number(isVisible);
-  });
-
-  if (noResults) noResults.hidden = visibleCount > 0;
-  if (projectStatus) {
-    projectStatus.textContent = `Mostrando ${visibleCount} de ${projectCards.length} proyectos.`;
-  }
-}
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle("is-active", isActive);
-      item.setAttribute("aria-pressed", String(isActive));
-    });
-    updateProjects();
-  });
-});
 
 const expandControllers = expandButtons.map((button) => {
   const scope = document.querySelector(button.dataset.expandAll);
