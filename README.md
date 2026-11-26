@@ -64,10 +64,10 @@ El código —`scripts/`, `src/`, `styles.css`, `app.js` y los HTML generados—
 
 ## Probar en local
 
-Abre `index.html` en un navegador o sirve la carpeta con un servidor estático, por ejemplo:
+Sirve la carpeta con un servidor estático, por ejemplo:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Después visita `http://localhost:8000`.
+Después visita `http://localhost:8000`. Abrir `index.html` con `file://` no sirve: la marca y los enlaces al inicio usan la raíz `/`.

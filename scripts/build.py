@@ -49,13 +49,11 @@ JSON_LD = """    <script type="application/ld+json">
     </script>
 """
 
-# La cabecera enlaza destinos con URL propia. Las secciones de la portada se
-# navegan con el índice local «En esta página», que se escribe en
-# `src/pages/index.html`: así ningún enlace de la cabecera salta a un ancla de
-# otra página. «Contacto» es la excepción, porque cierra la portada.
-NAV = [
-    ("index.html", "Inicio"),
-]
+# La cabecera enlaza destinos con URL propia; la marca es el enlace al inicio.
+# Las secciones de la portada se navegan con el índice local «En esta página»,
+# que se escribe en `src/pages/index.html`: ningún enlace de la cabecera salta
+# a un ancla de otra página. «Contacto» es la excepción, porque cierra la
+# portada.
 NAV_GROUP = [
     ("portfolio.html", "Portfolio de seguridad"),
     ("comicteca.html", "Comicteca"),
@@ -123,11 +121,6 @@ def render_nav(page: str) -> str:
     home = page == "index.html"
     lines = []
 
-    for target, label in NAV:
-        href = "#inicio" if home and target == "index.html" else target
-        current = ' class="is-active" aria-current="page"' if target == page else ""
-        lines.append(f'        <a href="{href}"{current}>{label}</a>')
-
     lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">')
     for target, label in NAV_GROUP:
         current = ' class="is-active" aria-current="page"' if target == page else ""
@@ -135,7 +128,7 @@ def render_nav(page: str) -> str:
     lines.append("        </div>")
 
     lines.append('        <div class="site-nav-group">')
-    lines.append('          <a href="%s">Contacto</a>' % ("#contacto" if home else "index.html#contacto"))
+    lines.append('          <a href="%s">Contacto</a>' % ("#contacto" if home else "/#contacto"))
     lines.append("        </div>")
     return "\n".join(lines)
 
@@ -155,7 +148,7 @@ def render_page(page: dict) -> str:
         "{{head_extra}}": page["head_extra"].rstrip("\n"),
         "{{nav}}": render_nav(page["file"]),
         "{{content}}": content,
-        "{{home_href}}": "#inicio" if home else "index.html",
+        "{{home_href}}": "#inicio" if home else "/",
         "{{top_href}}": "#inicio" if home else "#contenido",
     }
 
