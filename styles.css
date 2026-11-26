@@ -189,10 +189,10 @@ button { color: inherit; }
    para que el marco ancho no deje media pantalla vacía. */
 .page-head { margin-bottom: 34px; }
 .page-head .section-heading { margin-bottom: 0; }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .page-head {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
     gap: 48px;
     align-items: center;
   }
