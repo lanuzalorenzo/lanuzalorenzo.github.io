@@ -19,7 +19,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 SITE = "https://lanuzalorenzo.github.io"
-REPO = "https://github.com/lanuzalorenzo/lanuzalorenzo.github.io"
 VERSION_CSS = "20261126d"
 VERSION_JS = "20261126a"
 OG_IMAGE = f"{SITE}/assets/social/og-image.jpg?v=20261105b"
@@ -38,7 +37,6 @@ HEAD_COMUN = """    <script>if (location.hash) document.documentElement.classLis
     <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png?v=20261105a" sizes="180x180">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">"""
 SCRIPTS = f'    <script src="app.js?v={VERSION_JS}" defer></script>'
-NOTA_PIE = '© <span id="current-year">2026</span> Lorenzo Lanuza'
 
 JSON_LD = """    <script type="application/ld+json">
     {
@@ -69,19 +67,6 @@ JSON_LD = """    <script type="application/ld+json">
     }
     </script>
 """
-
-# La cabecera enlaza destinos con URL propia; la marca es el enlace al inicio.
-# Las secciones de la portada se navegan con el índice local «En esta página»,
-# que se escribe en `src/pages/index.html`: ningún enlace de la cabecera salta
-# a un ancla de otra página. «Contacto» es la excepción, porque cierra la
-# portada.
-NAV_GROUP = [
-    ("portfolio.html", "Portfolio de seguridad"),
-    ("comicteca.html", "Comicteca"),
-    ("api.html", "EcommerceApi"),
-    ("ia.html", "IA aplicada"),
-    (f"{SITE}/biblioteca-tecnica/", "Biblioteca"),
-]
 
 PAGES = [
     {
@@ -137,23 +122,6 @@ PAGES = [
 ]
 
 
-def render_nav(page: str) -> str:
-    """Devuelve la nav con enlaces relativos a la página que la contiene."""
-    home = page == "index.html"
-    lines = []
-
-    lines.append('        <div class="site-nav-group" role="group" aria-label="Proyectos, laboratorios y biblioteca">')
-    for target, label in NAV_GROUP:
-        current = ' class="is-active" aria-current="page"' if target == page else ""
-        lines.append(f'          <a href="{target}"{current}>{label}</a>')
-    lines.append("        </div>")
-
-    lines.append('        <div class="site-nav-group">')
-    lines.append('          <a href="%s">Contacto</a>' % ("#contacto" if home else "/#contacto"))
-    lines.append("        </div>")
-    return "\n".join(lines)
-
-
 def render_page(page: dict) -> str:
     content = (SRC / "pages" / page["file"]).read_text(encoding="utf-8").strip("\n")
     home = page["file"] == "index.html"
@@ -161,8 +129,6 @@ def render_page(page: dict) -> str:
         perfil="publica",
         estilos=["styles.css"],
         version=VERSION_CSS,
-        repo=REPO,
-        nota=NOTA_PIE,
     )
     return sitio.pagina(
         titulo=page["title"],
@@ -173,7 +139,6 @@ def render_page(page: dict) -> str:
         og_tipo=page["og_type"],
         imagen=OG_IMAGE,
         imagen_alt=OG_IMAGE_ALT,
-        nav=render_nav(page["file"]),
         actual=page["file"],
         contenido=content,
         arriba="#inicio" if home else "#contenido",

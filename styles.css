@@ -185,6 +185,19 @@ button { color: inherit; }
 .lab-row-main .lab-name { display: flex; margin-top: 6px; font-size: clamp(28px, 3.6vw, 40px); font-weight: 640; letter-spacing: -.045em; line-height: 1.1; }
 .lab-row-main .lab-note { font-size: 14px; max-width: 54ch; }
 .page-diagram { width: min(100%, 560px); aspect-ratio: 460 / 300; min-height: 0; margin: 34px 0 10px; }
+/* Página con diagrama: en escritorio el texto y la figura comparten la fila,
+   para que el marco ancho no deje media pantalla vacía. */
+.page-head { margin-bottom: 34px; }
+.page-head .section-heading { margin-bottom: 0; }
+@media (min-width: 900px) {
+  .page-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+    gap: 48px;
+    align-items: center;
+  }
+  .page-head .page-diagram { width: 100%; margin: 0; }
+}
 /* Rótulos de los diagramas: HTML sobre el SVG, nunca texto dentro */
 .page-diagram .dl { position: absolute; transform: translate(-50%, -50%); color: var(--ink); font-size: 11px; font-weight: 750; letter-spacing: .1em; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }
 .page-diagram .dl-boundary { transform: translate(0, -50%); color: var(--muted); letter-spacing: .18em; }
