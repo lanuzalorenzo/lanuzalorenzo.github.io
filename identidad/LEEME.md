@@ -30,7 +30,6 @@ tienen sentido en ese sitio.
 | Open Graph y Twitter | Sí | No |
 | `canonical` | Sí | No |
 | `robots` | Sin directiva | `noindex, nofollow` |
-| Enlace al código | Sí, si se pasa `repo` | No |
 
 Una web publicada usa `publica`. Un visor que solo escucha en `127.0.0.1` usa
 `local`: no tiene sentido anunciar en redes una URL que nadie alcanza.
@@ -43,7 +42,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.2/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.3/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION LEEME.md; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
@@ -57,7 +56,7 @@ Con el paquete dentro, la página se compone así:
 from shell import Sitio
 
 sitio = Sitio(perfil="publica", estilos=["_identidad/identidad.css", "sitio.css"],
-              version="1", repo="https://github.com/…")
+              version="1")
 html = sitio.pagina(
     titulo="…", descripcion="…", canonical="https://…/",
     actual="index.html",

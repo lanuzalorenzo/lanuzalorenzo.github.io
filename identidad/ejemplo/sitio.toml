@@ -4,7 +4,6 @@
 perfil = "publica"          # "publica" o "local"
 raiz = ""                   # prefijo de los recursos; "" en la raíz del sitio
 version = "1"               # se añade como ?v= a los estilos
-repo = "https://github.com/lanuzalorenzo/lanuzalorenzo.github.io"
 nota = "Ejemplo de la capa de identidad"
 estilos = ["_identidad/identidad.css"]
 

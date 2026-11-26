@@ -37,9 +37,6 @@
 
     <footer class="site-footer">
       <a class="wordmark" href="{{inicio}}" aria-label="Lorenzo Lanuza, inicio"><img src="{{marca_svg}}" alt="" width="40" height="40"></a>
-<!-- si:repo -->
-      <a href="{{repo}}" target="_blank" rel="noreferrer">Código en GitHub <span aria-hidden="true">↗</span></a>
-<!-- /si:repo -->
       <a href="{{arriba}}">Volver arriba <span aria-hidden="true">↑</span></a>
       <span>{{pie_nota}}</span>
     </footer>
