@@ -258,7 +258,7 @@ button { color: inherit; }
 .contact-links > a:hover span:last-child { color: var(--accent-hover); }
 .contact-links > p { margin: 18px 0 0; color: var(--muted); font-size: 12px; }
 .contact-links > p span { margin-inline: 6px; color: var(--accent-hover); }
-.site-footer { display: grid; grid-template-columns: 1fr 2fr 1fr 1fr; align-items: center; gap: 20px; min-height: 82px; padding: 0 max(40px, calc((100% - var(--frame)) / 2)); border-top: 1px solid var(--line); }
+.site-footer { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; gap: 20px; min-height: 82px; padding: 0 max(40px, calc((100% - var(--frame)) / 2)); border-top: 1px solid var(--line); }
 .site-footer > a:not(.wordmark), .site-footer > span { margin: 0; color: var(--muted); font-size: 12px; }
 .site-footer > a:not(.wordmark) { justify-self: center; }
 .site-footer > span { justify-self: end; }
