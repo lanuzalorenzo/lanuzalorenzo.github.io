@@ -42,7 +42,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.3/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.4/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION LEEME.md; do
   curl -sSfL "$base/$f" -o "_identidad/$f"
@@ -74,7 +74,7 @@ el sitio no vive en la raíz.
 
 La navegación también es del paquete: no se pasa `nav`. El consumidor indica
 `actual` —`portfolio.html`, `api.html`, `biblioteca`…— y el paquete marca la
-sección. El pie usa la nota y el enlace de código del paquete; no se reescriben.
+sección. El pie usa la nota del paquete; no se reescribe ni lleva enlaces a repositorios.
 
 Si el consumidor solo quiere las piezas, `Sitio.cabecera(nav=...)` y
 `Sitio.pie(nota=...)` devuelven la cabecera y el pie con los mismos tokens y
