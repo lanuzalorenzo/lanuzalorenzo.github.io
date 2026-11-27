@@ -159,9 +159,9 @@ Paleta fría de dos profundidades y un acento cian. Todo lo demás se deriva con
 
 ## Layout
 
-Marco de contenido del paquete de identidad (`.frame`): hasta 1440 px de ancho, con 40 px de margen por lado en escritorio, 24 px a 850 y 20 px a 620; por encima de 1520 px de ventana mide 1440 y por debajo, la ventana menos 80 px. El tope de 680 px entre 728 y 850 px es propio de esta web (`main .frame`). Las secciones alternan tres tonos: `paper` en el plano, `paper-deep` en experiencia y `surface-deep` en proyectos. Separan bloques sin añadir cajas.
+Marco de contenido del paquete de identidad (`.frame`): hasta 1440 px de ancho, con 40 px de margen por lado en escritorio, 24 px a 850 y 20 px a 620; por encima de 1520 px de ventana mide 1440 y por debajo, la ventana menos 80 px. Las secciones alternan tres tonos: `paper` en el plano, `paper-deep` en experiencia y `surface-deep` en proyectos. Separan bloques sin añadir cajas.
 
-- El contenido se capa a 680 px entre 728 y 850 px de ancho; el margen lateral mínimo es 24 px, y 20 en móvil.
+- El margen lateral mínimo es 24 px a 850 y 20 en móvil.
 - A 900, el índice de proyectos pasa a una sola columna.
 - A 850 el encabezado se estrecha y la portada mantiene dos columnas, con el gráfico más pequeño.
 - A 620 la portada pasa a bloque y las rejillas de dos y tres columnas caen a una, salvo la de métricas, que se queda en tres.

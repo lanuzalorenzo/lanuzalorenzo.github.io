@@ -1,5 +1,5 @@
 /* Capa de marca · lanuzalorenzo.github.io
-   Versión 1.4.3. Archivo generado por identidad/extraer.py desde styles.css.
+   Versión 1.4.4. Archivo generado por identidad/extraer.py desde styles.css.
    No editar a mano: cambia styles.css, sube VERSION y regenera. */
 
 :root {
@@ -267,7 +267,10 @@ button {
 }
 
 .site-footer > a:not(.wordmark) {
+  display: inline-flex;
+  align-items: center;
   justify-self: center;
+  min-height: 44px;
 }
 
 .site-footer > span {
