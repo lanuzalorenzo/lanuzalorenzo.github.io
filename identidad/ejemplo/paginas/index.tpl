@@ -3,7 +3,7 @@
     <p class="eyebrow">Ejemplo</p>
     <h1>Una web nueva con la identidad ya puesta</h1>
   </div>
-  <p>Esta página no escribe cabecera, pie ni tokens: los pone la capa de identidad. Lo que se cambia es el contenido y la nav de <code>sitio.toml</code>.</p>
+  <p>Esta página no escribe cabecera, pie ni tokens: los pone la capa de identidad. Lo que se cambia es el contenido y el <code>actual</code> que marca la sección de cada página.</p>
   <p><a class="button button-quiet" href="api.html">Ver la segunda página <span aria-hidden="true">→</span></a></p>
 </section>
 

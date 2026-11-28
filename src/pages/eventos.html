@@ -1,0 +1,169 @@
+      <!-- ========= EL LABORATORIO ASÍNCRONO — ingeniería de eventos-api ========= -->
+      <section class="workload-section" id="eventos" aria-labelledby="workload-title">
+        <div class="frame">
+          <div class="page-head">
+          <div class="section-heading">
+            <p class="eyebrow">El laboratorio asíncrono</p>
+            <h1 id="workload-title">eventos-api, control a control.</h1>
+            <p class="portfolio-intro">eventos-api es el laboratorio asíncrono <a class="portfolio-workload" href="portfolio.html">del portfolio</a>: un servicio de eventos en .NET 10 que guarda un sobre opaco y lo entrega con un lease de 300 s, sin conocer el dominio que transporta. El productor publica, el consumidor reclama y confirma con el hash del commit o rechaza con un motivo; la idempotencia y el bloqueo de fila viven en PostgreSQL 18, y el fencing por entrega, en la capa de dominio. El contrato está en OpenAPI y JSON Schema, con cinco <a class="portfolio-workload" href="https://github.com/lanuzalorenzo/eventos-api/tree/main/docs/adr" target="_blank" rel="noreferrer">ADR <span aria-hidden="true">↗</span></a> que documentan las decisiones. Lo que sigue es el estado real de los 16 controles de su línea base, con enlace a la evidencia: lo que falta también aparece.</p>
+          </div>
+
+          <div class="project-visual page-diagram">
+            <svg class="project-graphic" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+              <g class="graphic-boundary">
+                <rect x="28" y="62" width="404" height="178" rx="16" />
+              </g>
+              <g class="graphic-node">
+                <rect x="46" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-node graphic-node-core">
+                <rect x="180" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-node">
+                <rect x="314" y="116" width="100" height="62" rx="10" />
+              </g>
+              <g class="graphic-link">
+                <line x1="146" y1="147" x2="177" y2="147" />
+                <path d="m172 141 6 6-6 6" />
+              </g>
+              <g class="graphic-link">
+                <line x1="280" y1="147" x2="311" y2="147" />
+                <path d="m306 141 6 6-6 6" />
+              </g>
+              <g class="graphic-link">
+                <path d="M364 178v22H230v-22" />
+                <path d="m225 183 5-5 5 5" />
+              </g>
+            </svg>
+            <span class="dl dl-boundary" style="left:10.00%;top:28.00%">COLA DE EVENTOS</span>
+            <span class="dl dl-title" style="left:20.87%;top:47.00%">PUBLICA</span>
+            <span class="dl dl-sub" style="left:20.87%;top:53.00%">productor</span>
+            <span class="dl dl-title" style="left:50.00%;top:47.00%">COLA</span>
+            <span class="dl dl-sub" style="left:50.00%;top:53.00%">lease 300 s</span>
+            <span class="dl dl-title" style="left:79.13%;top:47.00%">RECLAMA</span>
+            <span class="dl dl-sub" style="left:79.13%;top:53.00%">consumidor</span>
+            <span class="dl dl-workload" style="left:50.00%;top:88.00%">eventos-api</span>
+          </div>
+          </div>
+
+          <div class="portfolio-controls">
+            <p>2 grupos · 16 controles.</p>
+            <button class="portfolio-expand" type="button" data-expand-all="#eventos" aria-expanded="false" aria-controls="eventos-seguridad eventos-entrega">Desplegar todos</button>
+          </div>
+
+          <div class="module-groups">
+
+            <details class="module-group" id="eventos-seguridad" open>
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Seguridad de aplicación</span>
+                <span class="group-count">8 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Validación de JWT con emisor y audiencia obligatorios</span>
+                    <span class="module-status status-partial">Parcial · sin Entra real</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/tests/EventosApi.Tests/AutenticacionTests.cs" target="_blank" rel="noreferrer">AutenticacionTests.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Permisos por rol de aplicación en las seis rutas <code>/v1</code></span>
+                    <span class="module-status status-partial">Parcial · sin app role</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/src/EventosApi.Api/Endpoints/EventosEndpoints.cs" target="_blank" rel="noreferrer">EventosEndpoints.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CORS con denegación por defecto y orígenes explícitos</span>
+                    <span class="module-status status-partial">Parcial · sin prueba propia</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/src/EventosApi.Api/Program.cs" target="_blank" rel="noreferrer">Program.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Cabeceras de seguridad</span>
+                    <span class="module-status status-partial">Parcial · Server pendiente</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/AGENTS.md#verificaci%C3%B3n" target="_blank" rel="noreferrer">Verificación manual <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CSP en el host, aunque la API no sirve HTML</span>
+                    <span class="module-status status-pending">Pendiente</span>
+                    <span class="spec-none">Sin evidencia</span>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Límite por IP con la sonda fuera del cupo</span>
+                    <span class="module-status status-partial">Parcial · sin prueba 429</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/src/EventosApi.Api/Program.cs" target="_blank" rel="noreferrer">Program.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">ProblemDetails en 401 y 403 con <code>application/problem+json</code></span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/tests/EventosApi.Tests/AutenticacionTests.cs" target="_blank" rel="noreferrer">AutenticacionTests.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Salud anónima que comprueba proceso y base</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/tests/EventosApi.Tests/HealthTests.cs" target="_blank" rel="noreferrer">HealthTests.cs <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="module-group" id="eventos-entrega">
+              <summary class="module-group-head">
+                <span class="group-dot" aria-hidden="true"></span>
+                <span class="group-title">Entrega y repositorio</span>
+                <span class="group-count">8 controles</span>
+                <span class="group-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="module-group-body">
+                <div class="spec-table" role="list">
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Permisos mínimos por workflow y por job</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Gitleaks sobre el historial completo</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">CodeQL con subida de SARIF</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/actions/runs/45819366110" target="_blank" rel="noreferrer">Run en verde <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Trivy SCA bloqueante para CRITICAL y HIGH</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Imagen sin root, construida y escaneada con Trivy</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/Dockerfile" target="_blank" rel="noreferrer">Dockerfile <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Dependabot para NuGet, Docker y GitHub Actions</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/.github/dependabot.yml" target="_blank" rel="noreferrer">dependabot.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name">Enlaces relativos de la documentación comprobados en CI</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/.github/workflows/ci.yml" target="_blank" rel="noreferrer">ci.yml <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <div class="spec-row" role="listitem">
+                    <span class="spec-name"><code>main</code> con PR, siete checks y sin bypass</span>
+                    <span class="module-status status-validated">Validado</span>
+                    <a class="module-link" href="https://github.com/lanuzalorenzo/eventos-api/rules/28163092" target="_blank" rel="noreferrer">Ruleset main <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+          </div>
+
+          <div class="portfolio-cta">
+            <a class="button button-dark" href="https://github.com/lanuzalorenzo/eventos-api" target="_blank" rel="noreferrer">Ver el repositorio <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="https://github.com/lanuzalorenzo/eventos-api/blob/main/AGENTS.md#l%C3%ADnea-base" target="_blank" rel="noreferrer">Tabla de estado completa <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
