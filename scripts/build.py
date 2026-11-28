@@ -29,7 +29,7 @@ from shell import Sitio  # noqa: E402
 
 # Lo que no viaja en los campos de `pagina()`: favicons, sitemap y autoría.
 HEAD_COMUN = """    <script>if (location.hash) document.documentElement.classList.add("landing-hash");</script>
-    <meta property="og:updated_time" content="2026-11-05T00:00:00+01:00">
+    <meta property="og:updated_time" content="2026-11-28T00:00:00+01:00">
     <meta name="author" content="Lorenzo Lanuza Arellano">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/marca/favicon-16.png?v=20261105a">
     <link rel="icon" href="favicon.svg?v=20261105a" type="image/svg+xml">
@@ -107,6 +107,16 @@ PAGES = [
         "og_description": "El estado real de 28 controles y límites de la API .NET 10 que sirve de banco de pruebas al portfolio, con enlace a su evidencia.",
         "og_type": "website",
         "canonical": f"{SITE}/api.html",
+        "head_extra": "",
+    },
+    {
+        "file": "eventos.html",
+        "title": "eventos-api — Lorenzo Lanuza",
+        "description": "El estado real de 16 controles de eventos-api, el servicio de eventos .NET 10 y PostgreSQL 18 que sirve de laboratorio asíncrono al portfolio, con enlace a su evidencia.",
+        "og_title": "eventos-api — Lorenzo Lanuza",
+        "og_description": "El estado real de 16 controles de eventos-api, el servicio de eventos .NET 10 y PostgreSQL 18 que sirve de laboratorio asíncrono al portfolio, con enlace a su evidencia.",
+        "og_type": "website",
+        "canonical": f"{SITE}/eventos.html",
         "head_extra": "",
     },
     {

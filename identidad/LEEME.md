@@ -20,6 +20,12 @@ distribución; no rehace la cabecera.
 `extraer.py`, `verificar.py` y `ejemplo/` viven en el repositorio dueño y no se
 distribuyen: son su mantenimiento, no el contrato de consumo.
 
+## Estado
+
+> **Estado:** Parcial (2026-11-28).
+
+La versión 1.5.0 añade `eventos-api` a la navegación canónica. La etiqueta se crea al fusionar y cada consumidor actualiza su copia; hasta que todos estén actualizados y su CI pase, el paquete no se declara Validado.
+
 ## Perfiles
 
 El perfil decide qué se emite. No es un tema: es qué metadatos y qué enlaces
@@ -42,7 +48,7 @@ La etiqueta se crea al fusionar el paquete; mientras no exista, el consumo queda
 **Pendiente**, no verde.
 
 ```bash
-base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.4.4/identidad
+base=https://raw.githubusercontent.com/lanuzalorenzo/lanuzalorenzo.github.io/identidad-v1.5.0/identidad
 mkdir -p _identidad
 for f in identidad.css plantilla.tpl shell.py menu.js marca-tile.svg SHA256SUMS VERSION LEEME.md; do
   curl -sSfL "$base/$f" -o "_identidad/$f"

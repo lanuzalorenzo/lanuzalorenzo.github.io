@@ -39,6 +39,7 @@ NAV = (
     ("https://lanuzalorenzo.github.io/portfolio.html", "Portfolio de seguridad", "portfolio.html"),
     ("https://lanuzalorenzo.github.io/comicteca.html", "Comicteca", "comicteca.html"),
     ("https://lanuzalorenzo.github.io/api.html", "EcommerceApi", "api.html"),
+    ("https://lanuzalorenzo.github.io/eventos.html", "eventos-api", "eventos.html"),
     ("https://lanuzalorenzo.github.io/ia.html", "IA aplicada", "ia.html"),
     ("https://lanuzalorenzo.github.io/biblioteca-tecnica/", "Biblioteca", "biblioteca"),
     ("https://lanuzalorenzo.github.io/#contacto", "Contacto", "contacto"),

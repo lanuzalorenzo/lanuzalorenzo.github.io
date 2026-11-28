@@ -218,7 +218,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 - **Medida:** a 900 el índice pasa a una sola columna.
 
 ### Navigation
-- **Global:** la cabecera enlaza los destinos con URL propia —Portfolio de seguridad, Comicteca, EcommerceApi, IA aplicada y Biblioteca— y «Contacto». La marca es el enlace al inicio: `/` desde una página de detalle y `#inicio` en la portada; no hay un enlace «Inicio» aparte. En la portada, «Contacto» es `#contacto`; desde una página de detalle, `/#contacto`. El resto de secciones de la portada no se enlazan desde la cabecera.
+- **Global:** la cabecera enlaza los destinos con URL propia —Portfolio de seguridad, Comicteca, EcommerceApi, eventos-api, IA aplicada y Biblioteca— y «Contacto». La marca es el enlace al inicio: `/` desde una página de detalle y `#inicio` en la portada; no hay un enlace «Inicio» aparte. En la portada, «Contacto» es `#contacto`; desde una página de detalle, `/#contacto`. El resto de secciones de la portada no se enlazan desde la cabecera.
 - **Local:** la portada lleva tras el hero un índice «En esta página» con Perfil, Experiencia, Proyectos y Contacto, numerados como los antetítulos; es la vía para saltar entre las secciones de la portada. La sección visible se marca en tinta clara con línea cian, como el destino activo de la cabecera.
 - **Style:** enlaces de 12 px y peso 650 en gris azulado. El activo va en tinta clara con una línea cian de 2 px sobre el borde del encabezado; sin subrayado de texto.
 - **Llegada:** al abrir una URL con ancla, el salto inicial es instantáneo y el bloque destino queda alineado bajo la cabecera y como punto de partida de la navegación por teclado. Los clics posteriores sí usan el desplazamiento suave.
@@ -231,9 +231,9 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 ## Gramática de página
 
-**Alcance.** Esta gramática es la de las cuatro páginas de detalle: `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. Las cuatro usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, índice, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: su índice de proyectos no declara estado.
+**Alcance.** Esta gramática es la de las cinco páginas de detalle: `portfolio.html`, `comicteca.html`, `api.html`, `eventos.html` e `ia.html`. Las cinco usan ya la fila de artefacto. La portada (`index.html`) conserva su secuencia propia —hero, índice, ticker, perfil, experiencia, proyectos y contacto— y no adopta esa fila: su índice de proyectos no declara estado.
 
-**Secuencia de bloques.** Las cuatro páginas se leen en el mismo orden:
+**Secuencia de bloques.** Las cinco páginas se leen en el mismo orden:
 
 1. **Cabecera de página.** `section-heading`: antetítulo, `h1` en sans, sin remate forzado, y `portfolio-intro` con medida de 62ch —unos 75 caracteres a 16,8 px—, que es ya el techo de la regla de cuerpo: `ch` mide el cero, no la letra media, y 75ch llevarían la línea a 90 caracteres. El remate serif se reserva a la firma del perfil. El intro dice qué contiene la página y qué significa ahí el estado; si hay página hermana, la enlaza. Si la página tiene diagrama propio, va justo después del intro en `.page-diagram`, con 560 px de ancho máximo.
 2. **Barra de control.** `portfolio-controls`: a la izquierda el total en prosa; a la derecha «Desplegar todos». El total cuenta grupos y filas, nunca estados.
@@ -250,7 +250,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 **Tipo y estado pueden coincidir.** Que hoy todos los resultados estén validados o parciales, y todos los límites en diseño o pendiente, no convierte «Resultados» en un grupo por estado. El criterio es la naturaleza del artefacto o el tema; si un grupo solo se puede nombrar con un estado, no es un grupo.
 
-**El tono no forma parte de la gramática.** `portfolio.html` puede mantener `surface-deep` y `comicteca.html`, `api.html` e `ia.html` el fondo `paper`; lo común es la estructura, no la banda de color.
+**El tono no forma parte de la gramática.** `portfolio.html` puede mantener `surface-deep` y `comicteca.html`, `api.html`, `eventos.html` e `ia.html` el fondo `paper`; lo común es la estructura, no la banda de color.
 
 ### Estado actual
 
@@ -259,6 +259,7 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 | `portfolio.html` | capa del modelo (5 grupos) | `spec-row` | insignia, una vez | 12 módulos |
 | `comicteca.html` | familia de control (5 grupos) | `spec-row` | insignia, una vez | 27 controles y límites |
 | `api.html` | familia de control (5 grupos) | `spec-row` | insignia, una vez | 28 controles y límites |
+| `eventos.html` | familia de control (2 grupos) | `spec-row` | insignia, una vez | 16 controles |
 | `ia.html` | guías por trabajo y resultados o límites por tema (7 grupos) | `spec-row` | insignia solo en resultados y límites | 9 guías y 13 resultados y límites |
 
 ## El estado
@@ -285,11 +286,11 @@ Ninguna tarjeta lleva radio. Bordes de 1 px con `line` para separar; `line-stron
 
 ## Fila tipo
 
-La misma fila sirve a `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`. No hay tarjeta de módulo, caja por control ni rejilla de resultados: la página es una lista de grupos y cada grupo, una lista de filas.
+La misma fila sirve a `portfolio.html`, `comicteca.html`, `api.html`, `eventos.html` e `ia.html`. No hay tarjeta de módulo, caja por control ni rejilla de resultados: la página es una lista de grupos y cada grupo, una lista de filas.
 
 | Campo | Obligatorio | Qué lleva | Dónde |
 |---|---|---|---|
-| Nombre | Sí | El artefacto en una frase, con el número de módulo delante en portfolio (`01 · Seguridad en Azure`). | En portfolio, `h2.spec-name`; en API e IA, `span.spec-name`. |
+| Nombre | Sí | El artefacto en una frase, con el número de módulo delante en portfolio (`01 · Seguridad en Azure`). | En portfolio, `h2.spec-name`; en API, eventos e IA, `span.spec-name`. |
 | Detalle | No | Una línea de contexto, una o dos, sin estado. | `.spec-detail` |
 | Estado | Sí, salvo en las guías de `ia.html` | Una insignia, la única de la fila. Las guías de `ia.html` no lo llevan. | `.module-status` + `.status-*` |
 | Evidencia | Sí | Enlace al artefacto con su nombre corto y `↗`; si no hay, `Sin evidencia` visible. | `.module-link`; si falta, `.spec-none` |
@@ -305,7 +306,7 @@ La misma fila sirve a `portfolio.html`, `comicteca.html`, `api.html` e `ia.html`
 </div>
 ```
 
-En API e IA, el nombre es `span.spec-name` y no lleva detalle; la fila conserva las mismas columnas. En `ia.html`, las filas de guía usan `.spec-row--guide` y no llevan `.module-status`: nombre y enlace ocupan dos columnas.
+En API, eventos e IA, el nombre es `span.spec-name` y no lleva detalle; la fila conserva las mismas columnas. En `ia.html`, las filas de guía usan `.spec-row--guide` y no llevan `.module-status`: nombre y enlace ocupan dos columnas.
 
 - **Escritorio:** tres columnas `minmax(0, 1fr) auto minmax(0, 13rem)`, 18 px de hueco, 11 px arriba y abajo, línea inferior al 55 % de `line`. Las filas de guía de `ia.html` usan dos columnas: nombre y enlace. La primera fila no lleva borde superior.
 - **A 850 px:** dos columnas; el nombre ocupa las dos, la insignia queda a la izquierda y la evidencia a la derecha en la segunda línea.
@@ -328,7 +329,7 @@ En API e IA, el nombre es `span.spec-name` y no lleva detalle; la fila conserva 
 - **Do** separar bloques con tono y línea antes que con una caja.
 - **Do** declarar el estado una vez, en la insignia de la fila.
 - **Do** agrupar por tipo, familia, capa o tema, y ordenar por número, fecha o fuente.
-- **Do** usar la misma fila en portfolio, API e IA.
+- **Do** usar la misma fila en portfolio, API, eventos e IA.
 
 ### Don't:
 - **Don't** introducir un segundo acento ni un hex suelto.
